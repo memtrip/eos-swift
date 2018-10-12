@@ -1,0 +1,4 @@
+Carthage/Build
+Carthage
+*.resolved
+eos-swift.xcodeproj/xcuserdata

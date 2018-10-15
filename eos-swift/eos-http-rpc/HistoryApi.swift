@@ -24,7 +24,7 @@ class HistoryApiImpl : HistoryApi {
         return RxHttp<GetActions, HistoricAccountActionParent, ChainError>().single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_actions",
-                method: .post,
+                method: "POST",
                 body: body
             )
         )
@@ -34,7 +34,7 @@ class HistoryApiImpl : HistoryApi {
         return RxHttp<GetTransaction, HistoricTransaction, ChainError>().single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_transaction",
-                method: .post,
+                method: "POST",
                 body: body
             )
         )
@@ -44,7 +44,7 @@ class HistoryApiImpl : HistoryApi {
         return RxHttp<GetKeyAccounts, Accounts, ChainError>().single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_key_accounts",
-                method: .post,
+                method: "POST",
                 body: body
             )
         )
@@ -54,7 +54,7 @@ class HistoryApiImpl : HistoryApi {
         return RxHttp<GetControlledAccounts, Accounts, ChainError>().single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_controlled_accounts",
-                method: .post,
+                method: "POST",
                 body: body
             )
         )

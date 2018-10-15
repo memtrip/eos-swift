@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743947217495EE0056F0E6 /* HistoryApiTest.swift */; };
+		3C74395B21750DF70056F0E6 /* AbiEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74395A21750DF70056F0E6 /* AbiEncoder.swift */; };
+		3C74395D21750F370056F0E6 /* AbiEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */; };
+		3C743962217528D60056F0E6 /* NameWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743961217528D60056F0E6 /* NameWriter.swift */; };
+		3C743964217528F90056F0E6 /* AccountNameWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743963217528F90056F0E6 /* AccountNameWriter.swift */; };
+		3C7439662175291D0056F0E6 /* BlockNumWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7439652175291D0056F0E6 /* BlockNumWriter.swift */; };
+		3C743968217529270056F0E6 /* BlockPrefixWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743967217529270056F0E6 /* BlockPrefixWriter.swift */; };
+		3C74396A217529400056F0E6 /* PublicKeyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743969217529400056F0E6 /* PublicKeyWriter.swift */; };
+		3C74396C2175296D0056F0E6 /* AssetWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74396B2175296D0056F0E6 /* AssetWriter.swift */; };
+		3C74396E2175299B0056F0E6 /* ChainIdWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74396D2175299B0056F0E6 /* ChainIdWriter.swift */; };
+		3C743970217529B20056F0E6 /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74396F217529B20056F0E6 /* DataWriter.swift */; };
+		3C743972217529DD0056F0E6 /* TimestampWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743971217529DD0056F0E6 /* TimestampWriter.swift */; };
+		3C74397421752A200056F0E6 /* StringCollectionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397321752A200056F0E6 /* StringCollectionWriter.swift */; };
+		3C74397621752A320056F0E6 /* HexCollectionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397521752A320056F0E6 /* HexCollectionWriter.swift */; };
+		3C74397821752A470056F0E6 /* AccountNameCollectionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397721752A470056F0E6 /* AccountNameCollectionWriter.swift */; };
+		3C74397A21752CB70056F0E6 /* AbiTypeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397921752CB70056F0E6 /* AbiTypeWriter.swift */; };
+		3C74397C217532BB0056F0E6 /* subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397B217532BB0056F0E6 /* subscript.swift */; };
 		3C824FA921652299006FC81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FA821652299006FC81C /* AppDelegate.swift */; };
 		3C824FAB21652299006FC81C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FAA21652299006FC81C /* ViewController.swift */; };
 		3C824FAE21652299006FC81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C824FAC21652299006FC81C /* Main.storyboard */; };
@@ -17,12 +33,6 @@
 		3C824FC92165229B006FC81C /* eos_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FC82165229B006FC81C /* eos_swiftUITests.swift */; };
 		3C824FD92165230C006FC81C /* Base58Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FD82165230C006FC81C /* Base58Decode.swift */; };
 		3C824FDB2165231B006FC81C /* Base58Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FDA2165231B006FC81C /* Base58Encode.swift */; };
-		3CFE7F29216FD684005AF4FA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BE4216FD2E200D3BBED /* Alamofire.framework */; };
-		3CFE7F2A216FD684005AF4FA /* BitcoinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BEB216FD2E200D3BBED /* BitcoinKit.framework */; };
-		3CFE7F2B216FD684005AF4FA /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BE6216FD2E200D3BBED /* Material.framework */; };
-		3CFE7F2C216FD684005AF4FA /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BEC216FD2E200D3BBED /* Motion.framework */; };
-		3CFE7F2D216FD684005AF4FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BE7216FD2E200D3BBED /* Realm.framework */; };
-		3CFE7F2E216FD684005AF4FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BE5216FD2E200D3BBED /* RealmSwift.framework */; };
 		3CFE7F2F216FD684005AF4FA /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BED216FD2E200D3BBED /* RxBlocking.framework */; };
 		3CFE7F30216FD684005AF4FA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BE8216FD2E200D3BBED /* RxCocoa.framework */; };
 		3CFE7F31216FD684005AF4FA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C236BEA216FD2E200D3BBED /* RxSwift.framework */; };
@@ -123,17 +133,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C236BE4216FD2E200D3BBED /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		3C236BE5216FD2E200D3BBED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		3C236BE6216FD2E200D3BBED /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = "<group>"; };
-		3C236BE7216FD2E200D3BBED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		3C236BE8216FD2E200D3BBED /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		3C236BE9216FD2E200D3BBED /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		3C236BEA216FD2E200D3BBED /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		3C236BEB216FD2E200D3BBED /* BitcoinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BitcoinKit.framework; path = Carthage/Build/iOS/BitcoinKit.framework; sourceTree = "<group>"; };
-		3C236BEC216FD2E200D3BBED /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motion.framework; path = Carthage/Build/iOS/Motion.framework; sourceTree = "<group>"; };
 		3C236BED216FD2E200D3BBED /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		3C743947217495EE0056F0E6 /* HistoryApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApiTest.swift; sourceTree = "<group>"; };
+		3C74395A21750DF70056F0E6 /* AbiEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiEncoder.swift; sourceTree = "<group>"; };
+		3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiEncodingContainer.swift; sourceTree = "<group>"; };
+		3C743961217528D60056F0E6 /* NameWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameWriter.swift; sourceTree = "<group>"; };
+		3C743963217528F90056F0E6 /* AccountNameWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNameWriter.swift; sourceTree = "<group>"; };
+		3C7439652175291D0056F0E6 /* BlockNumWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNumWriter.swift; sourceTree = "<group>"; };
+		3C743967217529270056F0E6 /* BlockPrefixWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockPrefixWriter.swift; sourceTree = "<group>"; };
+		3C743969217529400056F0E6 /* PublicKeyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKeyWriter.swift; sourceTree = "<group>"; };
+		3C74396B2175296D0056F0E6 /* AssetWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetWriter.swift; sourceTree = "<group>"; };
+		3C74396D2175299B0056F0E6 /* ChainIdWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainIdWriter.swift; sourceTree = "<group>"; };
+		3C74396F217529B20056F0E6 /* DataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
+		3C743971217529DD0056F0E6 /* TimestampWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampWriter.swift; sourceTree = "<group>"; };
+		3C74397321752A200056F0E6 /* StringCollectionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCollectionWriter.swift; sourceTree = "<group>"; };
+		3C74397521752A320056F0E6 /* HexCollectionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCollectionWriter.swift; sourceTree = "<group>"; };
+		3C74397721752A470056F0E6 /* AccountNameCollectionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNameCollectionWriter.swift; sourceTree = "<group>"; };
+		3C74397921752CB70056F0E6 /* AbiTypeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiTypeWriter.swift; sourceTree = "<group>"; };
+		3C74397B217532BB0056F0E6 /* subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subscript.swift; sourceTree = "<group>"; };
 		3C824FA521652299006FC81C /* eos-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eos-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C824FA821652299006FC81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C824FAA21652299006FC81C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -232,12 +252,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CFE7F29216FD684005AF4FA /* Alamofire.framework in Frameworks */,
-				3CFE7F2A216FD684005AF4FA /* BitcoinKit.framework in Frameworks */,
-				3CFE7F2B216FD684005AF4FA /* Material.framework in Frameworks */,
-				3CFE7F2C216FD684005AF4FA /* Motion.framework in Frameworks */,
-				3CFE7F2D216FD684005AF4FA /* Realm.framework in Frameworks */,
-				3CFE7F2E216FD684005AF4FA /* RealmSwift.framework in Frameworks */,
 				3CFE7F2F216FD684005AF4FA /* RxBlocking.framework in Frameworks */,
 				3CFE7F30216FD684005AF4FA /* RxCocoa.framework in Frameworks */,
 				3CFE7F31216FD684005AF4FA /* RxSwift.framework in Frameworks */,
@@ -265,6 +279,10 @@
 		3C236BDE216FCA3B00D3BBED /* eos-abi-writer */ = {
 			isa = PBXGroup;
 			children = (
+				3C743960217528CA0056F0E6 /* types */,
+				3C74395A21750DF70056F0E6 /* AbiEncoder.swift */,
+				3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */,
+				3C74397B217532BB0056F0E6 /* subscript.swift */,
 			);
 			path = "eos-abi-writer";
 			sourceTree = "<group>";
@@ -290,18 +308,32 @@
 		3C236BE3216FD2E200D3BBED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C236BE4216FD2E200D3BBED /* Alamofire.framework */,
-				3C236BEB216FD2E200D3BBED /* BitcoinKit.framework */,
-				3C236BE6216FD2E200D3BBED /* Material.framework */,
-				3C236BEC216FD2E200D3BBED /* Motion.framework */,
-				3C236BE7216FD2E200D3BBED /* Realm.framework */,
-				3C236BE5216FD2E200D3BBED /* RealmSwift.framework */,
 				3C236BED216FD2E200D3BBED /* RxBlocking.framework */,
 				3C236BE8216FD2E200D3BBED /* RxCocoa.framework */,
 				3C236BEA216FD2E200D3BBED /* RxSwift.framework */,
 				3C236BE9216FD2E200D3BBED /* RxTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C743960217528CA0056F0E6 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				3C74397921752CB70056F0E6 /* AbiTypeWriter.swift */,
+				3C743961217528D60056F0E6 /* NameWriter.swift */,
+				3C743963217528F90056F0E6 /* AccountNameWriter.swift */,
+				3C7439652175291D0056F0E6 /* BlockNumWriter.swift */,
+				3C743967217529270056F0E6 /* BlockPrefixWriter.swift */,
+				3C743969217529400056F0E6 /* PublicKeyWriter.swift */,
+				3C74396B2175296D0056F0E6 /* AssetWriter.swift */,
+				3C74396D2175299B0056F0E6 /* ChainIdWriter.swift */,
+				3C74396F217529B20056F0E6 /* DataWriter.swift */,
+				3C743971217529DD0056F0E6 /* TimestampWriter.swift */,
+				3C74397321752A200056F0E6 /* StringCollectionWriter.swift */,
+				3C74397521752A320056F0E6 /* HexCollectionWriter.swift */,
+				3C74397721752A470056F0E6 /* AccountNameCollectionWriter.swift */,
+			);
+			path = types;
 			sourceTree = "<group>";
 		};
 		3C824F9C21652299006FC81C = {
@@ -779,12 +811,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BitcoinKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Material.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Motion.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
@@ -793,12 +819,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BitcoinKit.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Material.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Motion.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
@@ -832,26 +852,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C743968217529270056F0E6 /* BlockPrefixWriter.swift in Sources */,
 				3CFE7FDC2170D0C0005AF4FA /* HistoricTransaction.swift in Sources */,
 				3CFE7F692170AF74005AF4FA /* TransactionAuthorization.swift in Sources */,
 				3CFE7F632170AE74005AF4FA /* TransactionReceipt.swift in Sources */,
 				3CFE7FDA2170D095005AF4FA /* HistoricAccountActionParent.swift in Sources */,
+				3C74396C2175296D0056F0E6 /* AssetWriter.swift in Sources */,
 				3CFE7FD02170CF8E005AF4FA /* Accounts.swift in Sources */,
+				3C743962217528D60056F0E6 /* NameWriter.swift in Sources */,
+				3C74395D21750F370056F0E6 /* AbiEncodingContainer.swift in Sources */,
 				3CFE7F892170C19F005AF4FA /* SelfDelegatedBandwidth.swift in Sources */,
 				3CFE7FB32170C8D7005AF4FA /* AbiField.swift in Sources */,
 				3CFE7FA42170C6CF005AF4FA /* Region.swift in Sources */,
 				3CFE7F8D2170C1F6005AF4FA /* VoterInfo.swift in Sources */,
+				3C74397621752A320056F0E6 /* HexCollectionWriter.swift in Sources */,
 				3CFE7F4C216FECAF005AF4FA /* HttpResponse.swift in Sources */,
+				3C74397C217532BB0056F0E6 /* subscript.swift in Sources */,
 				3CFE7FB52170C8FE005AF4FA /* AbiForAccount.swift in Sources */,
 				3CFE7F922170C29B005AF4FA /* BlockNumOrId.swift in Sources */,
 				3CFE7F5621709C7E005AF4FA /* ChainApi.swift in Sources */,
 				3CFE7F7F2170BE9F005AF4FA /* Account.swift in Sources */,
+				3C743970217529B20056F0E6 /* DataWriter.swift in Sources */,
 				3CFE7FCC2170CB99005AF4FA /* GetKeyAccounts.swift in Sources */,
+				3C743964217528F90056F0E6 /* AccountNameWriter.swift in Sources */,
 				3CFE7FCE2170CBB3005AF4FA /* GetTransaction.swift in Sources */,
+				3C74396E2175299B0056F0E6 /* ChainIdWriter.swift in Sources */,
 				3CFE7F982170C332005AF4FA /* BlockHeaderRootMerkle.swift in Sources */,
 				3CFE7F5D2170ACE3005AF4FA /* TransactionComitted.swift in Sources */,
 				3CFE7F7D2170BE7C005AF4FA /* AccountName.swift in Sources */,
+				3C74396A217529400056F0E6 /* PublicKeyWriter.swift in Sources */,
 				3CFE7F832170C0FA005AF4FA /* AccountPermission.swift in Sources */,
+				3C743972217529DD0056F0E6 /* TimestampWriter.swift in Sources */,
 				3CFE7F812170BF37005AF4FA /* AccountKey.swift in Sources */,
 				3CFE7F4B216FECAF005AF4FA /* Connection.swift in Sources */,
 				3CFE7F872170C155005AF4FA /* AccountResourceLimit.swift in Sources */,
@@ -872,12 +903,15 @@
 				3CFE7F752170BD96005AF4FA /* Action.swift in Sources */,
 				3CFE7F48216FECAF005AF4FA /* Logger.swift in Sources */,
 				3CFE7FA02170C664005AF4FA /* CycleSummary.swift in Sources */,
+				3C74397A21752CB70056F0E6 /* AbiTypeWriter.swift in Sources */,
 				3CFE7F672170AF1D005AF4FA /* TransactionAct.swift in Sources */,
 				3C824FAB21652299006FC81C /* ViewController.swift in Sources */,
 				3CFE7F54216FF3FD005AF4FA /* ChainError.swift in Sources */,
+				3C74397821752A470056F0E6 /* AccountNameCollectionWriter.swift in Sources */,
 				3CFE7FE32170D229005AF4FA /* Producer.swift in Sources */,
 				3CFE7F8B2170C1C2005AF4FA /* TotalResources.swift in Sources */,
 				3CFE7F782170BDF1005AF4FA /* Info.swift in Sources */,
+				3C74395B21750DF70056F0E6 /* AbiEncoder.swift in Sources */,
 				3CFE7FA62170C770005AF4FA /* AbiBinToJson.swift in Sources */,
 				3CFE7FAF2170C873005AF4FA /* AbiAction.swift in Sources */,
 				3C824FD92165230C006FC81C /* Base58Decode.swift in Sources */,
@@ -886,8 +920,10 @@
 				3CFE7FD42170D00C005AF4FA /* ExecutedTransactionParent.swift in Sources */,
 				3CFE7FA82170C791005AF4FA /* GetCodeByAccountName.swift in Sources */,
 				3CFE7FC82170CB25005AF4FA /* GetActions.swift in Sources */,
+				3C7439662175291D0056F0E6 /* BlockNumWriter.swift in Sources */,
 				3CFE7FD62170D04B005AF4FA /* ExecutedTransactionReceipt.swift in Sources */,
 				3CFE7F9C2170C5ED005AF4FA /* BlockHeaderState.swift in Sources */,
+				3C74397421752A200056F0E6 /* StringCollectionWriter.swift in Sources */,
 				3CFE7FCA2170CB4F005AF4FA /* GetControlledAccounts.swift in Sources */,
 				3CFE7FA22170C6A2005AF4FA /* CycleSummaryTransaction.swift in Sources */,
 				3CFE7F4D216FECAF005AF4FA /* HttpRequest.swift in Sources */,

@@ -41,7 +41,7 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Codable> {
 
         var request = URLRequest(url: URL(string: httpRequest.url)!)
 
-        request.httpMethod = httpRequest.method.rawValue
+        request.httpMethod = httpRequest.method
 
         httpRequest.headers.forEach { key, value in
             request.setValue(key, forHTTPHeaderField: value)
@@ -53,7 +53,7 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Codable> {
             Logger.log(value: json)
         }
 
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = connection.request(urlRequest: request) { (data, response, error) in
 
             if let res = response as? HTTPURLResponse {
                 Logger.log(value: "status_code: \(res.statusCode)")

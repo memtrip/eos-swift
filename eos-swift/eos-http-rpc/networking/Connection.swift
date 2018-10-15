@@ -1,45 +1,29 @@
 import Foundation
-import Alamofire
 
 protocol Connection {
     func request(
-        _ url: String,
-        httpMethod: HTTPMethod,
-        httpHeaders: HTTPHeaders,
-        jsonData: Data?
-    ) -> Alamofire.DataRequest
+        urlRequest: URLRequest,
+        closure: @escaping (Data?, URLResponse?, Error?) -> Void
+    ) -> URLSessionDataTask
 }
 
-class AlmoConnection: Connection {
+class ConnectionImpl: Connection {
 
     fileprivate init() {
     }
 
     func request(
-        _ url: String,
-        httpMethod: HTTPMethod,
-        httpHeaders: HTTPHeaders,
-        jsonData: Data?
-        ) -> DataRequest {
-
-        var request = URLRequest(url: URL(string: url)!)
-        request.httpMethod = httpMethod.rawValue
-        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-
-        httpHeaders.forEach { key, value in
-            request.setValue(key, forHTTPHeaderField: value)
+        urlRequest: URLRequest,
+        closure: @escaping (Data?, URLResponse?, Error?) -> Void
+    ) -> URLSessionDataTask {
+        return URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            closure(data, response, error)
         }
-
-        if let json = jsonData {
-            request.httpBody = json
-        }
-
-        return Alamofire.request(request)
     }
 }
 
 class ConnectionFactory {
     static func create() -> Connection {
-        return AlmoConnection()
+        return ConnectionImpl()
     }
 }

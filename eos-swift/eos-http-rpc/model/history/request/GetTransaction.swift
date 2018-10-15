@@ -1,5 +1,5 @@
 import Foundation
 
-struct GetTransaction {
+struct GetTransaction : Encodable {
     let id: String
 }

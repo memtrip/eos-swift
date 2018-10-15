@@ -1,5 +1,5 @@
 import Foundation
 
-struct BlockNumOrId {
+struct BlockNumOrId : Encodable {
     let block_num_or_id: String
 }

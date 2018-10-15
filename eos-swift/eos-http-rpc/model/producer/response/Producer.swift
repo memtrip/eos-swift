@@ -7,6 +7,6 @@ struct Producer : Codable {
     let is_active: Int
     let url: String
     let unpaid_blocks: Int
-    let last_claim_time: String
+    let last_claim_time: UInt64
     let location: Int
 }

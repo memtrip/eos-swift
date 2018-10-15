@@ -1,5 +1,5 @@
 import Foundation
 
-struct GetKeyAccounts {
+struct GetKeyAccounts : Encodable {
     let public_key: String
 }

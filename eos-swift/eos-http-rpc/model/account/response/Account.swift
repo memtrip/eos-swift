@@ -8,12 +8,12 @@ struct Account : Codable {
     let last_code_update: Date
     let created: Date
     let core_liquid_balance: String?
-    let ram_quota: UInt64
-    let net_weight: UInt64
-    let cpu_weight: UInt64
+    let ram_quota: Int64
+    let net_weight: Int64
+    let cpu_weight: Int64
     let net_limit: AccountResourceLimit
     let cpu_limit: AccountResourceLimit
-    let ram_usage: UInt64
+    let ram_usage: Int64
     let permissions: Array<AccountPermission>
     let total_resources: TotalResources?
     let self_delegated_bandwidth: SelfDelegatedBandwidth?

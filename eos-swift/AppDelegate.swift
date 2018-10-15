@@ -1,19 +1,9 @@
-//
-//  AppDelegate.swift
-//  eos-swift
-//
-//  Created by Samuel Kirton on 03/10/2018.
-//  Copyright © 2018 memtrip. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    let chainApi = ChainApiImpl()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

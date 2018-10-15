@@ -1,6 +1,6 @@
 import Foundation
 
-struct HttpResponse<D: Codable> {
+struct HttpResponse<D: Decodable> {
     let statusCode: Int
     let success: Bool
     let body: D?

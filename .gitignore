@@ -2,3 +2,6 @@ Carthage/Build
 Carthage
 *.resolved
 eos-swift.xcodeproj/xcuserdata
+Pods
+Podfile.lock
+eos-swift.xcworkspace/xcuserdata

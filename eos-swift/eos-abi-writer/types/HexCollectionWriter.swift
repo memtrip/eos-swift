@@ -12,5 +12,6 @@ class HexCollectionWriterValue : HexCollectionWriter {
     }
 
     func encode(writer: AbiEncodingContainer) throws {
+        // TODO - requires a SHA256 implementation
     }
 }

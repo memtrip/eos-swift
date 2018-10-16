@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C13E217622140030FF9B /* AssetWriterTest.swift */; };
+		3C55C141217625980030FF9B /* regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C140217625980030FF9B /* regex.swift */; };
 		3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743947217495EE0056F0E6 /* HistoryApiTest.swift */; };
 		3C74395B21750DF70056F0E6 /* AbiEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74395A21750DF70056F0E6 /* AbiEncoder.swift */; };
 		3C74395D21750F370056F0E6 /* AbiEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */; };
@@ -137,6 +139,8 @@
 		3C236BE9216FD2E200D3BBED /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		3C236BEA216FD2E200D3BBED /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		3C236BED216FD2E200D3BBED /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		3C55C13E217622140030FF9B /* AssetWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetWriterTest.swift; sourceTree = "<group>"; };
+		3C55C140217625980030FF9B /* regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regex.swift; sourceTree = "<group>"; };
 		3C743947217495EE0056F0E6 /* HistoryApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApiTest.swift; sourceTree = "<group>"; };
 		3C74395A21750DF70056F0E6 /* AbiEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiEncoder.swift; sourceTree = "<group>"; };
 		3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiEncodingContainer.swift; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				3C74395A21750DF70056F0E6 /* AbiEncoder.swift */,
 				3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */,
 				3C74397B217532BB0056F0E6 /* subscript.swift */,
+				3C55C140217625980030FF9B /* regex.swift */,
 			);
 			path = "eos-abi-writer";
 			sourceTree = "<group>";
@@ -314,6 +319,14 @@
 				3C236BE9216FD2E200D3BBED /* RxTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C55C13D217622000030FF9B /* eos-abi-writer */ = {
+			isa = PBXGroup;
+			children = (
+				3C55C13E217622140030FF9B /* AssetWriterTest.swift */,
+			);
+			path = "eos-abi-writer";
 			sourceTree = "<group>";
 		};
 		3C743960217528CA0056F0E6 /* types */ = {
@@ -377,6 +390,7 @@
 		3C824FBC2165229B006FC81C /* eos-swiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				3C55C13D217622000030FF9B /* eos-abi-writer */,
 				3CFE7FEC21710AA8005AF4FA /* eos-http-rpc */,
 				3C824FBD2165229B006FC81C /* eos_swiftTests.swift */,
 				3C824FBF2165229B006FC81C /* Info.plist */,
@@ -937,6 +951,7 @@
 				3CFE7F6B2170B3FC005AF4FA /* Encodable.swift in Sources */,
 				3CFE7F6F2170B80F005AF4FA /* GetCurrencyStats.swift in Sources */,
 				3C824FDB2165231B006FC81C /* Base58Encode.swift in Sources */,
+				3C55C141217625980030FF9B /* regex.swift in Sources */,
 				3CFE7FE72170D28E005AF4FA /* RequiredKeys.swift in Sources */,
 				3CFE7F962170C303005AF4FA /* BlockHeaderProducer.swift in Sources */,
 				3CFE7FB12170C89D005AF4FA /* AbiContract.swift in Sources */,
@@ -955,6 +970,7 @@
 			files = (
 				3CFE7FF221710FB7005AF4FA /* util.swift in Sources */,
 				3C824FBE2165229B006FC81C /* eos_swiftTests.swift in Sources */,
+				3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */,
 				3CFE7FF021710F82005AF4FA /* ChainApiTest.swift in Sources */,
 				3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */,
 			);

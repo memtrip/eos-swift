@@ -12,5 +12,6 @@ class DataWriterValue : DataWriter {
     }
 
     func encode(writer: AbiEncodingContainer) throws {
+        // TODO - required the hex writer
     }
 }

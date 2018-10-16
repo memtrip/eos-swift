@@ -25,10 +25,6 @@ class AbiEncodingContainer : SingleValueEncodingContainer {
         fatalError("Bool encoding is not supported")
     }
 
-    /*
-     putVariableUInt(value.length.toLong())
-     putBytes(value.toByteArray())
-    */
     func encode(_ value: String) throws {
         try encode(UInt64.init(value.count))
         encodeBytes(value: [UInt8](value.utf8))
@@ -109,33 +105,33 @@ class AbiEncodingContainer : SingleValueEncodingContainer {
         case is NameWriter:
             try (value as! NameWriter).encode(writer: self)
         case is AccountNameWriter:
-            let accountNameWriter = value as! AccountNameWriter
+            try (value as! AccountNameWriter).encode(writer: self)
         case is BlockNumWriter:
-            let blockNumWriter = value as! BlockNumWriter
+            try (value as! BlockNumWriter).encode(writer: self)
         case is BlockPrefixWriter:
-            let blockPrefixWriter = value as! BlockPrefixWriter
+            try (value as! BlockPrefixWriter).encode(writer: self)
         case is PublicKeyWriter:
-            let publicKeyWriter = value as! PublicKeyWriter
+            fatalError("public key writer not implemented")
         case is AssetWriter:
-            let assetWriter = value as! AssetWriter
+            try (value as! AssetWriter).encode(writer: self)
         case is ChainIdWriter:
-            let chainIdWriter = value as! ChainIdWriter
+            try (value as! ChainIdWriter).encode(writer: self)
         case is DataWriter:
-            let dataWriter = value as! DataWriter
+           fatalError("data writer not implemented")
         case is TimestampWriter:
-            let timestampWriter = value as! TimestampWriter
+            try (value as! TimestampWriter).encode(writer: self)
         case is StringCollectionWriter:
-            let stringCollectionWriter = value as! StringCollectionWriter
+            try (value as! StringCollectionWriter).encode(writer: self)
         case is HexCollectionWriter:
-            let hexCollectionWriter = value as! HexCollectionWriter
+            fatalError("hex collection writer not implemented")
         case is AccountNameCollectionWriter:
-            let accountNameCollectionWriter = value as! AccountNameCollectionWriter
+            try (value as! AccountNameCollectionWriter).encode(writer: self)
         default:
-            fatalError("Generic encoding is not supported")
+            fatalError("Encoding type is not supported")
         }
     }
 
-    private func encodeBytes(value: Array<UInt8>) {
+    func encodeBytes(value: Array<UInt8>) {
         ensureCapacity(value.count)
         buffer[index...index+value.count] = value[0...value.count]
         index += value.count

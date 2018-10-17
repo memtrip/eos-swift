@@ -36,6 +36,9 @@
 		3C824FD92165230C006FC81C /* Base58.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FD82165230C006FC81C /* Base58.swift */; };
 		3C90A9462176764E00569124 /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C90A9452176764E00569124 /* Sha256.swift */; };
 		3C90A94D2176839400569124 /* Base58Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C90A94C2176839400569124 /* Base58Test.swift */; };
+		3CB38C4D2177292500C1BEB2 /* HexWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB38C4C2177292500C1BEB2 /* HexWriter.swift */; };
+		3CB38C4F2177299D00C1BEB2 /* DefaultHexWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB38C4E2177299D00C1BEB2 /* DefaultHexWriter.swift */; };
+		3CB38C5221772E9F00C1BEB2 /* HexWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB38C5121772E9F00C1BEB2 /* HexWriterTests.swift */; };
 		3CFE7F48216FECAF005AF4FA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F41216FECAF005AF4FA /* Logger.swift */; };
 		3CFE7F49216FECAF005AF4FA /* RxHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F42216FECAF005AF4FA /* RxHttp.swift */; };
 		3CFE7F4B216FECAF005AF4FA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F44216FECAF005AF4FA /* Connection.swift */; };
@@ -172,6 +175,9 @@
 		3C90A9452176764E00569124 /* Sha256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha256.swift; sourceTree = "<group>"; };
 		3C90A947217676EE00569124 /* eos-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eos-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C90A94C2176839400569124 /* Base58Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58Test.swift; sourceTree = "<group>"; };
+		3CB38C4C2177292500C1BEB2 /* HexWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexWriter.swift; sourceTree = "<group>"; };
+		3CB38C4E2177299D00C1BEB2 /* DefaultHexWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHexWriter.swift; sourceTree = "<group>"; };
+		3CB38C5121772E9F00C1BEB2 /* HexWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexWriterTests.swift; sourceTree = "<group>"; };
 		3CFE7F41216FECAF005AF4FA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3CFE7F42216FECAF005AF4FA /* RxHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxHttp.swift; sourceTree = "<group>"; };
 		3CFE7F44216FECAF005AF4FA /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
@@ -426,6 +432,7 @@
 			children = (
 				3C90A9442176762300569124 /* hash */,
 				3C824FD7216522FE006FC81C /* base58 */,
+				3CB38C4B2177291300C1BEB2 /* hex */,
 				3C74397B217532BB0056F0E6 /* type.swift */,
 			);
 			path = "eos-core";
@@ -451,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				3C90A94B2176837E00569124 /* base58 */,
+				3CB38C5021772E8D00C1BEB2 /* hex */,
 			);
 			path = "eos-core";
 			sourceTree = "<group>";
@@ -461,6 +469,23 @@
 				3C90A94C2176839400569124 /* Base58Test.swift */,
 			);
 			path = base58;
+			sourceTree = "<group>";
+		};
+		3CB38C4B2177291300C1BEB2 /* hex */ = {
+			isa = PBXGroup;
+			children = (
+				3CB38C4C2177292500C1BEB2 /* HexWriter.swift */,
+				3CB38C4E2177299D00C1BEB2 /* DefaultHexWriter.swift */,
+			);
+			path = hex;
+			sourceTree = "<group>";
+		};
+		3CB38C5021772E8D00C1BEB2 /* hex */ = {
+			isa = PBXGroup;
+			children = (
+				3CB38C5121772E9F00C1BEB2 /* HexWriterTests.swift */,
+			);
+			path = hex;
 			sourceTree = "<group>";
 		};
 		3CFE7F32216FE329005AF4FA /* networking */ = {
@@ -1038,10 +1063,12 @@
 				3CFE7FCA2170CB4F005AF4FA /* GetControlledAccounts.swift in Sources */,
 				3CFE7FA22170C6A2005AF4FA /* CycleSummaryTransaction.swift in Sources */,
 				3CFE7F4D216FECAF005AF4FA /* HttpRequest.swift in Sources */,
+				3CB38C4D2177292500C1BEB2 /* HexWriter.swift in Sources */,
 				3CFE7F52216FF03B005AF4FA /* ResponseBody.swift in Sources */,
 				3CFE7F712170B9D2005AF4FA /* GetRequiredKeysBody.swift in Sources */,
 				3CFE7F732170BA3C005AF4FA /* Transaction.swift in Sources */,
 				3CFE7FB72170C922005AF4FA /* AbiStruct.swift in Sources */,
+				3CB38C4F2177299D00C1BEB2 /* DefaultHexWriter.swift in Sources */,
 				3CFE7FAA2170C7C2005AF4FA /* GetCurrencyBalance.swift in Sources */,
 				3C824FA921652299006FC81C /* AppDelegate.swift in Sources */,
 				3CFE7FAC2170C7FD005AF4FA /* GetTableRows.swift in Sources */,
@@ -1066,6 +1093,7 @@
 			files = (
 				3CFE7FF221710FB7005AF4FA /* util.swift in Sources */,
 				3C824FBE2165229B006FC81C /* eos_swiftTests.swift in Sources */,
+				3CB38C5221772E9F00C1BEB2 /* HexWriterTests.swift in Sources */,
 				3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */,
 				3C90A94D2176839400569124 /* Base58Test.swift in Sources */,
 				3CFE7FF021710F82005AF4FA /* ChainApiTest.swift in Sources */,

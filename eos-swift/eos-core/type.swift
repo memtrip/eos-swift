@@ -14,6 +14,10 @@ extension Character {
     func toUInt8() -> UInt8 {
         return Array(String(self).utf8)[0]
     }
+
+    func toString() -> String {
+        return String(self)
+    }
 }
 
 extension UInt8 {

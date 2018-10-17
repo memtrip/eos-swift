@@ -2,8 +2,6 @@ import Foundation
 
 class Base58 {
 
-    //[UInt8](str.utf8)
-
     let ALPHABET: [UInt8]
     let ENCODED_ZERO: UInt8
     var INDEXES: [Int]
@@ -134,10 +132,25 @@ class Base58 {
         return remainder.toUInt8()
     }
 
-    enum AddressFormatException: Error {
+    enum AddressFormatException: Error, Equatable {
         case invalidCharacter(Character, Int)
         case invalidDataLength(String, Int)
         case invalidChecksum()
         case versionNotInRange()
+
+        static func ==(lhs: AddressFormatException, rhs: AddressFormatException) -> Bool {
+            switch (lhs, rhs) {
+            case (let .invalidCharacter(codeA1, codeB1), let .invalidCharacter(codeA2, codeB2)):
+                return codeA1 == codeA2 && codeB1 == codeB2
+            case (let .invalidDataLength(code1), let .invalidDataLength(code2)):
+                return code1 == code2
+            case (.invalidChecksum, .invalidChecksum):
+                return true
+            case (.versionNotInRange, .versionNotInRange):
+                return true
+            default:
+                return false
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ class HexWriterTest: XCTestCase {
         let hexWriter: HexWriter = DefaultHexWriter()
 
         let testString = "These are some bytes that should be written to a hexadecimal string representation."
-        let testAsHex = hexWriter.bytesToHex(bytes: testString.toUint8())
+        let testAsHex =  testString.data(using: .utf8)!.hexEncodedString()
         let testAsBytes = hexWriter.hexToBytes(hex: testAsHex)
 
         XCTAssertEqual(testString, String(bytes: testAsBytes, encoding: .utf8))
@@ -19,7 +19,7 @@ class HexWriterTest: XCTestCase {
         let hexWriter: HexWriter = DefaultHexWriter()
 
         let testString = " !#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~"
-        let testAsHex = hexWriter.bytesToHex(bytes: testString.toUint8())
+        let testAsHex = testString.data(using: .utf8)!.hexEncodedString()
         let testAsBytes = hexWriter.hexToBytes(hex: testAsHex)
 
         XCTAssertEqual(testString, String(bytes: testAsBytes, encoding: .utf8))
@@ -29,7 +29,7 @@ class HexWriterTest: XCTestCase {
         let hexWriter: HexWriter = DefaultHexWriter()
 
         let testString = "\\"
-        let testAsHex = hexWriter.bytesToHex(bytes: testString.toUint8())
+        let testAsHex = testString.data(using: .utf8)!.hexEncodedString()
         let testAsBytes = hexWriter.hexToBytes(hex: testAsHex)
 
         XCTAssertEqual(testString, String(bytes: testAsBytes, encoding: .utf8))
@@ -39,7 +39,7 @@ class HexWriterTest: XCTestCase {
         let hexWriter: HexWriter = DefaultHexWriter()
 
         let testString = "\""
-        let testAsHex = hexWriter.bytesToHex(bytes: testString.toUint8())
+        let testAsHex = testString.data(using: .utf8)!.hexEncodedString()
         let testAsBytes = hexWriter.hexToBytes(hex: testAsHex)
 
         XCTAssertEqual(testString, String(bytes: testAsBytes, encoding: .utf8))
@@ -49,7 +49,7 @@ class HexWriterTest: XCTestCase {
         let hexWriter: HexWriter = DefaultHexWriter()
 
         let testString = "\'"
-        let testAsHex = hexWriter.bytesToHex(bytes: testString.toUint8())
+        let testAsHex = testString.data(using: .utf8)!.hexEncodedString()
         let testAsBytes = hexWriter.hexToBytes(hex: testAsHex)
 
         XCTAssertEqual(testString, String(bytes: testAsBytes, encoding: .utf8))

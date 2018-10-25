@@ -1,0 +1,4 @@
+module microecc {
+    header "include/uECC.h"
+    export *
+}

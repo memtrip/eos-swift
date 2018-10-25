@@ -1,5 +1,6 @@
 import Foundation
 
+// reference only
 class Base58 {
 
     let ALPHABET: [UInt8]

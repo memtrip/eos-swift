@@ -1,15 +1,18 @@
 import Foundation
 
-class ECKey {
+class ECPrivateKey {
 
-    let data: Data
+    let privKeyData: Data
+    let pubKeyData: Data
 
     init() {
-        data = ECKey.generatePrivateKeyBytes()
+        privKeyData = ECPrivateKey.generatePrivateKeyBytes()
+        pubKeyData = ECPrivateKey.resolvePubKeyBytesFromPrivKey(privKeyData: privKeyData)
     }
 
-    init(data: Data) {
-        self.data = data
+    init(privKeyData: Data) {
+        self.privKeyData = privKeyData
+        self.pubKeyData = ECPrivateKey.resolvePubKeyBytesFromPrivKey(privKeyData: privKeyData)
     }
 
     private static func generatePrivateKeyBytes() -> Data {
@@ -49,5 +52,14 @@ class ECKey {
         } while (status != 0 || !check([UInt8](key)))
 
         return key
+    }
+
+    private static func resolvePubKeyBytesFromPrivKey(privKeyData: Data) -> Data {
+        var publicBytes: Array<UInt8> = Array(repeating: UInt8(0), count: 64)
+        var compressedPublicBytes: Array<UInt8> = Array(repeating: UInt8(0), count: 33)
+        let curve: uECC_Curve = uECC_secp256k1()
+        uECC_compute_public_key([UInt8](privKeyData), &publicBytes, curve)
+        uECC_compress(&publicBytes, &compressedPublicBytes, curve)
+        return Data(bytes: compressedPublicBytes, count: 33)
     }
 }

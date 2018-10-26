@@ -4,26 +4,30 @@ import BigInt
 
 class EOSPrivateKey {
 
-    private let ecKey: ECKey
+    private let ecKeyPrivateKey: ECPrivateKey
     let base58: String
+    let publicKey: EOSPublicKey
 
     init() throws {
-        ecKey = ECKey()
-        base58 = EOSPrivateKey.base58Encode(key: ecKey)
+        ecKeyPrivateKey = ECPrivateKey()
+        base58 = EOSPrivateKey.base58Encode(key: ecKeyPrivateKey)
+        publicKey = EOSPublicKey(bytes: ecKeyPrivateKey.pubKeyData)
     }
 
-    init(ecKey: ECKey) {
-        self.ecKey = ecKey
+    init(ecKey: ECPrivateKey) {
+        self.ecKeyPrivateKey = ecKey
         base58 = EOSPrivateKey.base58Encode(key: ecKey)
+        publicKey = EOSPublicKey(bytes: ecKey.pubKeyData)
     }
 
     init(base58: String) throws {
-        ecKey = ECKey(data: try EOSPrivateKey.getBase58Bytes(base58: base58))
+        ecKeyPrivateKey = ECPrivateKey(privKeyData: try EOSPrivateKey.getBase58Bytes(base58: base58))
         self.base58 = base58
+        publicKey = EOSPublicKey(bytes: ecKeyPrivateKey.pubKeyData)
     }
 
     func bytes() -> Data {
-        return ecKey.data
+        return ecKeyPrivateKey.privKeyData
     }
 
     func bigInt() -> BigUInt {
@@ -66,8 +70,8 @@ class EOSPrivateKey {
         return true
     }
 
-    private static func base58Encode(key: ECKey) -> String {
-        let privateKeyBytes = key.data
+    private static func base58Encode(key: ECPrivateKey) -> String {
+        let privateKeyBytes = key.privKeyData
         var resultBytes = Data(Array<UInt8>(repeating: 0, count: 1 + 32 + 4))
         resultBytes[0] = UInt8(0x80)
         let startingPosition = (privateKeyBytes.count > 32) ? 1 : 0

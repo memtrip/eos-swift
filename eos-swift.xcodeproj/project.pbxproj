@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		3C11C38121789EBF007F346C /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38021789EBF007F346C /* uECC.c */; };
 		3C11C38B2178B50A007F346C /* EOSPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38A2178B50A007F346C /* EOSPrivateKey.swift */; };
-		3C11C38D2178B549007F346C /* ECKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38C2178B549007F346C /* ECKey.swift */; };
-		3C11C3902178B6E5007F346C /* ECKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38F2178B6E5007F346C /* ECKeyTests.swift */; };
-		3C11C3922178C303007F346C /* EOSPrivateKeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C3912178C303007F346C /* EOSPrivateKeyTest.swift */; };
+		3C11C38D2178B549007F346C /* ECPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38C2178B549007F346C /* ECPrivateKey.swift */; };
+		3C11C3922178C303007F346C /* EOSPrivateKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C3912178C303007F346C /* EOSPrivateKeyTests.swift */; };
 		3C11C3992178D24B007F346C /* Base58.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C3982178D24B007F346C /* Base58.swift */; };
 		3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C13E217622140030FF9B /* AssetWriterTest.swift */; };
 		3C55C141217625980030FF9B /* regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C140217625980030FF9B /* regex.swift */; };
+		3C5E85EE21831D9B00B57D39 /* ECPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E85ED21831D9B00B57D39 /* ECPublicKey.swift */; };
+		3C5E85F7218325DD00B57D39 /* RIPEMD160-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E85F3218325DC00B57D39 /* RIPEMD160-Ext.swift */; };
+		3C5E85F8218325DD00B57D39 /* RIPEMD160-HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E85F4218325DC00B57D39 /* RIPEMD160-HMAC.swift */; };
+		3C5E85F9218325DD00B57D39 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E85F5218325DC00B57D39 /* RIPEMD160.swift */; };
+		3C5E85FA218325DD00B57D39 /* HMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E85F6218325DD00B57D39 /* HMac.swift */; };
+		3C5E85FC2183280700B57D39 /* EOSPublicKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E85FB2183280700B57D39 /* EOSPublicKeyTests.swift */; };
 		3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C743947217495EE0056F0E6 /* HistoryApiTest.swift */; };
 		3C74395B21750DF70056F0E6 /* AbiEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74395A21750DF70056F0E6 /* AbiEncoder.swift */; };
 		3C74395D21750F370056F0E6 /* AbiEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */; };
@@ -32,12 +37,12 @@
 		3C74397821752A470056F0E6 /* AccountNameCollectionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397721752A470056F0E6 /* AccountNameCollectionWriter.swift */; };
 		3C74397A21752CB70056F0E6 /* AbiTypeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397921752CB70056F0E6 /* AbiTypeWriter.swift */; };
 		3C74397C217532BB0056F0E6 /* type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74397B217532BB0056F0E6 /* type.swift */; };
+		3C7B4D7D218235B90072A21F /* EOSPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4D7C218235B90072A21F /* EOSPublicKey.swift */; };
 		3C824FA921652299006FC81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FA821652299006FC81C /* AppDelegate.swift */; };
 		3C824FAB21652299006FC81C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FAA21652299006FC81C /* ViewController.swift */; };
 		3C824FAE21652299006FC81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C824FAC21652299006FC81C /* Main.storyboard */; };
 		3C824FB02165229A006FC81C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C824FAF2165229A006FC81C /* Assets.xcassets */; };
 		3C824FB32165229A006FC81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C824FB12165229A006FC81C /* LaunchScreen.storyboard */; };
-		3C824FBE2165229B006FC81C /* eos_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FBD2165229B006FC81C /* eos_swiftTests.swift */; };
 		3C824FC92165229B006FC81C /* eos_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FC82165229B006FC81C /* eos_swiftUITests.swift */; };
 		3C90A9462176764E00569124 /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C90A9452176764E00569124 /* Sha256.swift */; };
 		3CB38C4D2177292500C1BEB2 /* HexWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB38C4C2177292500C1BEB2 /* HexWriter.swift */; };
@@ -151,12 +156,17 @@
 		3C11C38721789ECA007F346C /* uECC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = uECC.h; path = "eos-swift/microecc_uref/include/uECC.h"; sourceTree = SOURCE_ROOT; };
 		3C11C38821789ED2007F346C /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "eos-swift/microecc_uref/module.modulemap"; sourceTree = SOURCE_ROOT; };
 		3C11C38A2178B50A007F346C /* EOSPrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSPrivateKey.swift; sourceTree = "<group>"; };
-		3C11C38C2178B549007F346C /* ECKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECKey.swift; sourceTree = "<group>"; };
-		3C11C38F2178B6E5007F346C /* ECKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECKeyTests.swift; sourceTree = "<group>"; };
-		3C11C3912178C303007F346C /* EOSPrivateKeyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSPrivateKeyTest.swift; sourceTree = "<group>"; };
-		3C11C3982178D24B007F346C /* Base58.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Base58.swift; path = base58/Base58.swift; sourceTree = "<group>"; };
+		3C11C38C2178B549007F346C /* ECPrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPrivateKey.swift; sourceTree = "<group>"; };
+		3C11C3912178C303007F346C /* EOSPrivateKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSPrivateKeyTests.swift; sourceTree = "<group>"; };
+		3C11C3982178D24B007F346C /* Base58.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base58.swift; sourceTree = "<group>"; };
 		3C55C13E217622140030FF9B /* AssetWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetWriterTest.swift; sourceTree = "<group>"; };
 		3C55C140217625980030FF9B /* regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regex.swift; sourceTree = "<group>"; };
+		3C5E85ED21831D9B00B57D39 /* ECPublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPublicKey.swift; sourceTree = "<group>"; };
+		3C5E85F3218325DC00B57D39 /* RIPEMD160-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RIPEMD160-Ext.swift"; sourceTree = "<group>"; };
+		3C5E85F4218325DC00B57D39 /* RIPEMD160-HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RIPEMD160-HMAC.swift"; sourceTree = "<group>"; };
+		3C5E85F5218325DC00B57D39 /* RIPEMD160.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
+		3C5E85F6218325DD00B57D39 /* HMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMac.swift; sourceTree = "<group>"; };
+		3C5E85FB2183280700B57D39 /* EOSPublicKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSPublicKeyTests.swift; sourceTree = "<group>"; };
 		3C743947217495EE0056F0E6 /* HistoryApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApiTest.swift; sourceTree = "<group>"; };
 		3C74395A21750DF70056F0E6 /* AbiEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiEncoder.swift; sourceTree = "<group>"; };
 		3C74395C21750F370056F0E6 /* AbiEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiEncodingContainer.swift; sourceTree = "<group>"; };
@@ -174,6 +184,7 @@
 		3C74397721752A470056F0E6 /* AccountNameCollectionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNameCollectionWriter.swift; sourceTree = "<group>"; };
 		3C74397921752CB70056F0E6 /* AbiTypeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbiTypeWriter.swift; sourceTree = "<group>"; };
 		3C74397B217532BB0056F0E6 /* type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = type.swift; sourceTree = "<group>"; };
+		3C7B4D7C218235B90072A21F /* EOSPublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSPublicKey.swift; sourceTree = "<group>"; };
 		3C824FA521652299006FC81C /* eos-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eos-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C824FA821652299006FC81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C824FAA21652299006FC81C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,7 +193,6 @@
 		3C824FB22165229A006FC81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C824FB42165229B006FC81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C824FB92165229B006FC81C /* eos-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eos-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C824FBD2165229B006FC81C /* eos_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eos_swiftTests.swift; sourceTree = "<group>"; };
 		3C824FBF2165229B006FC81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C824FC42165229B006FC81C /* eos-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eos-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C824FC82165229B006FC81C /* eos_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eos_swiftUITests.swift; sourceTree = "<group>"; };
@@ -347,7 +357,9 @@
 			isa = PBXGroup;
 			children = (
 				3C11C38A2178B50A007F346C /* EOSPrivateKey.swift */,
-				3C11C38C2178B549007F346C /* ECKey.swift */,
+				3C7B4D7C218235B90072A21F /* EOSPublicKey.swift */,
+				3C11C38C2178B549007F346C /* ECPrivateKey.swift */,
+				3C5E85ED21831D9B00B57D39 /* ECPublicKey.swift */,
 			);
 			path = key;
 			sourceTree = "<group>";
@@ -355,8 +367,8 @@
 		3C11C38E2178B6DB007F346C /* key */ = {
 			isa = PBXGroup;
 			children = (
-				3C11C38F2178B6E5007F346C /* ECKeyTests.swift */,
-				3C11C3912178C303007F346C /* EOSPrivateKeyTest.swift */,
+				3C11C3912178C303007F346C /* EOSPrivateKeyTests.swift */,
+				3C5E85FB2183280700B57D39 /* EOSPublicKeyTests.swift */,
 			);
 			path = key;
 			sourceTree = "<group>";
@@ -406,6 +418,14 @@
 				3C55C13E217622140030FF9B /* AssetWriterTest.swift */,
 			);
 			path = "eos-abi-writer";
+			sourceTree = "<group>";
+		};
+		3C5E85F2218325A600B57D39 /* encode */ = {
+			isa = PBXGroup;
+			children = (
+				3C11C3982178D24B007F346C /* Base58.swift */,
+			);
+			path = encode;
 			sourceTree = "<group>";
 		};
 		3C743960217528CA0056F0E6 /* types */ = {
@@ -475,7 +495,6 @@
 				3C90A94A2176837300569124 /* eos-core */,
 				3C55C13D217622000030FF9B /* eos-abi-writer */,
 				3CFE7FEC21710AA8005AF4FA /* eos-http-rpc */,
-				3C824FBD2165229B006FC81C /* eos_swiftTests.swift */,
 				3C824FBF2165229B006FC81C /* Info.plist */,
 			);
 			path = "eos-swiftTests";
@@ -493,8 +512,8 @@
 		3C824FD6216522F4006FC81C /* eos-core */ = {
 			isa = PBXGroup;
 			children = (
-				3C11C3982178D24B007F346C /* Base58.swift */,
 				3C90A9442176762300569124 /* hash */,
+				3C5E85F2218325A600B57D39 /* encode */,
 				3CB38C4B2177291300C1BEB2 /* hex */,
 				3C11C3892178B4FA007F346C /* key */,
 				3C74397B217532BB0056F0E6 /* type.swift */,
@@ -505,6 +524,10 @@
 		3C90A9442176762300569124 /* hash */ = {
 			isa = PBXGroup;
 			children = (
+				3C5E85F6218325DD00B57D39 /* HMac.swift */,
+				3C5E85F3218325DC00B57D39 /* RIPEMD160-Ext.swift */,
+				3C5E85F4218325DC00B57D39 /* RIPEMD160-HMAC.swift */,
+				3C5E85F5218325DC00B57D39 /* RIPEMD160.swift */,
 				3C90A9452176764E00569124 /* Sha256.swift */,
 			);
 			path = hash;
@@ -1085,7 +1108,7 @@
 				3CFE7FE12170D201005AF4FA /* GetProducers.swift in Sources */,
 				3CFE7FC32170CA25005AF4FA /* RawCodeForAccount.swift in Sources */,
 				3CFE7F942170C2C5005AF4FA /* Block.swift in Sources */,
-				3C11C38D2178B549007F346C /* ECKey.swift in Sources */,
+				3C11C38D2178B549007F346C /* ECPrivateKey.swift in Sources */,
 				3CFE7F9A2170C351005AF4FA /* BlockHeaderSchedule.swift in Sources */,
 				3CFE7FBD2170C999005AF4FA /* BinaryHex.swift in Sources */,
 				3CFE7FD82170D071005AF4FA /* HistoricAccountAction.swift in Sources */,
@@ -1095,6 +1118,7 @@
 				3CFE7FE52170D24D005AF4FA /* ProducerList.swift in Sources */,
 				3CFE7FD22170CFB6005AF4FA /* ExecutedTransaction.swift in Sources */,
 				3CFE7FE92170D2F0005AF4FA /* RequestBody.swift in Sources */,
+				3C5E85EE21831D9B00B57D39 /* ECPublicKey.swift in Sources */,
 				3CFE7FBB2170C97C005AF4FA /* AbiType.swift in Sources */,
 				3CFE7F49216FECAF005AF4FA /* RxHttp.swift in Sources */,
 				3CFE7F752170BD96005AF4FA /* Action.swift in Sources */,
@@ -1106,6 +1130,7 @@
 				3CFE7F54216FF3FD005AF4FA /* ChainError.swift in Sources */,
 				3C74397821752A470056F0E6 /* AccountNameCollectionWriter.swift in Sources */,
 				3C11C38121789EBF007F346C /* uECC.c in Sources */,
+				3C7B4D7D218235B90072A21F /* EOSPublicKey.swift in Sources */,
 				3CFE7FE32170D229005AF4FA /* Producer.swift in Sources */,
 				3CFE7F8B2170C1C2005AF4FA /* TotalResources.swift in Sources */,
 				3CFE7F782170BDF1005AF4FA /* Info.swift in Sources */,
@@ -1113,6 +1138,7 @@
 				3CFE7FA62170C770005AF4FA /* AbiBinToJson.swift in Sources */,
 				3CFE7FAF2170C873005AF4FA /* AbiAction.swift in Sources */,
 				3CFE7FBF2170C9C3005AF4FA /* CodeForAccount.swift in Sources */,
+				3C5E85FA218325DD00B57D39 /* HMac.swift in Sources */,
 				3CFE7FB92170C948005AF4FA /* AbiTable.swift in Sources */,
 				3CFE7FD42170D00C005AF4FA /* ExecutedTransactionParent.swift in Sources */,
 				3CFE7FA82170C791005AF4FA /* GetCodeByAccountName.swift in Sources */,
@@ -1125,6 +1151,7 @@
 				3CFE7FA22170C6A2005AF4FA /* CycleSummaryTransaction.swift in Sources */,
 				3CFE7F4D216FECAF005AF4FA /* HttpRequest.swift in Sources */,
 				3CB38C4D2177292500C1BEB2 /* HexWriter.swift in Sources */,
+				3C5E85F8218325DD00B57D39 /* RIPEMD160-HMAC.swift in Sources */,
 				3CFE7F52216FF03B005AF4FA /* ResponseBody.swift in Sources */,
 				3CFE7F712170B9D2005AF4FA /* GetRequiredKeysBody.swift in Sources */,
 				3CFE7F732170BA3C005AF4FA /* Transaction.swift in Sources */,
@@ -1133,6 +1160,7 @@
 				3C824FA921652299006FC81C /* AppDelegate.swift in Sources */,
 				3CFE7FAC2170C7FD005AF4FA /* GetTableRows.swift in Sources */,
 				3CFE7F6B2170B3FC005AF4FA /* Encodable.swift in Sources */,
+				3C5E85F9218325DD00B57D39 /* RIPEMD160.swift in Sources */,
 				3CFE7F6F2170B80F005AF4FA /* GetCurrencyStats.swift in Sources */,
 				3C55C141217625980030FF9B /* regex.swift in Sources */,
 				3CFE7FE72170D28E005AF4FA /* RequiredKeys.swift in Sources */,
@@ -1140,6 +1168,7 @@
 				3CFE7FB12170C89D005AF4FA /* AbiContract.swift in Sources */,
 				3CFE7F652170AEDC005AF4FA /* TransactionParentReceipt.swift in Sources */,
 				3CFE7F9E2170C632005AF4FA /* BlockHeaderStateHeader.swift in Sources */,
+				3C5E85F7218325DD00B57D39 /* RIPEMD160-Ext.swift in Sources */,
 				3CFE7FEB2170DF3F005AF4FA /* HistoryApi.swift in Sources */,
 				3CFE7FC12170C9E3005AF4FA /* ContractTableRows.swift in Sources */,
 				3CFE7F5921709D02005AF4FA /* PushTransaction.swift in Sources */,
@@ -1152,14 +1181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C11C3922178C303007F346C /* EOSPrivateKeyTest.swift in Sources */,
+				3C11C3922178C303007F346C /* EOSPrivateKeyTests.swift in Sources */,
 				3CFE7FF221710FB7005AF4FA /* util.swift in Sources */,
-				3C824FBE2165229B006FC81C /* eos_swiftTests.swift in Sources */,
 				3CB38C5221772E9F00C1BEB2 /* HexWriterTests.swift in Sources */,
+				3C5E85FC2183280700B57D39 /* EOSPublicKeyTests.swift in Sources */,
 				3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */,
 				3CFE7FF021710F82005AF4FA /* ChainApiTest.swift in Sources */,
 				3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */,
-				3C11C3902178B6E5007F346C /* ECKeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

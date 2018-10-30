@@ -5,13 +5,24 @@ protocol PublicKeyWriter : AbiTypeWriter {
 
 class PublicKeyWriterValue : DataWriter, Encodable {
 
-    private let publicKey: String
+    private let publicKeyBytes: [UInt8]
+    private let isCurveParamK1: Bool
 
-    init(publicKey: String) {
-        self.publicKey = publicKey
+    init(publicKey: EOSPublicKey, isCurveParamK1: Bool) {
+        self.publicKeyBytes = [UInt8](publicKey.bytes())
+        self.isCurveParamK1 = isCurveParamK1
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        // TODO - requires EOS public key
+        try writer.encode(PublicKeyWriterValue.type(isCurveParamK1: isCurveParamK1))
+        try writer.encodeBytes(value: publicKeyBytes)
+    }
+
+    private static func type(isCurveParamK1: Bool) -> UInt64 {
+        if (isCurveParamK1) {
+            return UInt64.init(0)
+        } else {
+            return UInt64.init(1)
+        }
     }
 }

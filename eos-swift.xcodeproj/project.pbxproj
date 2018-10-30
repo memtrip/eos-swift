@@ -64,6 +64,21 @@
 		3CDCDFAB2188D45C005D0B25 /* BuyRamBytesBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFAA2188D45C005D0B25 /* BuyRamBytesBody.swift */; };
 		3CDCDFAD2188D478005D0B25 /* BuyRamArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFAC2188D478005D0B25 /* BuyRamArgs.swift */; };
 		3CDCDFAF2188D4B3005D0B25 /* BuyRamBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFAE2188D4B3005D0B25 /* BuyRamBody.swift */; };
+		3CDCDFB12188D5F2005D0B25 /* BuyRamArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFB02188D5F2005D0B25 /* BuyRamArgsTest.swift */; };
+		3CDCDFB42188D675005D0B25 /* DelegateBandwidthArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFB32188D675005D0B25 /* DelegateBandwidthArgs.swift */; };
+		3CDCDFB62188D67E005D0B25 /* DelegateBandwidthBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFB52188D67E005D0B25 /* DelegateBandwidthBody.swift */; };
+		3CDCDFB82188D78B005D0B25 /* DelegateBandwidthArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFB72188D78B005D0B25 /* DelegateBandwidthArgsTest.swift */; };
+		3CDCDFBB2188D88E005D0B25 /* AccountKeyAbi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFBA2188D88E005D0B25 /* AccountKeyAbi.swift */; };
+		3CDCDFBD2188D8D1005D0B25 /* AccountRequiredAuthAbi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFBC2188D8D1005D0B25 /* AccountRequiredAuthAbi.swift */; };
+		3CDCDFBF2188D91E005D0B25 /* NewAccountArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFBE2188D91E005D0B25 /* NewAccountArgs.swift */; };
+		3CDCDFC12188D94F005D0B25 /* NewAccountBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFC02188D94F005D0B25 /* NewAccountBody.swift */; };
+		3CDCDFC42188D97C005D0B25 /* SellRamArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFC32188D97C005D0B25 /* SellRamArgs.swift */; };
+		3CDCDFC62188D984005D0B25 /* SellRamBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFC52188D984005D0B25 /* SellRamBody.swift */; };
+		3CDCDFC92188D9D5005D0B25 /* UnDelegateBandwidthArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFC82188D9D5005D0B25 /* UnDelegateBandwidthArgs.swift */; };
+		3CDCDFCB2188D9DF005D0B25 /* UnDelegateBandwidthBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFCA2188D9DF005D0B25 /* UnDelegateBandwidthBody.swift */; };
+		3CDCDFCD2188DE03005D0B25 /* NewAccountArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFCC2188DE03005D0B25 /* NewAccountArgsTest.swift */; };
+		3CDCDFCF2188DF82005D0B25 /* SellRamArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFCE2188DF82005D0B25 /* SellRamArgsTest.swift */; };
+		3CDCDFD12188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFD02188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift */; };
 		3CFE7F48216FECAF005AF4FA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F41216FECAF005AF4FA /* Logger.swift */; };
 		3CFE7F49216FECAF005AF4FA /* RxHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F42216FECAF005AF4FA /* RxHttp.swift */; };
 		3CFE7F4B216FECAF005AF4FA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F44216FECAF005AF4FA /* Connection.swift */; };
@@ -235,6 +250,21 @@
 		3CDCDFAA2188D45C005D0B25 /* BuyRamBytesBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamBytesBody.swift; sourceTree = "<group>"; };
 		3CDCDFAC2188D478005D0B25 /* BuyRamArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamArgs.swift; sourceTree = "<group>"; };
 		3CDCDFAE2188D4B3005D0B25 /* BuyRamBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamBody.swift; sourceTree = "<group>"; };
+		3CDCDFB02188D5F2005D0B25 /* BuyRamArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamArgsTest.swift; sourceTree = "<group>"; };
+		3CDCDFB32188D675005D0B25 /* DelegateBandwidthArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthArgs.swift; sourceTree = "<group>"; };
+		3CDCDFB52188D67E005D0B25 /* DelegateBandwidthBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthBody.swift; sourceTree = "<group>"; };
+		3CDCDFB72188D78B005D0B25 /* DelegateBandwidthArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthArgsTest.swift; sourceTree = "<group>"; };
+		3CDCDFBA2188D88E005D0B25 /* AccountKeyAbi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKeyAbi.swift; sourceTree = "<group>"; };
+		3CDCDFBC2188D8D1005D0B25 /* AccountRequiredAuthAbi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequiredAuthAbi.swift; sourceTree = "<group>"; };
+		3CDCDFBE2188D91E005D0B25 /* NewAccountArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountArgs.swift; sourceTree = "<group>"; };
+		3CDCDFC02188D94F005D0B25 /* NewAccountBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountBody.swift; sourceTree = "<group>"; };
+		3CDCDFC32188D97C005D0B25 /* SellRamArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamArgs.swift; sourceTree = "<group>"; };
+		3CDCDFC52188D984005D0B25 /* SellRamBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamBody.swift; sourceTree = "<group>"; };
+		3CDCDFC82188D9D5005D0B25 /* UnDelegateBandwidthArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnDelegateBandwidthArgs.swift; sourceTree = "<group>"; };
+		3CDCDFCA2188D9DF005D0B25 /* UnDelegateBandwidthBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnDelegateBandwidthBody.swift; sourceTree = "<group>"; };
+		3CDCDFCC2188DE03005D0B25 /* NewAccountArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountArgsTest.swift; sourceTree = "<group>"; };
+		3CDCDFCE2188DF82005D0B25 /* SellRamArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamArgsTest.swift; sourceTree = "<group>"; };
+		3CDCDFD02188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnDelegateBandwidthArgsTest.swift; sourceTree = "<group>"; };
 		3CFE7F41216FECAF005AF4FA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3CFE7F42216FECAF005AF4FA /* RxHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxHttp.swift; sourceTree = "<group>"; };
 		3CFE7F44216FECAF005AF4FA /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
@@ -646,8 +676,13 @@
 		3CBBCD4E2187115300D7AEB7 /* transaction */ = {
 			isa = PBXGroup;
 			children = (
+				3CDCDFB02188D5F2005D0B25 /* BuyRamArgsTest.swift */,
 				3CDCDFA32188D39D005D0B25 /* BuyRamBytesArgsTest.swift */,
+				3CDCDFB72188D78B005D0B25 /* DelegateBandwidthArgsTest.swift */,
+				3CDCDFCC2188DE03005D0B25 /* NewAccountArgsTest.swift */,
+				3CDCDFCE2188DF82005D0B25 /* SellRamArgsTest.swift */,
 				3CBBCD512187116E00D7AEB7 /* TransferArgsTests.swift */,
+				3CDCDFD02188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift */,
 				3CDCDF9B2188CEB6005D0B25 /* VoteArgsTests.swift */,
 			);
 			path = transaction;
@@ -682,6 +717,10 @@
 			isa = PBXGroup;
 			children = (
 				3CDCDFA72188D410005D0B25 /* buyram */,
+				3CDCDFB22188D659005D0B25 /* delegatebw */,
+				3CDCDFC72188D9BC005D0B25 /* undelegatebw */,
+				3CDCDFB92188D853005D0B25 /* newaccount */,
+				3CDCDFC22188D96E005D0B25 /* sellram */,
 			);
 			path = actions;
 			sourceTree = "<group>";
@@ -695,6 +734,44 @@
 				3CDCDFAE2188D4B3005D0B25 /* BuyRamBody.swift */,
 			);
 			path = buyram;
+			sourceTree = "<group>";
+		};
+		3CDCDFB22188D659005D0B25 /* delegatebw */ = {
+			isa = PBXGroup;
+			children = (
+				3CDCDFB32188D675005D0B25 /* DelegateBandwidthArgs.swift */,
+				3CDCDFB52188D67E005D0B25 /* DelegateBandwidthBody.swift */,
+			);
+			path = delegatebw;
+			sourceTree = "<group>";
+		};
+		3CDCDFB92188D853005D0B25 /* newaccount */ = {
+			isa = PBXGroup;
+			children = (
+				3CDCDFBA2188D88E005D0B25 /* AccountKeyAbi.swift */,
+				3CDCDFBC2188D8D1005D0B25 /* AccountRequiredAuthAbi.swift */,
+				3CDCDFBE2188D91E005D0B25 /* NewAccountArgs.swift */,
+				3CDCDFC02188D94F005D0B25 /* NewAccountBody.swift */,
+			);
+			path = newaccount;
+			sourceTree = "<group>";
+		};
+		3CDCDFC22188D96E005D0B25 /* sellram */ = {
+			isa = PBXGroup;
+			children = (
+				3CDCDFC32188D97C005D0B25 /* SellRamArgs.swift */,
+				3CDCDFC52188D984005D0B25 /* SellRamBody.swift */,
+			);
+			path = sellram;
+			sourceTree = "<group>";
+		};
+		3CDCDFC72188D9BC005D0B25 /* undelegatebw */ = {
+			isa = PBXGroup;
+			children = (
+				3CDCDFC82188D9D5005D0B25 /* UnDelegateBandwidthArgs.swift */,
+				3CDCDFCA2188D9DF005D0B25 /* UnDelegateBandwidthBody.swift */,
+			);
+			path = undelegatebw;
 			sourceTree = "<group>";
 		};
 		3CFE7F32216FE329005AF4FA /* networking */ = {
@@ -1209,6 +1286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C743968217529270056F0E6 /* BlockPrefixWriter.swift in Sources */,
+				3CDCDFBD2188D8D1005D0B25 /* AccountRequiredAuthAbi.swift in Sources */,
 				3CFE7FDC2170D0C0005AF4FA /* HistoricTransaction.swift in Sources */,
 				3CFE7F692170AF74005AF4FA /* TransactionAuthorization.swift in Sources */,
 				3CBBCD4421870A3300D7AEB7 /* TransactionAbi.swift in Sources */,
@@ -1248,6 +1326,7 @@
 				3C74396A217529400056F0E6 /* PublicKeyWriter.swift in Sources */,
 				3CFE7F832170C0FA005AF4FA /* AccountPermission.swift in Sources */,
 				3C743972217529DD0056F0E6 /* TimestampWriter.swift in Sources */,
+				3CDCDFC62188D984005D0B25 /* SellRamBody.swift in Sources */,
 				3CFE7F812170BF37005AF4FA /* AccountKey.swift in Sources */,
 				3CBBCD3E2187093500D7AEB7 /* ActionAbi.swift in Sources */,
 				3CFE7F4B216FECAF005AF4FA /* Connection.swift in Sources */,
@@ -1282,6 +1361,7 @@
 				3C7B4D7D218235B90072A21F /* EOSPublicKey.swift in Sources */,
 				3CFE7FE32170D229005AF4FA /* Producer.swift in Sources */,
 				3CFE7F8B2170C1C2005AF4FA /* TotalResources.swift in Sources */,
+				3CDCDFCB2188D9DF005D0B25 /* UnDelegateBandwidthBody.swift in Sources */,
 				3CFE7F782170BDF1005AF4FA /* Info.swift in Sources */,
 				3C74395B21750DF70056F0E6 /* AbiEncoder.swift in Sources */,
 				3CFE7FA62170C770005AF4FA /* AbiBinToJson.swift in Sources */,
@@ -1296,6 +1376,7 @@
 				3C7439662175291D0056F0E6 /* BlockNumWriter.swift in Sources */,
 				3CFE7FD62170D04B005AF4FA /* ExecutedTransactionReceipt.swift in Sources */,
 				3CFE7F9C2170C5ED005AF4FA /* BlockHeaderState.swift in Sources */,
+				3CDCDFC42188D97C005D0B25 /* SellRamArgs.swift in Sources */,
 				3C74397421752A200056F0E6 /* StringCollectionWriter.swift in Sources */,
 				3CFE7FCA2170CB4F005AF4FA /* GetControlledAccounts.swift in Sources */,
 				3CFE7FA22170C6A2005AF4FA /* CycleSummaryTransaction.swift in Sources */,
@@ -1315,16 +1396,22 @@
 				3C5E85F9218325DD00B57D39 /* RIPEMD160.swift in Sources */,
 				3CFE7F6F2170B80F005AF4FA /* GetCurrencyStats.swift in Sources */,
 				3C55C141217625980030FF9B /* regex.swift in Sources */,
+				3CDCDFB42188D675005D0B25 /* DelegateBandwidthArgs.swift in Sources */,
 				3CFE7FE72170D28E005AF4FA /* RequiredKeys.swift in Sources */,
 				3CFE7F962170C303005AF4FA /* BlockHeaderProducer.swift in Sources */,
+				3CDCDFC12188D94F005D0B25 /* NewAccountBody.swift in Sources */,
+				3CDCDFBF2188D91E005D0B25 /* NewAccountArgs.swift in Sources */,
 				3CFE7FB12170C89D005AF4FA /* AbiContract.swift in Sources */,
 				3CFE7F652170AEDC005AF4FA /* TransactionParentReceipt.swift in Sources */,
 				3CFE7F9E2170C632005AF4FA /* BlockHeaderStateHeader.swift in Sources */,
 				3CDCDFAF2188D4B3005D0B25 /* BuyRamBody.swift in Sources */,
 				3C5E85F7218325DD00B57D39 /* RIPEMD160-Ext.swift in Sources */,
+				3CDCDFC92188D9D5005D0B25 /* UnDelegateBandwidthArgs.swift in Sources */,
 				3CFE7FEB2170DF3F005AF4FA /* HistoryApi.swift in Sources */,
+				3CDCDFBB2188D88E005D0B25 /* AccountKeyAbi.swift in Sources */,
 				3CFE7FC12170C9E3005AF4FA /* ContractTableRows.swift in Sources */,
 				3CFE7F5921709D02005AF4FA /* PushTransaction.swift in Sources */,
+				3CDCDFB62188D67E005D0B25 /* DelegateBandwidthBody.swift in Sources */,
 				3CFE7F4E216FECAF005AF4FA /* HttpErrorResponse.swift in Sources */,
 				3C11C38B2178B50A007F346C /* EOSPrivateKey.swift in Sources */,
 			);
@@ -1334,14 +1421,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDCDFB12188D5F2005D0B25 /* BuyRamArgsTest.swift in Sources */,
 				3CDCDFA42188D39D005D0B25 /* BuyRamBytesArgsTest.swift in Sources */,
 				3C11C3922178C303007F346C /* EOSPrivateKeyTests.swift in Sources */,
 				3CFE7FF221710FB7005AF4FA /* util.swift in Sources */,
 				3CB38C5221772E9F00C1BEB2 /* HexWriterTests.swift in Sources */,
 				3C5E85FC2183280700B57D39 /* EOSPublicKeyTests.swift in Sources */,
 				3CDCDF9C2188CEB6005D0B25 /* VoteArgsTests.swift in Sources */,
+				3CDCDFCD2188DE03005D0B25 /* NewAccountArgsTest.swift in Sources */,
+				3CDCDFB82188D78B005D0B25 /* DelegateBandwidthArgsTest.swift in Sources */,
 				3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */,
 				3CFE7FF021710F82005AF4FA /* ChainApiTest.swift in Sources */,
+				3CDCDFCF2188DF82005D0B25 /* SellRamArgsTest.swift in Sources */,
+				3CDCDFD12188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift in Sources */,
 				3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */,
 				3CBBCD522187116E00D7AEB7 /* TransferArgsTests.swift in Sources */,
 			);

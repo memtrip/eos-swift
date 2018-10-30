@@ -12,7 +12,7 @@ class ChainIdWriterValue : ChainIdWriter, Encodable {
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        writer.encodeBytes(value: getSha256FromHexStr(value: chainId))
+       try writer.encodeBytes(value: getSha256FromHexStr(value: chainId))
     }
 
     private func getSha256FromHexStr(value: String) -> Array<UInt8> {

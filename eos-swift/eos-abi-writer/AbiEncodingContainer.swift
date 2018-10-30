@@ -33,7 +33,7 @@ class AbiEncodingContainer : UnkeyedEncodingContainer {
 
     func encode(_ value: String) throws {
         try encode(UInt64.init(value.count))
-        encodeBytes(value: [UInt8](value.utf8))
+        try encodeBytes(value: [UInt8](value.utf8))
     }
 
     func encode(_ value: Double) throws {
@@ -172,7 +172,7 @@ class AbiEncodingContainer : UnkeyedEncodingContainer {
         fatalError("Generic encoding not supported")
     }
 
-    func encodeBytes(value: Array<UInt8>) {
+    func encodeBytes(value: Array<UInt8>) throws {
         ensureCapacity(value.count)
         buffer[index..<index+value.count] = value[0..<value.count]
         index += value.count

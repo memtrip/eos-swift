@@ -85,6 +85,12 @@ extension AbiEncoder {
                 try abiEncodingContainer.encode(child.value as! HexCollectionWriter)
             case is AccountNameCollectionWriter:
                 try abiEncodingContainer.encode(child.value as! AccountNameCollectionWriter)
+            case is [Encodable]:
+                let encodableValues = child.value as! [Encodable]
+                try self.abiEncodingContainer.encode(UInt64.init(encodableValues.count))
+                for encodable in encodableValues {
+                    try self.encode(encodable: encodable)
+                }
             case is Encodable:
                 try self.encode(encodable: child.value as! Encodable)
             default:

@@ -1,9 +1,9 @@
 import Foundation
 
-protocol BlockPrefixWriter : AbiTypeWriter, Encodable {
+protocol BlockPrefixWriter : AbiTypeWriter {
 }
 
-class BlockPrefixWriterValue : BlockPrefixWriter {
+class BlockPrefixWriterValue : BlockPrefixWriter, Encodable {
 
     private let value: Int64
 

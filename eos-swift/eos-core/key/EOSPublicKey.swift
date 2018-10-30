@@ -35,10 +35,7 @@ class EOSPublicKey {
             switch (lhs, rhs) {
             case (.unsupportFormat, .unsupportFormat):
                 return true
-            default:
-                return false
             }
         }
     }
-
 }

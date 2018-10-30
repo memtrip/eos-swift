@@ -1,9 +1,9 @@
 import Foundation
 
-protocol HexCollectionWriter : AbiTypeWriter, Encodable {
+protocol HexCollectionWriter : AbiTypeWriter {
 }
 
-class HexCollectionWriterValue : HexCollectionWriter {
+class HexCollectionWriterValue : HexCollectionWriter, Encodable {
 
     private let value: Array<String>
 

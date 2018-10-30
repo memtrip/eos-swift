@@ -1,9 +1,9 @@
 import Foundation
 
-protocol NameWriter : AbiTypeWriter, Encodable {
+protocol NameWriter : AbiTypeWriter {
 }
 
-class NameWriterValue : NameWriter {
+class NameWriterValue : NameWriter, Encodable {
 
     private let NAME_MAX_LENGTH = 12
 
@@ -14,18 +14,18 @@ class NameWriterValue : NameWriter {
     }
     
     func encode(writer: AbiEncodingContainer) throws {
-        try writer.encode(nameAsUInt64(name: name))
+        try writer.encode(nameAsInt64(name: name))
     }
 
-    private func nameAsUInt64(name: String) -> UInt64 {
+    private func nameAsInt64(name: String) -> Int64 {
         let len = name.count
-        var value: UInt64 = 0
+        var value: Int64 = 0
 
-        for i in 0...NAME_MAX_LENGTH {
-            var c: UInt64 = 0
+        for i in 0..<NAME_MAX_LENGTH {
+            var c: Int64 = 0
 
             if (i < len && i <= NAME_MAX_LENGTH) {
-                c = UInt64.init(charToSymbol(c: UTF8Char.init(String(name[i]))!))
+                c = Int64.init(charToSymbol(c: name[i].toUInt8()))
             }
 
             if (i < NAME_MAX_LENGTH) {
@@ -43,12 +43,12 @@ class NameWriterValue : NameWriter {
 
     private func charToSymbol(c: UTF8Char) -> UInt8 {
 
-        if (c >= UTF8Char.init("a")! && c <= UTF8Char.init("z")!) {
-            return UInt8.init((c - UTF8Char.init("a")!) + 6)
+        if (c >= "a"[0].toUInt8() && c <= "z"[0].toUInt8()) {
+            return UInt8.init((c - "a"[0].toUInt8()) + 6)
         }
 
-        if (c >= UTF8Char.init("1")! && c <= UTF8Char.init("5")!) {
-            return UInt8.init((c - UTF8Char.init("1")!) + 1)
+        if (c >= "1"[0].toUInt8() && c <= "5"[0].toUInt8()) {
+            return UInt8.init((c - "1"[0].toUInt8()) + 1)
         }
 
         return UInt8.init(0)

@@ -1,9 +1,9 @@
 import Foundation
 
-protocol BlockNumWriter : AbiTypeWriter, Encodable {
+protocol BlockNumWriter : AbiTypeWriter {
 }
 
-class BlockNumWriterValue : BlockNumWriter {
+class BlockNumWriterValue : BlockNumWriter, Encodable {
 
     private let value: Int16
 

@@ -1,9 +1,9 @@
 import Foundation
 
-protocol DataWriter : AbiTypeWriter, Encodable {
+protocol DataWriter : AbiTypeWriter {
 }
 
-class DataWriterValue : DataWriter {
+class DataWriterValue : DataWriter, Encodable {
 
     private let chainId: String
 

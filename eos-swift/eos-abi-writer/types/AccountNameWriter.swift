@@ -1,9 +1,9 @@
 import Foundation
 
-protocol AccountNameWriter : AbiTypeWriter, Encodable {
+protocol AccountNameWriter : AbiTypeWriter {
 }
 
-class AccountNameWriterValue : AccountNameWriter {
+class AccountNameWriterValue : AccountNameWriter, Encodable {
 
     private let MAX_LENGTH = 12
     private let ILLEGAL_CHARACTER = "."

@@ -14,6 +14,10 @@ extension String {
     func toUint8() -> [UInt8] {
         return [UInt8](self.utf8)
     }
+
+    func trim() -> String {
+        return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
 }
 
 extension Character {
@@ -71,4 +75,10 @@ extension Data {
     func subdata(in range: ClosedRange<Index>) -> Data {
         return subdata(in: range.lowerBound ..< range.upperBound + 1)
     }
+}
+
+infix operator <<< : BitwiseShiftPrecedence
+
+func <<< (lhs: Int64, rhs: Int64) -> Int64 {
+    return Int64(bitPattern: UInt64(bitPattern: lhs) << UInt64(rhs))
 }

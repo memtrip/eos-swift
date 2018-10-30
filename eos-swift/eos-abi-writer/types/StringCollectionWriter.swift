@@ -1,9 +1,9 @@
 import Foundation
 
-protocol StringCollectionWriter : AbiTypeWriter, Encodable {
+protocol StringCollectionWriter : AbiTypeWriter {
 }
 
-class StringCollectionWriterValue : StringCollectionWriter {
+class StringCollectionWriterValue : StringCollectionWriter, Encodable {
 
     private let value: Array<String>
 

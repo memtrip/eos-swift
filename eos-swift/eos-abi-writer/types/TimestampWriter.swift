@@ -1,9 +1,9 @@
 import Foundation
 
-protocol TimestampWriter : AbiTypeWriter, Encodable {
+protocol TimestampWriter : AbiTypeWriter {
 }
 
-class TimestampWriterValue : TimestampWriter {
+class TimestampWriterValue : TimestampWriter, Encodable {
 
     private let timestamp: UInt64
 

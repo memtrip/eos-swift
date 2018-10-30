@@ -1,9 +1,9 @@
 import Foundation
 
-protocol PublicKeyWriter : AbiTypeWriter, Encodable {
+protocol PublicKeyWriter : AbiTypeWriter {
 }
 
-class PublicKeyWriterValue : DataWriter {
+class PublicKeyWriterValue : DataWriter, Encodable {
 
     private let publicKey: String
 

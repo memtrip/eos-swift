@@ -165,8 +165,11 @@ class ChainApiTest: XCTestCase {
     }
 
     func testAbiBinToJson() {
-        // TODO
-        XCTAssertTrue(false)
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        let response = try! chainApi.abiBinToJson(body: AbiBinToJson(
+            code: "eosio.token", action: "transfer", binargs: "746869732069732061206d656d6f")).asObservable().toBlocking().first()
+        XCTAssertTrue(response!.success)
+        XCTAssertNotNil(response!.body)
     }
 
     func testGetRequiredKeys() {

@@ -20,7 +20,7 @@ class NewAccountArgsTests: XCTestCase {
                         weight: 1)
                 ],
                 accounts: StringCollectionWriterValue(value: []),
-                waits:StringCollectionWriterValue(value: [])
+                waits: StringCollectionWriterValue(value: [])
             ),
             active: AccountRequiredAuthAbi(
                 threshold: 1,
@@ -30,7 +30,7 @@ class NewAccountArgsTests: XCTestCase {
                         weight: 1)
                 ],
                 accounts: StringCollectionWriterValue(value: []),
-                waits:StringCollectionWriterValue(value: [])
+                waits: StringCollectionWriterValue(value: [])
             )
         )
 

@@ -30,6 +30,6 @@ class VoteArgsTests: XCTestCase {
         try! abiEncoder.encode(encodable: voteBody)
         let hexEncodedString = abiEncoder.toData().hexEncodedString()
 
-        XCTAssertEqual(hexEncodedString, "a034c6aeba9ba592e03bbdb5ba9ba59200a034c6aeba9ba59200000000000000000100118da7ba9ba592")
+        XCTAssertEqual(hexEncodedString, "a034c6aeba9ba59200000000000000000100118da7ba9ba592")
     }
 }

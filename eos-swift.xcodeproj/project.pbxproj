@@ -79,6 +79,8 @@
 		3CDCDFCD2188DE03005D0B25 /* NewAccountArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFCC2188DE03005D0B25 /* NewAccountArgsTest.swift */; };
 		3CDCDFCF2188DF82005D0B25 /* SellRamArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFCE2188DF82005D0B25 /* SellRamArgsTest.swift */; };
 		3CDCDFD12188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFD02188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift */; };
+		3CDCDFDA21891162005D0B25 /* BlockIdDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFD921891162005D0B25 /* BlockIdDetails.swift */; };
+		3CDCDFE0218911D8005D0B25 /* BlockIdDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCDFDF218911D8005D0B25 /* BlockIdDetailsTest.swift */; };
 		3CFE7F48216FECAF005AF4FA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F41216FECAF005AF4FA /* Logger.swift */; };
 		3CFE7F49216FECAF005AF4FA /* RxHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F42216FECAF005AF4FA /* RxHttp.swift */; };
 		3CFE7F4B216FECAF005AF4FA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE7F44216FECAF005AF4FA /* Connection.swift */; };
@@ -265,6 +267,8 @@
 		3CDCDFCC2188DE03005D0B25 /* NewAccountArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountArgsTest.swift; sourceTree = "<group>"; };
 		3CDCDFCE2188DF82005D0B25 /* SellRamArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamArgsTest.swift; sourceTree = "<group>"; };
 		3CDCDFD02188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnDelegateBandwidthArgsTest.swift; sourceTree = "<group>"; };
+		3CDCDFD921891162005D0B25 /* BlockIdDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockIdDetails.swift; sourceTree = "<group>"; };
+		3CDCDFDF218911D8005D0B25 /* BlockIdDetailsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockIdDetailsTest.swift; sourceTree = "<group>"; };
 		3CFE7F41216FECAF005AF4FA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3CFE7F42216FECAF005AF4FA /* RxHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxHttp.swift; sourceTree = "<group>"; };
 		3CFE7F44216FECAF005AF4FA /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
@@ -578,6 +582,7 @@
 		3C824FD6216522F4006FC81C /* eos-core */ = {
 			isa = PBXGroup;
 			children = (
+				3CDCDFD62189112F005D0B25 /* block */,
 				3C90A9442176762300569124 /* hash */,
 				3C5E85F2218325A600B57D39 /* encode */,
 				3CB38C4B2177291300C1BEB2 /* hex */,
@@ -602,6 +607,7 @@
 		3C90A94A2176837300569124 /* eos-core */ = {
 			isa = PBXGroup;
 			children = (
+				3CDCDFDC218911B8005D0B25 /* block */,
 				3C11C38E2178B6DB007F346C /* key */,
 				3CB38C5021772E8D00C1BEB2 /* hex */,
 			);
@@ -772,6 +778,22 @@
 				3CDCDFCA2188D9DF005D0B25 /* UnDelegateBandwidthBody.swift */,
 			);
 			path = undelegatebw;
+			sourceTree = "<group>";
+		};
+		3CDCDFD62189112F005D0B25 /* block */ = {
+			isa = PBXGroup;
+			children = (
+				3CDCDFD921891162005D0B25 /* BlockIdDetails.swift */,
+			);
+			path = block;
+			sourceTree = "<group>";
+		};
+		3CDCDFDC218911B8005D0B25 /* block */ = {
+			isa = PBXGroup;
+			children = (
+				3CDCDFDF218911D8005D0B25 /* BlockIdDetailsTest.swift */,
+			);
+			path = block;
 			sourceTree = "<group>";
 		};
 		3CFE7F32216FE329005AF4FA /* networking */ = {
@@ -1330,6 +1352,7 @@
 				3CFE7F812170BF37005AF4FA /* AccountKey.swift in Sources */,
 				3CBBCD3E2187093500D7AEB7 /* ActionAbi.swift in Sources */,
 				3CFE7F4B216FECAF005AF4FA /* Connection.swift in Sources */,
+				3CDCDFDA21891162005D0B25 /* BlockIdDetails.swift in Sources */,
 				3CFE7F872170C155005AF4FA /* AccountResourceLimit.swift in Sources */,
 				3CDCDFAD2188D478005D0B25 /* BuyRamArgs.swift in Sources */,
 				3CFE7FE12170D201005AF4FA /* GetProducers.swift in Sources */,
@@ -1433,6 +1456,7 @@
 				3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */,
 				3CFE7FF021710F82005AF4FA /* ChainApiTest.swift in Sources */,
 				3CDCDFCF2188DF82005D0B25 /* SellRamArgsTest.swift in Sources */,
+				3CDCDFE0218911D8005D0B25 /* BlockIdDetailsTest.swift in Sources */,
 				3CDCDFD12188F393005D0B25 /* UnDelegateBandwidthArgsTest.swift in Sources */,
 				3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */,
 				3CBBCD522187116E00D7AEB7 /* TransferArgsTests.swift in Sources */,

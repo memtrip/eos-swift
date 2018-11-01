@@ -75,10 +75,19 @@ extension Data {
     func subdata(in range: ClosedRange<Index>) -> Data {
         return subdata(in: range.lowerBound ..< range.upperBound + 1)
     }
-}
 
-infix operator <<< : BitwiseShiftPrecedence
-
-func <<< (lhs: Int64, rhs: Int64) -> Int64 {
-    return Int64(bitPattern: UInt64(bitPattern: lhs) << UInt64(rhs))
+    enum Endianness {
+        case BigEndian
+        case LittleEndian
+    }
+    
+    func scanValue<T: FixedWidthInteger>(at index: Data.Index, endianess: Endianness) -> T {
+        let number: T = self.subdata(in: index..<index + MemoryLayout<T>.size).withUnsafeBytes({ $0.pointee })
+        switch endianess {
+        case .BigEndian:
+            return number.bigEndian
+        case .LittleEndian:
+            return number.littleEndian
+        }
+    }
 }

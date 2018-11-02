@@ -45,6 +45,8 @@
 		3C824FB32165229A006FC81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C824FB12165229A006FC81C /* LaunchScreen.storyboard */; };
 		3C824FC92165229B006FC81C /* eos_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C824FC82165229B006FC81C /* eos_swiftUITests.swift */; };
 		3C90A9462176764E00569124 /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C90A9452176764E00569124 /* Sha256.swift */; };
+		3C93732C218C6B2C00685AF3 /* ChainErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93732B218C6B2B00685AF3 /* ChainErrorItem.swift */; };
+		3C93732E218C6B7400685AF3 /* ChainErrorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93732D218C6B7400685AF3 /* ChainErrorDetail.swift */; };
 		3CB38C4D2177292500C1BEB2 /* HexWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB38C4C2177292500C1BEB2 /* HexWriter.swift */; };
 		3CB38C5221772E9F00C1BEB2 /* HexWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB38C5121772E9F00C1BEB2 /* HexWriterTests.swift */; };
 		3CBBCD3A2187088100D7AEB7 /* ChainTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBBCD392187088100D7AEB7 /* ChainTransaction.swift */; };
@@ -236,6 +238,8 @@
 		3C824FCA2165229B006FC81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C90A9452176764E00569124 /* Sha256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha256.swift; sourceTree = "<group>"; };
 		3C90A947217676EE00569124 /* eos-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eos-swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C93732B218C6B2B00685AF3 /* ChainErrorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainErrorItem.swift; sourceTree = "<group>"; };
+		3C93732D218C6B7400685AF3 /* ChainErrorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainErrorDetail.swift; sourceTree = "<group>"; };
 		3CB38C4C2177292500C1BEB2 /* HexWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexWriter.swift; sourceTree = "<group>"; };
 		3CB38C5121772E9F00C1BEB2 /* HexWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexWriterTests.swift; sourceTree = "<group>"; };
 		3CBBCD392187088100D7AEB7 /* ChainTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTransaction.swift; sourceTree = "<group>"; };
@@ -840,6 +844,8 @@
 				3CFE7FE82170D2F0005AF4FA /* RequestBody.swift */,
 				3CFE7F51216FF03B005AF4FA /* ResponseBody.swift */,
 				3CFE7F53216FF3FD005AF4FA /* ChainError.swift */,
+				3C93732B218C6B2B00685AF3 /* ChainErrorItem.swift */,
+				3C93732D218C6B7400685AF3 /* ChainErrorDetail.swift */,
 				3CFE7F6A2170B3FC005AF4FA /* Encodable.swift */,
 			);
 			path = model;
@@ -1391,6 +1397,7 @@
 				3CFE7F752170BD96005AF4FA /* Action.swift in Sources */,
 				3CFE7F48216FECAF005AF4FA /* Logger.swift in Sources */,
 				3CFE7FA02170C664005AF4FA /* CycleSummary.swift in Sources */,
+				3C93732E218C6B7400685AF3 /* ChainErrorDetail.swift in Sources */,
 				3C74397A21752CB70056F0E6 /* AbiTypeWriter.swift in Sources */,
 				3CFE7F672170AF1D005AF4FA /* TransactionAct.swift in Sources */,
 				3C824FAB21652299006FC81C /* ViewController.swift in Sources */,
@@ -1401,6 +1408,7 @@
 				3C7B4D7D218235B90072A21F /* EOSPublicKey.swift in Sources */,
 				3CFE7FE32170D229005AF4FA /* Producer.swift in Sources */,
 				3CFE7F8B2170C1C2005AF4FA /* TotalResources.swift in Sources */,
+				3C93732C218C6B2C00685AF3 /* ChainErrorItem.swift in Sources */,
 				3CDCDFCB2188D9DF005D0B25 /* UnDelegateBandwidthBody.swift in Sources */,
 				3CFE7F782170BDF1005AF4FA /* Info.swift in Sources */,
 				3C74395B21750DF70056F0E6 /* AbiEncoder.swift in Sources */,

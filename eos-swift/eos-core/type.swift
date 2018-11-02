@@ -20,6 +20,13 @@ extension String {
     }
 }
 
+extension Date {
+
+    static func defaultTransactionExpiry() -> Date {
+        return Date(timeIntervalSince1970: (Date().timeIntervalSince1970) + 120)
+    }
+}
+
 extension Character {
     func toUInt8() -> UInt8 {
         return Array(String(self).utf8)[0]
@@ -89,5 +96,13 @@ extension Data {
         case .LittleEndian:
             return number.littleEndian
         }
+    }
+}
+
+extension Encodable {
+    func toHex() -> String {
+        let abiEncoder = AbiEncoder(capacity: 512)
+        try! abiEncoder.encode(encodable: self)
+        return abiEncoder.toData().hexEncodedString()
     }
 }

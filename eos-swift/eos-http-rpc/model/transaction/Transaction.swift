@@ -3,7 +3,7 @@ import Foundation
 struct Transaction : Codable {
     let expiration: Date
     let ref_block_num: Int
-    let ref_block_prefix: UInt64
+    let ref_block_prefix: Int64
     let max_net_usage_words: UInt64
     let max_cpu_usage_ms: UInt64
     let delay_sec: UInt64

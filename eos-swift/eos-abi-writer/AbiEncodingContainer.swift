@@ -60,6 +60,14 @@ class AbiEncodingContainer : UnkeyedEncodingContainer {
         index = index + 1
     }
 
+    func encodeShort(_ value: Int) throws {
+        ensureCapacity(2)
+        buffer[index] = UInt8.init((0xFF & value))
+        index = index + 1
+        buffer[index] = UInt8.init((0xFF & value >> 8))
+        index = index + 1
+    }
+
     func encode(_ value: Int32) throws {
         ensureCapacity(4)
         buffer[index] = UInt8.init((0xFF & value))

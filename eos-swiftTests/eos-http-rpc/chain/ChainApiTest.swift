@@ -172,9 +172,47 @@ class ChainApiTest: XCTestCase {
         XCTAssertNotNil(response!.body)
     }
 
-    func testGetRequiredKeys() {
-        // TODO - requires byte writer
-        XCTAssertTrue(false)
+    func testGetRequiredKeys() throws {
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        let privateKey = try EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+
+        let info = try chainApi.getInfo().asObservable().toBlocking().first()!
+
+        let blockIdDetails = BlockIdDetails(blockId: info.body!.head_block_id)
+
+        let transferArgs: TransferArgs = TransferArgs(
+            fromValue: AccountNameWriterValue(name: "memtripissu5"),
+            to: AccountNameWriterValue(name: "memtripblock"),
+            quantity: AssetWriterValue(asset: "12.3040 EOS"),
+            memo: "this is a memo")
+        let transferBody: TransferBody = TransferBody(args: transferArgs)
+
+        let transaction = Transaction(
+            expiration: Date.defaultTransactionExpiry(),
+            ref_block_num: blockIdDetails.blockNum,
+            ref_block_prefix: blockIdDetails.blockPrefix,
+            max_net_usage_words: 0,
+            max_cpu_usage_ms: 0,
+            delay_sec: 0,
+            context_free_actions: [],
+            actions: [
+                Action(
+                    account: "eosio",
+                    name: "transfer",
+                    authorization: [TransactionAuthorization(
+                        actor: "eosio",
+                        permission: "active")],
+                    data: transferBody.toHex()),
+            ],
+            transaction_extensions: [],
+            signatures: [],
+            context_free_data: [])
+
+        let requiredKeys = try chainApi.getRequiredKeys(body: GetRequiredKeysBody(
+            transaction: transaction,
+            available_keys: [privateKey.publicKey.base58])).asObservable().toBlocking().first()
+
+        XCTAssertTrue(requiredKeys!.success)
     }
 
     func testGetCurrencyStats() throws {

@@ -12,7 +12,6 @@ class DataWriterValue : DataWriter, Encodable {
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        let test = [UInt8](self.hexAsBytes)
         try writer.encode(UInt64.init(hexAsBytes.count))
         try writer.encodeBytes(value: [UInt8](hexAsBytes))
     }

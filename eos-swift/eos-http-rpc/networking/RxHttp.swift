@@ -1,9 +1,8 @@
 import Foundation
 import RxSwift
 
-class RxHttp<REQ: Encodable, RES: Decodable, ERR: Codable> {
+class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
 
-    let encoder = JSONEncoder()
     let connection: Connection = ConnectionFactory.create()
 
     func single(httpRequest: HttpRequest<REQ>) -> Single<HttpResponse<RES>> {
@@ -66,7 +65,7 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Codable> {
                             let decodedBody = try self.jsonDecoder().decode(RES.self, from: body)
                             onSuccess(HttpResponse(statusCode: res.statusCode, body: decodedBody))
                         } catch {
-                            onError(HttpErrorResponse(statusCode: -999, body: nil))
+                            onError(HttpErrorResponse(statusCode: -999, body: nil, bodyString: nil))
                         }
                     } else {
                         onSuccess(HttpResponse(statusCode: res.statusCode, body: nil))
@@ -74,20 +73,22 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Codable> {
                 } else {
 
                     if let body = data {
+                        let bodyString = String(describing: String(data: body, encoding: .utf8))
+                        Logger.log(value: "error_response: \(bodyString)")
                         do {
                             let decodedBody = try JSONDecoder().decode(ERR.self, from: body)
-                            Logger.log(value: "error_response: \(decodedBody)")
-                            onError(HttpErrorResponse(statusCode: res.statusCode, body: decodedBody))
+                            onError(HttpErrorResponse(statusCode: res.statusCode, body: decodedBody, bodyString: bodyString))
                         } catch {
-                            onError(HttpErrorResponse(statusCode: res.statusCode, body: nil))
+                            print("Error info: \(error)")
+                            onError(HttpErrorResponse(statusCode: res.statusCode, body: nil, bodyString: bodyString))
                         }
                     } else {
-                        onError(HttpErrorResponse(statusCode: res.statusCode, body: nil))
+                        onError(HttpErrorResponse(statusCode: res.statusCode, body: nil, bodyString: nil))
                     }
                 }
             } else {
                 Logger.err(value: error!)
-                onError(HttpErrorResponse(statusCode: -111, body: nil))
+                onError(HttpErrorResponse(statusCode: -111, body: nil, bodyString: ""))
             }
         }
         
@@ -100,7 +101,7 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Codable> {
 
     private func body(httpRequest: HttpRequest<REQ>) -> Data? {
         if let jsonBody = httpRequest.body {
-            return try! JSONEncoder().encode(jsonBody)
+            return try! jsonEncoder().encode(jsonBody)
         } else {
             return nil
         }
@@ -140,5 +141,11 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Codable> {
             throw DateError.invalidDate
         })
         return decoder
+    }
+
+    private func jsonEncoder() -> JSONEncoder {
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        return encoder
     }
 }

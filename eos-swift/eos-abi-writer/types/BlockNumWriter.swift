@@ -5,13 +5,13 @@ protocol BlockNumWriter : AbiTypeWriter {
 
 class BlockNumWriterValue : BlockNumWriter, Encodable {
 
-    private let value: Int16
+    private let value: Int
 
-    init(value: Int16) {
+    init(value: Int) {
         self.value = value
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        try writer.encode(Int16.init(value & 0xFFF))
+        try writer.encode(Int16(truncatingIfNeeded: value & 0xFFFF))
     }
 }

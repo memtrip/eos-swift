@@ -12,6 +12,6 @@ class TimestampWriterValue : TimestampWriter, Encodable {
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        try writer.encode(Int32.init(timestamp/1000))
+        try writer.encode(Int32.init(timestamp))
     }
 }

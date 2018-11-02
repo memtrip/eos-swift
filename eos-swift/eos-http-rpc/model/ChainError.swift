@@ -1,4 +1,7 @@
 import Foundation
 
-class ChainError : Codable {
+struct ChainError : Decodable {
+    let code: Int
+    let message: String
+    let error: ChainErrorItem
 }

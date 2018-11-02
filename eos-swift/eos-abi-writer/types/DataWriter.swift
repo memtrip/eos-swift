@@ -5,13 +5,15 @@ protocol DataWriter : AbiTypeWriter {
 
 class DataWriterValue : DataWriter, Encodable {
 
-    private let chainId: String
+    private let hexAsBytes: Data
 
-    init(chainId: String) {
-        self.chainId = chainId
+    init(hex: String) {
+        self.hexAsBytes = DefaultHexWriter().hexToBytes(hex: hex)
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        // TODO - required the hex writer
+        let test = [UInt8](self.hexAsBytes)
+        try writer.encode(UInt64.init(hexAsBytes.count))
+        try writer.encodeBytes(value: [UInt8](hexAsBytes))
     }
 }

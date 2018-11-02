@@ -12,6 +12,14 @@ class HexCollectionWriterValue : HexCollectionWriter, Encodable {
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        // TODO - requires a SHA256 implementation
+        try writer.encodeBytes(value: hexCollectionBytes(hexList: self.value))
+    }
+
+    private func hexCollectionBytes(hexList: [String]) -> [UInt8] {
+        if (hexList.count == 0) {
+            return [UInt8](Data(repeating: 0, count: 32))
+        } else {
+            fatalError("not implemented")
+        }
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct TransactionAuthorizationAbi : Codable {
-    let actor: String
-    let permission: String
+struct TransactionAuthorizationAbi : Encodable {
+    let actor: AccountNameWriterValue
+    let permission: AccountNameWriterValue
 }

@@ -103,20 +103,24 @@ class AbiEncodingContainer : UnkeyedEncodingContainer {
     }
 
     func encode(_ value: UInt16) throws {
-        fatalError("UInt16 encoding is not supported")
+        try encodeUnsignedInteger(value)
     }
 
     func encode(_ value: UInt32) throws {
-        fatalError("UInt32 encoding is not supported")
+        try encodeUnsignedInteger(value)
     }
 
     func encode(_ value: UInt64) throws {
-        var copy: UInt64 = value
+        try encodeUnsignedInteger(value)
+    }
+
+    private func encodeUnsignedInteger<T : UnsignedInteger> (_ value: T) throws {
+        var copy: T = value
         repeat {
-            var b: UInt8 = UInt8.init(copy & 0x7f)
-            copy = copy >> 7
-            b = UInt8.init(Int.init(b) | ((copy > 0) ? 1 : 0) << 7)
-            try encode(b)
+        var b: UInt8 = UInt8.init(copy & 0x7f)
+        copy = copy >> 7
+        b = UInt8.init(Int.init(b) | ((copy > 0) ? 1 : 0) << 7)
+        try encode(b)
         } while (copy != 0)
     }
 

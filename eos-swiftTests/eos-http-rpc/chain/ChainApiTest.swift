@@ -8,61 +8,61 @@ import RxBlocking
 
 class ChainApiTest: XCTestCase {
 
-    func testGetInfo() {
+    func testGetInfo() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-        let response = try! chainApi.getInfo().asObservable().toBlocking().first()
+        let response = try chainApi.getInfo().asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
     }
 
-    func testGetProducers() {
+    func testGetProducers() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-        let response = try! chainApi.getProducers(body: GetProducers(
+        let response = try chainApi.getProducers(body: GetProducers(
             json: true,lower_bound: "", limit: 10)).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
     }
 
-    func testGetBlock() {
+    func testGetBlock() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let infoResponse = try! chainApi.getInfo().asObservable().toBlocking().first()
+        let infoResponse = try chainApi.getInfo().asObservable().toBlocking().first()
 
-        let response = try! chainApi.getBlock(body: BlockNumOrId(block_num_or_id:
+        let response = try chainApi.getBlock(body: BlockNumOrId(block_num_or_id:
             infoResponse!.body!.head_block_id)).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
     }
 
-    func testGetBlockHeaderState() {
+    func testGetBlockHeaderState() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let infoResponse = try! chainApi.getInfo().asObservable().toBlocking().first()
+        let infoResponse = try chainApi.getInfo().asObservable().toBlocking().first()
 
-        let response = try! chainApi.getBlockHeaderState(body: BlockNumOrId(block_num_or_id:
+        let response = try chainApi.getBlockHeaderState(body: BlockNumOrId(block_num_or_id:
             infoResponse!.body!.head_block_id)).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
     }
 
-    func testAccount() {
+    func testAccount() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getAccount(body: AccountName(
+        let response = try chainApi.getAccount(body: AccountName(
             account_name: "eosio.token")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
     }
 
-    func testVoterAccount() {
+    func testVoterAccount() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getAccount(body: AccountName(
+        let response = try chainApi.getAccount(body: AccountName(
             account_name: "memtripadmin")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -70,10 +70,10 @@ class ChainApiTest: XCTestCase {
         XCTAssertTrue(response!.body!.voter_info!.producers.count == 0)
     }
 
-    func testVoterProxy() {
+    func testVoterProxy() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getAccount(body: AccountName(
+        let response = try chainApi.getAccount(body: AccountName(
             account_name: "memtripproxy")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -81,10 +81,10 @@ class ChainApiTest: XCTestCase {
         XCTAssertTrue(response!.body!.voter_info!.is_proxy == 1)
     }
 
-    func testGetAbi() {
+    func testGetAbi() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getAbi(body: AccountName(
+        let response = try chainApi.getAbi(body: AccountName(
             account_name: "eosio.token")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -104,10 +104,10 @@ class ChainApiTest: XCTestCase {
         XCTAssertTrue(false)
     }
 
-    func testGetCodeWast() {
+    func testGetCodeWast() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getCode(body: GetCodeByAccountName(
+        let response = try chainApi.getCode(body: GetCodeByAccountName(
             account_name: "eosio.token", code_as_wasm: false)).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -115,10 +115,10 @@ class ChainApiTest: XCTestCase {
         XCTAssertNotNil(response!.body!.wast, "")
     }
 
-    func testGetRawCodeAndAbi() {
+    func testGetRawCodeAndAbi() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getRawCodeAndAbi(body: AccountName(
+        let response = try chainApi.getRawCodeAndAbi(body: AccountName(
             account_name: "eosio.token")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -128,10 +128,10 @@ class ChainApiTest: XCTestCase {
         XCTAssertEqual(response!.body!.account_name, "eosio.token")
     }
 
-    func testGetTableRows() {
+    func testGetTableRows() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getTableRows(body: GetTableRows(
+        let response = try chainApi.getTableRows(body: GetTableRows(
             scope: "eosio",
             code: "eosio.token",
             table: "accounts",
@@ -148,10 +148,10 @@ class ChainApiTest: XCTestCase {
         XCTAssertNotNil(response!.body)
     }
 
-    func testGetCurrencyBalance() {
+    func testGetCurrencyBalance() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getCurrencyBalance(body: GetCurrencyBalance(
+        let response = try chainApi.getCurrencyBalance(body: GetCurrencyBalance(
             code: "eosio.token", account: "memtripissue", symbol: "SYS")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -164,9 +164,9 @@ class ChainApiTest: XCTestCase {
         XCTAssertTrue(false)
     }
 
-    func testAbiBinToJson() {
+    func testAbiBinToJson() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-        let response = try! chainApi.abiBinToJson(body: AbiBinToJson(
+        let response = try chainApi.abiBinToJson(body: AbiBinToJson(
             code: "eosio.token", action: "transfer", binargs: "746869732069732061206d656d6f")).asObservable().toBlocking().first()
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
@@ -177,10 +177,10 @@ class ChainApiTest: XCTestCase {
         XCTAssertTrue(false)
     }
 
-    func testGetCurrencyStats() {
+    func testGetCurrencyStats() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
-        let response = try! chainApi.getCurrencyStats(
+        let response = try chainApi.getCurrencyStats(
             body: GetCurrencyStats(code: "eosio.token",symbol: "SYS")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)

@@ -1,7 +1,8 @@
 import Foundation
 
-struct ActionAbi : Codable {
-    let account: String
-    let name: String
-    let data: String?
+struct ActionAbi : Encodable {
+    let account: AccountNameWriterValue
+    let name: AccountNameWriterValue
+    let authorization: [TransactionAuthorizationAbi]
+    let data: DataWriterValue
 }

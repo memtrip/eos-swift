@@ -5,13 +5,13 @@ protocol TimestampWriter : AbiTypeWriter {
 
 class TimestampWriterValue : TimestampWriter, Encodable {
 
-    private let timestamp: UInt64
+    private let timestamp: Double
 
-    init(timestamp: UInt64) {
-        self.timestamp = timestamp
+    init(date: Date) {
+        self.timestamp = date.timeIntervalSince1970
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        try writer.encode(Int64.init(timestamp/1000))
+        try writer.encode(Int32.init(timestamp/1000))
     }
 }

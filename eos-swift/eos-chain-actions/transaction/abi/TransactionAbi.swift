@@ -1,14 +1,15 @@
 import Foundation
 
-struct TransactionAbi : Codable {
-    let expiration: Date
-    let ref_block_num: Int
-    let ref_block_prefix: Int64
-    let max_net_usage_words: Int64
-    let max_cpu_usage_ms: Int64
-    let delay_sec: Int64
+struct TransactionAbi : Encodable {
+    let expiration: TimestampWriterValue
+    let ref_block_num: BlockNumWriterValue
+    let ref_block_prefix: BlockPrefixWriterValue
+    let max_net_usage_words: UInt64
+    let max_cpu_usage_ms: UInt64
+    let delay_sec: UInt64
     let context_free_actions: [ActionAbi]
     let actions: [ActionAbi]
-    let transaction_extensions: [String]
-    let context_free_data: [String]
+    let transaction_extensions: StringCollectionWriterValue
+    let signatures: StringCollectionWriterValue
+    let context_free_data: StringCollectionWriterValue
 }

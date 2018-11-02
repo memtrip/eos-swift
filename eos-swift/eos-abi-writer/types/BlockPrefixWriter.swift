@@ -12,6 +12,6 @@ class BlockPrefixWriterValue : BlockPrefixWriter, Encodable {
     }
 
     func encode(writer: AbiEncodingContainer) throws {
-        try writer.encode(Int64.init(value & -0x1))
+        try writer.encode(Int32(truncatingIfNeeded: value & -0x1))
     }
 }

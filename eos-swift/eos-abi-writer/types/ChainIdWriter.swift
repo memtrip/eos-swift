@@ -18,9 +18,9 @@ class ChainIdWriterValue : ChainIdWriter, Encodable {
     private func getSha256FromHexStr(value: String) -> Array<UInt8> {
         let len = value.count
         var bytes = Array<UInt8>(repeating: 0, count: 32)
-        var i = 0
+    var i = 0
         while (i < len) {
-            let str = value[value.index(String.Index(encodedOffset: 0), offsetBy: i+2)]
+            let str = value[i...i+1]
             bytes[i / 2] = UInt8.init(String(str), radix: 16)! & 0xFF
             i += 2
         }

@@ -143,13 +143,14 @@ class ChainApiImpl : ChainApi {
     }
 
     func abiJsonToBin(body: RequestBody) -> Single<HttpResponse<BinaryHex>> {
-        return RxHttp<RequestBody, BinaryHex, ChainError>().single(
-            httpRequest: HttpRequest(
-                url: self.rootUrl + "v1/chain/abi_json_to_bin",
-                method: "POST",
-                body: body
-            )
-        )
+        fatalError("The local abi byte writing should be used in replace of this call. Mobile clients that use this method are exposed to man in the middle attacks.")
+//        return RxHttp<RequestBody, BinaryHex, ChainError>().single(
+//            httpRequest: HttpRequest(
+//                url: self.rootUrl + "v1/chain/abi_json_to_bin",
+//                method: "POST",
+//                body: body
+//            )
+//        )
     }
 
     func abiBinToJson(body: AbiBinToJson) -> Single<HttpResponse<ResponseBody>> {

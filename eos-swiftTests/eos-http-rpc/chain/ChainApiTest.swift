@@ -91,17 +91,15 @@ class ChainApiTest: XCTestCase {
         XCTAssertNotNil(response!.body)
     }
 
-    func testGetCodeWasm() {
-        // failing
-//        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-//
-//        let response = try! chainApi.getCode(body: GetCodeByAccountName(
-//            account_name: "eosio.token", code_as_wasm: true)).asObservable().toBlocking().first()
-//
-//        XCTAssertTrue(response!.success)
-//        XCTAssertNotNil(response!.body)
-//        XCTAssertNotEqual(response!.body!.wasm, "")
-        XCTAssertTrue(false)
+    func testGetCodeWasm() throws {
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+
+        let response = try chainApi.getCode(body: GetCodeByAccountName(
+            account_name: "eosio.token", code_as_wasm: true)).asObservable().toBlocking().first()
+
+        XCTAssertTrue(response!.success)
+        XCTAssertNotNil(response!.body)
+        XCTAssertNotEqual(response!.body!.wasm, "")
     }
 
     func testGetCodeWast() throws {
@@ -159,15 +157,28 @@ class ChainApiTest: XCTestCase {
         XCTAssertNotNil(response!.body!.count > 0)
     }
 
-    func testAbiJsonToBin() {
-        // TODO
-        XCTAssertTrue(false)
+    func testAbiJsonToBin() throws {
+        /*
+         The local abi byte writing should be used in replace of this call.
+         Mobile clients that use this method are exposed to man in the middle attacks.
+        */
+        XCTAssertTrue(true)
     }
 
     func testAbiBinToJson() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+
+        let delegateBandwidthArgs: DelegateBandwidthArgs = DelegateBandwidthArgs(
+            from: AccountNameWriterValue(name: "memtripissue"),
+            receiver: AccountNameWriterValue(name: "memtripproxy"),
+            stake_net_quantity: AssetWriterValue(asset: "51.2345 SYS"),
+            stake_cpu_quantity: AssetWriterValue(asset: "171.2345 SYS"),
+            transfer: 1
+        )
+        let delegateBandwidthBody: DelegateBandwidthBody = DelegateBandwidthBody(args: delegateBandwidthArgs)
+
         let response = try chainApi.abiBinToJson(body: AbiBinToJson(
-            code: "eosio.token", action: "transfer", binargs: "746869732069732061206d656d6f")).asObservable().toBlocking().first()
+            code: "eosio", action: "delegatebw", binargs: delegateBandwidthBody.toHex())).asObservable().toBlocking().first()
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
     }

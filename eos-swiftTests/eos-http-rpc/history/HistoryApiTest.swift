@@ -8,10 +8,10 @@ import RxBlocking
 
 class HistoryApiTest: XCTestCase {
 
-    func testGetActions() {
+    func testGetActions() throws {
         let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
 
-        let response = try! historyApi.getActions(
+        let response = try historyApi.getActions(
             body: GetActions(account_name: "eosio.token", pos: nil, offset: nil)).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -19,10 +19,10 @@ class HistoryApiTest: XCTestCase {
         XCTAssertTrue(response!.body!.actions.count > 0)
     }
 
-    func testGetActionsPagination() {
+    func testGetActionsPagination() throws {
         let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
 
-        let responseSetOne = try! historyApi.getActions(
+        let responseSetOne = try historyApi.getActions(
             body: GetActions(account_name: "eosio.token", pos: -1, offset: -20)).asObservable().toBlocking().first()
         let firstPageActionsItems = responseSetOne!.body!.actions
 
@@ -39,10 +39,10 @@ class HistoryApiTest: XCTestCase {
         XCTAssertTrue(responseSetTwo!.body!.actions.count == 21)
     }
 
-    func testGetActionsOutOfRange() {
+    func testGetActionsOutOfRange() throws {
         let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
 
-        let response = try! historyApi.getActions(
+        let response = try historyApi.getActions(
             body: GetActions(account_name: "eosio.token", pos: -1, offset: 100000)).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
@@ -50,19 +50,28 @@ class HistoryApiTest: XCTestCase {
         XCTAssertTrue(response!.body!.actions.count == 0)
     }
 
-    func testGetKeyAccounts() {
-        // TODO - requires pub/priv key implementation
-        XCTAssertTrue(false)
+    func testGetKeyAccounts() throws {
+
+        let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
+
+        let privateKey = try EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+
+        let accounts = try historyApi.getKeyAccounts(body: GetKeyAccounts(public_key: privateKey.publicKey.base58))
+            .asObservable().toBlocking().first()!
+
+        XCTAssertTrue(accounts.success)
+        XCTAssertNotNil(accounts.body)
+        XCTAssertTrue(accounts.body!.account_names.count > 0)
     }
 
-    func testGetTransaction() {
+    func testGetTransaction() throws {
         let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
 
         let actionsResponse = try! historyApi.getActions(
             body: GetActions(account_name: "eosio.token", pos: nil, offset: nil)).asObservable().toBlocking().first()
         let action = actionsResponse!.body!.actions[0]
 
-        let response = try! historyApi.getTransaction(body: GetTransaction(id: action.action_trace.trx_id)).asObservable().toBlocking().first()
+        let response = try historyApi.getTransaction(body: GetTransaction(id: action.action_trace.trx_id)).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)

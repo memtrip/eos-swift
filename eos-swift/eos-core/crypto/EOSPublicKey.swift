@@ -2,20 +2,20 @@ import Foundation
 
 class EOSPublicKey {
 
-    private let ecPublicKey: ECPublicKey
+    private let pubKeyData: Data
     let base58: String
 
     func bytes() -> Data {
-        return ecPublicKey.pubKeyData
+        return pubKeyData
     }
 
     init(bytes: Data) {
-        self.ecPublicKey = ECPublicKey(pubKeyData: bytes)
-        self.base58 = Base58.encodeWithChecksum(prefix: "EOS", data: ecPublicKey.pubKeyData)
+        self.pubKeyData = bytes
+        self.base58 = Base58.encodeWithChecksum(prefix: "EOS", data: pubKeyData)
     }
 
     init(base58: String) throws {
-        self.ecPublicKey = ECPublicKey(pubKeyData: try EOSPublicKey.bytesFromBase58(base58: base58))
+        self.pubKeyData = try EOSPublicKey.bytesFromBase58(base58: base58)
         self.base58 = base58
     }
 

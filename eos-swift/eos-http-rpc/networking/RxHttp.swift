@@ -145,7 +145,9 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
 
     private func jsonEncoder() -> JSONEncoder {
         let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .iso8601
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        encoder.dateEncodingStrategy = .formatted(formatter)
         return encoder
     }
 }

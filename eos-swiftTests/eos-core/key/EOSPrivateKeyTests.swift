@@ -15,7 +15,7 @@ class EOSPrivateKeyTests: XCTestCase {
 
     func testEOSPrivateKeyFromString() {
         let eosPrivateKey = try! EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
-        let eosPrivateKeyFromBytes = EOSPrivateKey(ecKey: ECPrivateKey(privKeyData: eosPrivateKey.bytes()))
+        let eosPrivateKeyFromBytes = EOSPrivateKey(ecKeyPrivateKey: ECPrivateKey(privKeyData: eosPrivateKey.bytes()))
         XCTAssertEqual(eosPrivateKey.base58, eosPrivateKeyFromBytes.base58)
     }
 }

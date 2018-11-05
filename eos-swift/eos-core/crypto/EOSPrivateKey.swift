@@ -72,7 +72,6 @@ class EOSPrivateKey {
 
     private static func base58Encode(key: ECPrivateKey) -> String {
         let privateKeyBytes = key.privKeyData
-        let t = [UInt8](privateKeyBytes)
         var resultBytes = Data(Array<UInt8>(repeating: 0, count: 1 + 32 + 4))
         resultBytes[0] = UInt8(0x80)
         let startingPosition = (privateKeyBytes.count > 32) ? 1 : 0

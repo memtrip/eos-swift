@@ -65,6 +65,7 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
                             let decodedBody = try self.jsonDecoder().decode(RES.self, from: body)
                             onSuccess(HttpResponse(statusCode: res.statusCode, body: decodedBody))
                         } catch {
+                            Logger.log(value: "Error info: \(error)")
                             onError(HttpErrorResponse(statusCode: -999, body: nil, bodyString: nil))
                         }
                     } else {
@@ -79,7 +80,7 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
                             let decodedBody = try JSONDecoder().decode(ERR.self, from: body)
                             onError(HttpErrorResponse(statusCode: res.statusCode, body: decodedBody, bodyString: bodyString))
                         } catch {
-                            print("Error info: \(error)")
+                            Logger.log(value: "Error info: \(error)")
                             onError(HttpErrorResponse(statusCode: res.statusCode, body: nil, bodyString: bodyString))
                         }
                     } else {

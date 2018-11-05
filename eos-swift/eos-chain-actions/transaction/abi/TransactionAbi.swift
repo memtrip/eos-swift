@@ -10,6 +10,4 @@ struct TransactionAbi : Encodable {
     let context_free_actions: [ActionAbi]
     let actions: [ActionAbi]
     let transaction_extensions: StringCollectionWriterValue
-    let signatures: StringCollectionWriterValue
-    let context_free_data: StringCollectionWriterValue
 }

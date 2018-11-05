@@ -79,6 +79,10 @@ extension Data {
         }
     }
 
+    func toUInt8Array() -> [UInt8] {
+        return [UInt8](self)
+    }
+
     func subdata(in range: ClosedRange<Index>) -> Data {
         return subdata(in: range.lowerBound ..< range.upperBound + 1)
     }

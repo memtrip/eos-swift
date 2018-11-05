@@ -69,8 +69,6 @@ extension ChainTransaction {
             delay_sec: 0,
             context_free_actions: [],
             actions: actions,
-            transaction_extensions: StringCollectionWriterValue(value: []),
-            signatures: StringCollectionWriterValue(value: []),
-            context_free_data: StringCollectionWriterValue(value: []))
+            transaction_extensions: StringCollectionWriterValue(value: []))
     }
 }

@@ -13,7 +13,7 @@ class RefundChain : ChainTransaction {
         return _chainApi
     }
 
-    func delegateBandwidth(transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
+    func refund(transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
         return push(
             expirationDate: Date.defaultTransactionExpiry(),
             actions: buildAbiList(transactionContext: transactionContext),

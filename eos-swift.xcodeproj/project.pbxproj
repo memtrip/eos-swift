@@ -22,6 +22,13 @@
 		3C07C826219034A5002E67E7 /* UnDelegateBandwidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C825219034A5002E67E7 /* UnDelegateBandwidth.swift */; };
 		3C07C8282190350B002E67E7 /* TransferChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C8272190350B002E67E7 /* TransferChain.swift */; };
 		3C07C82A219035BF002E67E7 /* VoteChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C829219035BF002E67E7 /* VoteChain.swift */; };
+		3C07C82C219036A9002E67E7 /* BuyRamBytesChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C82B219036A9002E67E7 /* BuyRamBytesChainTest.swift */; };
+		3C07C82E2190373D002E67E7 /* SetupTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C82D2190373D002E67E7 /* SetupTransactions.swift */; };
+		3C07C83021903B43002E67E7 /* BuyRamChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C82F21903B43002E67E7 /* BuyRamChainTest.swift */; };
+		3C07C83221903BB0002E67E7 /* DelegateBandwidthChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C83121903BB0002E67E7 /* DelegateBandwidthChainTest.swift */; };
+		3C07C83421903D28002E67E7 /* SellRamChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C83321903D28002E67E7 /* SellRamChainTest.swift */; };
+		3C07C83621903EA7002E67E7 /* TransferChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C83521903EA7002E67E7 /* TransferChainTest.swift */; };
+		3C07C83821904049002E67E7 /* VoteChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C83721904049002E67E7 /* VoteChainTest.swift */; };
 		3C11C38121789EBF007F346C /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38021789EBF007F346C /* uECC.c */; };
 		3C11C38B2178B50A007F346C /* EOSPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38A2178B50A007F346C /* EOSPrivateKey.swift */; };
 		3C11C38D2178B549007F346C /* ECPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38C2178B549007F346C /* ECPrivateKey.swift */; };
@@ -216,6 +223,13 @@
 		3C07C825219034A5002E67E7 /* UnDelegateBandwidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnDelegateBandwidth.swift; sourceTree = "<group>"; };
 		3C07C8272190350B002E67E7 /* TransferChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferChain.swift; sourceTree = "<group>"; };
 		3C07C829219035BF002E67E7 /* VoteChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteChain.swift; sourceTree = "<group>"; };
+		3C07C82B219036A9002E67E7 /* BuyRamBytesChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamBytesChainTest.swift; sourceTree = "<group>"; };
+		3C07C82D2190373D002E67E7 /* SetupTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTransactions.swift; sourceTree = "<group>"; };
+		3C07C82F21903B43002E67E7 /* BuyRamChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamChainTest.swift; sourceTree = "<group>"; };
+		3C07C83121903BB0002E67E7 /* DelegateBandwidthChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthChainTest.swift; sourceTree = "<group>"; };
+		3C07C83321903D28002E67E7 /* SellRamChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamChainTest.swift; sourceTree = "<group>"; };
+		3C07C83521903EA7002E67E7 /* TransferChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferChainTest.swift; sourceTree = "<group>"; };
+		3C07C83721904049002E67E7 /* VoteChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteChainTest.swift; sourceTree = "<group>"; };
 		3C11C38021789EBF007F346C /* uECC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uECC.c; path = "eos-swift/microecc_uref/src/uECC.c"; sourceTree = SOURCE_ROOT; };
 		3C11C38221789ECA007F346C /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = types.h; path = "eos-swift/microecc_uref/include/types.h"; sourceTree = SOURCE_ROOT; };
 		3C11C38321789ECA007F346C /* asm_arm.inc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = asm_arm.inc.h; path = "eos-swift/microecc_uref/include/asm_arm.inc.h"; sourceTree = SOURCE_ROOT; };
@@ -433,7 +447,13 @@
 		3C07C80921901253002E67E7 /* transaction */ = {
 			isa = PBXGroup;
 			children = (
+				3C07C82B219036A9002E67E7 /* BuyRamBytesChainTest.swift */,
+				3C07C82F21903B43002E67E7 /* BuyRamChainTest.swift */,
 				3C07C80A21901292002E67E7 /* CreateAccountChainTests.swift */,
+				3C07C83121903BB0002E67E7 /* DelegateBandwidthChainTest.swift */,
+				3C07C83321903D28002E67E7 /* SellRamChainTest.swift */,
+				3C07C83521903EA7002E67E7 /* TransferChainTest.swift */,
+				3C07C83721904049002E67E7 /* VoteChainTest.swift */,
 			);
 			path = transaction;
 			sourceTree = "<group>";
@@ -737,6 +757,7 @@
 			children = (
 				3CBBCD4E2187115300D7AEB7 /* abihex */,
 				3C07C80921901253002E67E7 /* transaction */,
+				3C07C82D2190373D002E67E7 /* SetupTransactions.swift */,
 			);
 			path = "eos-chain-actions";
 			sourceTree = "<group>";
@@ -1546,6 +1567,7 @@
 				3CDCDFB12188D5F2005D0B25 /* BuyRamArgsTests.swift in Sources */,
 				3CDCDFA42188D39D005D0B25 /* BuyRamBytesArgsTests.swift in Sources */,
 				3C07C80B21901292002E67E7 /* CreateAccountChainTests.swift in Sources */,
+				3C07C83221903BB0002E67E7 /* DelegateBandwidthChainTest.swift in Sources */,
 				3C11C3922178C303007F346C /* EOSPrivateKeyTests.swift in Sources */,
 				3CFE7FF221710FB7005AF4FA /* util.swift in Sources */,
 				3CB38C5221772E9F00C1BEB2 /* HexWriterTests.swift in Sources */,
@@ -1553,17 +1575,23 @@
 				3CE74B92218B5560006CB0C2 /* SignedTransactionAbiTest.swift in Sources */,
 				3CDCDF9C2188CEB6005D0B25 /* VoteArgsTests.swift in Sources */,
 				3CDCDFCD2188DE03005D0B25 /* NewAccountArgsTests.swift in Sources */,
+				3C07C82E2190373D002E67E7 /* SetupTransactions.swift in Sources */,
+				3C07C83021903B43002E67E7 /* BuyRamChainTest.swift in Sources */,
 				3CDCDFB82188D78B005D0B25 /* DelegateBandwidthArgsTests.swift in Sources */,
+				3C07C83621903EA7002E67E7 /* TransferChainTest.swift in Sources */,
 				3C55C13F217622140030FF9B /* AssetWriterTest.swift in Sources */,
 				3CFE7FF021710F82005AF4FA /* ChainApiTest.swift in Sources */,
 				3CDCDFCF2188DF82005D0B25 /* SellRamArgsTests.swift in Sources */,
 				3CDCDFE0218911D8005D0B25 /* BlockIdDetailsTest.swift in Sources */,
 				3C07C822219032D2002E67E7 /* RefundArgsTest.swift in Sources */,
 				3C07C81121902C46002E67E7 /* utils.swift in Sources */,
+				3C07C82C219036A9002E67E7 /* BuyRamBytesChainTest.swift in Sources */,
 				3CDCDFD12188F393005D0B25 /* UnDelegateBandwidthArgsTests.swift in Sources */,
+				3C07C83821904049002E67E7 /* VoteChainTest.swift in Sources */,
 				3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */,
 				3CE74B94218B58B1006CB0C2 /* ActionAbiTests.swift in Sources */,
 				3CBBCD522187116E00D7AEB7 /* TransferArgsTests.swift in Sources */,
+				3C07C83421903D28002E67E7 /* SellRamChainTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

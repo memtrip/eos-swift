@@ -20,7 +20,7 @@ class UnDelegateBandwidthChain : ChainTransaction {
         return _chainApi
     }
 
-    func delegateBandwidth(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
+    func undelegateBandwidth(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
         return push(
             expirationDate: Date.defaultTransactionExpiry(),
             actions: buildAbiList(args: args, transactionContext: transactionContext),

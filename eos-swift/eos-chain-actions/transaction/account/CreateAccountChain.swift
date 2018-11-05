@@ -12,7 +12,7 @@ class CreateAccountChain : ChainTransaction {
     }
 
     struct Quantity {
-        let ram: UInt64
+        let ram: Int64
         let net: String
         let cpu: String
     }
@@ -97,7 +97,7 @@ class CreateAccountChain : ChainTransaction {
         let buyRamBytesArgs: BuyRamBytesArgs = BuyRamBytesArgs(
             payer: AccountNameWriterValue(name: transactionContext.authorizingAccountName),
             receiver: AccountNameWriterValue(name: args.newAccountName),
-            bytes: 4096
+            bytes: args.quantity.ram
         )
         return BuyRamBytesBody(args: buyRamBytesArgs).toHex()
     }

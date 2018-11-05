@@ -17,7 +17,7 @@ class SellRamChain : ChainTransaction {
         return _chainApi
     }
 
-    func buyRam(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
+    func sellRam(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
         return push(
             expirationDate: Date.defaultTransactionExpiry(),
             actions: buildAbiList(args: args, transactionContext: transactionContext),

@@ -7,7 +7,7 @@ class TransferArgsTests: XCTestCase {
 
     func testTransferDecodable() {
         let transferArgs: TransferArgs = TransferArgs(
-            fromValue: AccountNameWriterValue(name: "memtripissu5"),
+            from: AccountNameWriterValue(name: "memtripissu5"),
             to: AccountNameWriterValue(name: "memtripblock"),
             quantity: AssetWriterValue(asset: "12.3040 EOS"),
             memo: "this is a memo")

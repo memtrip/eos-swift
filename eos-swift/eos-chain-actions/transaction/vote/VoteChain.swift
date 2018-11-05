@@ -19,7 +19,7 @@ class VoteChain : ChainTransaction {
         return _chainApi
     }
 
-    func transfer(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
+    func vote(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
         return push(
             expirationDate: Date.defaultTransactionExpiry(),
             actions: buildAbiList(args: args, transactionContext: transactionContext),
@@ -34,8 +34,8 @@ class VoteChain : ChainTransaction {
             producers: AccountNameCollectionWriterValue(value: args.producers))
 
         return [ActionAbi(
-            account: AccountNameWriterValue(name: "eosio.token"),
-            name: AccountNameWriterValue(name: "transfer"),
+            account: AccountNameWriterValue(name: "eosio"),
+            name: AccountNameWriterValue(name: "voteproducer"),
             authorization: [TransactionAuthorizationAbi(
                 actor: AccountNameWriterValue(name: transactionContext.authorizingAccountName),
                 permission: AccountNameWriterValue(name: "active"))],

@@ -1,5 +1,4 @@
 import Foundation
-import Base58String
 import BigInt
 
 class EOSPrivateKey {

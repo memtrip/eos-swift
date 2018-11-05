@@ -24,14 +24,14 @@ extension ChainTransaction {
                     context_free_data: HexCollectionWriterValue(value: []))
 
                 let signature = PrivateKeySigning().sign(
-                    digest: try self.encodeSignedTransactionAbi(signedTransactionAbi: signedTransactionAbi),
+                    digest: signedTransactionAbi.toData(),
                     eosPrivateKey: authorizingPrivateKey)
 
                 return self.chainApi().pushTransaction(body: PushTransaction(
                     signatures: [signature],
                     compression: "none",
                     packed_context_free_data: "",
-                    packed_trx: try self.encodeTransactionAbi(transactionAbi: transactionAbi).hexEncodedString()
+                    packed_trx: transactionAbi.toHex()
                 )).map { response in
                     ChainResponse<TransactionCommitted>(
                         success: response.success,
@@ -43,18 +43,6 @@ extension ChainTransaction {
                 return Single.just(ChainResponse.errorResponse())
             }
         }
-    }
-
-    private func encodeSignedTransactionAbi(signedTransactionAbi: SignedTransactionAbi) throws -> Data {
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try abiEncoder.encode(encodable: signedTransactionAbi)
-        return abiEncoder.toData()
-    }
-
-    private func encodeTransactionAbi(transactionAbi: TransactionAbi) throws -> Data {
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try abiEncoder.encode(encodable: transactionAbi)
-        return abiEncoder.toData()
     }
 
     private func createTransactionAbi(expirationDate: Date,

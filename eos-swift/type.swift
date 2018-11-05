@@ -102,17 +102,3 @@ extension Data {
         }
     }
 }
-
-extension Encodable {
-    func toHex() -> String {
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: self)
-        return abiEncoder.toData().hexEncodedString()
-    }
-
-    func toData() -> Data {
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: self)
-        return abiEncoder.toData()
-    }
-}

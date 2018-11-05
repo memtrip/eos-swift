@@ -11,6 +11,17 @@
 		3C07C80D21901376002E67E7 /* CreateAccountChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C80C21901376002E67E7 /* CreateAccountChain.swift */; };
 		3C07C80F21901542002E67E7 /* TransactionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C80E21901542002E67E7 /* TransactionContext.swift */; };
 		3C07C81121902C46002E67E7 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C81021902C46002E67E7 /* utils.swift */; };
+		3C07C81521902FD4002E67E7 /* BuyRamBytesChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C81421902FD4002E67E7 /* BuyRamBytesChain.swift */; };
+		3C07C817219030C7002E67E7 /* BuyRamChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C816219030C7002E67E7 /* BuyRamChain.swift */; };
+		3C07C8192190314D002E67E7 /* DelegateBandwidthChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C8182190314D002E67E7 /* DelegateBandwidthChain.swift */; };
+		3C07C81B2190322E002E67E7 /* RefundChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C81A2190322E002E67E7 /* RefundChain.swift */; };
+		3C07C81E2190327D002E67E7 /* RefundArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C81D2190327D002E67E7 /* RefundArgs.swift */; };
+		3C07C82021903287002E67E7 /* RefundBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C81F21903287002E67E7 /* RefundBody.swift */; };
+		3C07C822219032D2002E67E7 /* RefundArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C821219032D2002E67E7 /* RefundArgsTest.swift */; };
+		3C07C82421903444002E67E7 /* SellRamChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C82321903444002E67E7 /* SellRamChain.swift */; };
+		3C07C826219034A5002E67E7 /* UnDelegateBandwidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C825219034A5002E67E7 /* UnDelegateBandwidth.swift */; };
+		3C07C8282190350B002E67E7 /* TransferChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C8272190350B002E67E7 /* TransferChain.swift */; };
+		3C07C82A219035BF002E67E7 /* VoteChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07C829219035BF002E67E7 /* VoteChain.swift */; };
 		3C11C38121789EBF007F346C /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38021789EBF007F346C /* uECC.c */; };
 		3C11C38B2178B50A007F346C /* EOSPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38A2178B50A007F346C /* EOSPrivateKey.swift */; };
 		3C11C38D2178B549007F346C /* ECPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C38C2178B549007F346C /* ECPrivateKey.swift */; };
@@ -194,6 +205,17 @@
 		3C07C80C21901376002E67E7 /* CreateAccountChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountChain.swift; sourceTree = "<group>"; };
 		3C07C80E21901542002E67E7 /* TransactionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionContext.swift; sourceTree = "<group>"; };
 		3C07C81021902C46002E67E7 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		3C07C81421902FD4002E67E7 /* BuyRamBytesChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamBytesChain.swift; sourceTree = "<group>"; };
+		3C07C816219030C7002E67E7 /* BuyRamChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRamChain.swift; sourceTree = "<group>"; };
+		3C07C8182190314D002E67E7 /* DelegateBandwidthChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthChain.swift; sourceTree = "<group>"; };
+		3C07C81A2190322E002E67E7 /* RefundChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundChain.swift; sourceTree = "<group>"; };
+		3C07C81D2190327D002E67E7 /* RefundArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundArgs.swift; sourceTree = "<group>"; };
+		3C07C81F21903287002E67E7 /* RefundBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundBody.swift; sourceTree = "<group>"; };
+		3C07C821219032D2002E67E7 /* RefundArgsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundArgsTest.swift; sourceTree = "<group>"; };
+		3C07C82321903444002E67E7 /* SellRamChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRamChain.swift; sourceTree = "<group>"; };
+		3C07C825219034A5002E67E7 /* UnDelegateBandwidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnDelegateBandwidth.swift; sourceTree = "<group>"; };
+		3C07C8272190350B002E67E7 /* TransferChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferChain.swift; sourceTree = "<group>"; };
+		3C07C829219035BF002E67E7 /* VoteChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteChain.swift; sourceTree = "<group>"; };
 		3C11C38021789EBF007F346C /* uECC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uECC.c; path = "eos-swift/microecc_uref/src/uECC.c"; sourceTree = SOURCE_ROOT; };
 		3C11C38221789ECA007F346C /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = types.h; path = "eos-swift/microecc_uref/include/types.h"; sourceTree = SOURCE_ROOT; };
 		3C11C38321789ECA007F346C /* asm_arm.inc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = asm_arm.inc.h; path = "eos-swift/microecc_uref/include/asm_arm.inc.h"; sourceTree = SOURCE_ROOT; };
@@ -414,6 +436,15 @@
 				3C07C80A21901292002E67E7 /* CreateAccountChainTests.swift */,
 			);
 			path = transaction;
+			sourceTree = "<group>";
+		};
+		3C07C81C2190326B002E67E7 /* refund */ = {
+			isa = PBXGroup;
+			children = (
+				3C07C81D2190327D002E67E7 /* RefundArgs.swift */,
+				3C07C81F21903287002E67E7 /* RefundBody.swift */,
+			);
+			path = refund;
 			sourceTree = "<group>";
 		};
 		3C11C37821789E84007F346C /* microecc */ = {
@@ -687,6 +718,7 @@
 			isa = PBXGroup;
 			children = (
 				3CBBCD4821870F9A00D7AEB7 /* actions */,
+				3C07C8272190350B002E67E7 /* TransferChain.swift */,
 			);
 			path = transfer;
 			sourceTree = "<group>";
@@ -719,6 +751,7 @@
 				3CDCDFCC2188DE03005D0B25 /* NewAccountArgsTests.swift */,
 				3CDCDFCE2188DF82005D0B25 /* SellRamArgsTests.swift */,
 				3CBBCD512187116E00D7AEB7 /* TransferArgsTests.swift */,
+				3C07C821219032D2002E67E7 /* RefundArgsTest.swift */,
 				3CDCDFD02188F393005D0B25 /* UnDelegateBandwidthArgsTests.swift */,
 				3CDCDF9B2188CEB6005D0B25 /* VoteArgsTests.swift */,
 				3CE74B91218B5560006CB0C2 /* SignedTransactionAbiTest.swift */,
@@ -730,6 +763,7 @@
 			isa = PBXGroup;
 			children = (
 				3CDCDF9E2188CED6005D0B25 /* actions */,
+				3C07C829219035BF002E67E7 /* VoteChain.swift */,
 			);
 			path = vote;
 			sourceTree = "<group>";
@@ -747,7 +781,13 @@
 			isa = PBXGroup;
 			children = (
 				3CDCDFA62188D40C005D0B25 /* actions */,
+				3C07C81421902FD4002E67E7 /* BuyRamBytesChain.swift */,
+				3C07C816219030C7002E67E7 /* BuyRamChain.swift */,
 				3C07C80C21901376002E67E7 /* CreateAccountChain.swift */,
+				3C07C8182190314D002E67E7 /* DelegateBandwidthChain.swift */,
+				3C07C81A2190322E002E67E7 /* RefundChain.swift */,
+				3C07C82321903444002E67E7 /* SellRamChain.swift */,
+				3C07C825219034A5002E67E7 /* UnDelegateBandwidth.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -759,6 +799,7 @@
 				3CDCDFB22188D659005D0B25 /* delegatebw */,
 				3CDCDFC72188D9BC005D0B25 /* undelegatebw */,
 				3CDCDFB92188D853005D0B25 /* newaccount */,
+				3C07C81C2190326B002E67E7 /* refund */,
 				3CDCDFC22188D96E005D0B25 /* sellram */,
 			);
 			path = actions;
@@ -1356,6 +1397,7 @@
 				3CFE7F692170AF74005AF4FA /* TransactionAuthorization.swift in Sources */,
 				3CBBCD4421870A3300D7AEB7 /* TransactionAbi.swift in Sources */,
 				3CBBCD42218709F000D7AEB7 /* SignedTransactionAbi.swift in Sources */,
+				3C07C8282190350B002E67E7 /* TransferChain.swift in Sources */,
 				3CFE7F632170AE74005AF4FA /* TransactionReceipt.swift in Sources */,
 				3CFE7FDA2170D095005AF4FA /* HistoricAccountActionParent.swift in Sources */,
 				3C74396C2175296D0056F0E6 /* AssetWriter.swift in Sources */,
@@ -1367,9 +1409,11 @@
 				3CFE7F892170C19F005AF4FA /* SelfDelegatedBandwidth.swift in Sources */,
 				3CFE7FB32170C8D7005AF4FA /* AbiField.swift in Sources */,
 				3CFE7FA42170C6CF005AF4FA /* Region.swift in Sources */,
+				3C07C82021903287002E67E7 /* RefundBody.swift in Sources */,
 				3CDCDFA02188CEE0005D0B25 /* VoteArgs.swift in Sources */,
 				3CFE7F8D2170C1F6005AF4FA /* VoterInfo.swift in Sources */,
 				3C11C3992178D24B007F346C /* Base58.swift in Sources */,
+				3C07C81E2190327D002E67E7 /* RefundArgs.swift in Sources */,
 				3C74397621752A320056F0E6 /* HexCollectionWriter.swift in Sources */,
 				3CDCDFA92188D42C005D0B25 /* BuyRamBytesArgs.swift in Sources */,
 				3CFE7F4C216FECAF005AF4FA /* HttpResponse.swift in Sources */,
@@ -1384,6 +1428,7 @@
 				3CFE7FCC2170CB99005AF4FA /* GetKeyAccounts.swift in Sources */,
 				3C90A9462176764E00569124 /* Sha256.swift in Sources */,
 				3C743964217528F90056F0E6 /* AccountNameWriter.swift in Sources */,
+				3C07C826219034A5002E67E7 /* UnDelegateBandwidth.swift in Sources */,
 				3CFE7FCE2170CBB3005AF4FA /* GetTransaction.swift in Sources */,
 				3C74396E2175299B0056F0E6 /* ChainIdWriter.swift in Sources */,
 				3CFE7F982170C332005AF4FA /* BlockHeaderRootMerkle.swift in Sources */,
@@ -1402,6 +1447,7 @@
 				3CFE7FE12170D201005AF4FA /* GetProducers.swift in Sources */,
 				3CFE7FC32170CA25005AF4FA /* RawCodeForAccount.swift in Sources */,
 				3CFE7F942170C2C5005AF4FA /* Block.swift in Sources */,
+				3C07C8192190314D002E67E7 /* DelegateBandwidthChain.swift in Sources */,
 				3C11C38D2178B549007F346C /* ECPrivateKey.swift in Sources */,
 				3CFE7F9A2170C351005AF4FA /* BlockHeaderSchedule.swift in Sources */,
 				3CFE7FBD2170C999005AF4FA /* BinaryHex.swift in Sources */,
@@ -1443,17 +1489,20 @@
 				3CFE7FA82170C791005AF4FA /* GetCodeByAccountName.swift in Sources */,
 				3CFE7FC82170CB25005AF4FA /* GetActions.swift in Sources */,
 				3C7439662175291D0056F0E6 /* BlockNumWriter.swift in Sources */,
+				3C07C81B2190322E002E67E7 /* RefundChain.swift in Sources */,
 				3C07C80F21901542002E67E7 /* TransactionContext.swift in Sources */,
 				3CFE7FD62170D04B005AF4FA /* ExecutedTransactionReceipt.swift in Sources */,
 				3CFE7F9C2170C5ED005AF4FA /* BlockHeaderState.swift in Sources */,
 				3CDCDFC42188D97C005D0B25 /* SellRamArgs.swift in Sources */,
 				3C74397421752A200056F0E6 /* StringCollectionWriter.swift in Sources */,
+				3C07C82421903444002E67E7 /* SellRamChain.swift in Sources */,
 				3CFE7FCA2170CB4F005AF4FA /* GetControlledAccounts.swift in Sources */,
 				3CFE7FA22170C6A2005AF4FA /* CycleSummaryTransaction.swift in Sources */,
 				3CFE7F4D216FECAF005AF4FA /* HttpRequest.swift in Sources */,
 				3CB38C4D2177292500C1BEB2 /* HexWriter.swift in Sources */,
 				3C5E85F8218325DD00B57D39 /* RIPEMD160-HMAC.swift in Sources */,
 				3CFE7F52216FF03B005AF4FA /* ResponseBody.swift in Sources */,
+				3C07C82A219035BF002E67E7 /* VoteChain.swift in Sources */,
 				3CFE7F712170B9D2005AF4FA /* GetRequiredKeysBody.swift in Sources */,
 				3CFE7F732170BA3C005AF4FA /* Transaction.swift in Sources */,
 				3CFE7FB72170C922005AF4FA /* AbiStruct.swift in Sources */,
@@ -1465,6 +1514,7 @@
 				3CFE7F6B2170B3FC005AF4FA /* Encodable.swift in Sources */,
 				3C5E85F9218325DD00B57D39 /* RIPEMD160.swift in Sources */,
 				3CFE7F6F2170B80F005AF4FA /* GetCurrencyStats.swift in Sources */,
+				3C07C81521902FD4002E67E7 /* BuyRamBytesChain.swift in Sources */,
 				3C55C141217625980030FF9B /* regex.swift in Sources */,
 				3CDCDFB42188D675005D0B25 /* DelegateBandwidthArgs.swift in Sources */,
 				3CFE7FE72170D28E005AF4FA /* RequiredKeys.swift in Sources */,
@@ -1473,6 +1523,7 @@
 				3CDCDFBF2188D91E005D0B25 /* NewAccountArgs.swift in Sources */,
 				3CFE7FB12170C89D005AF4FA /* AbiContract.swift in Sources */,
 				3CFE7F652170AEDC005AF4FA /* TransactionParentReceipt.swift in Sources */,
+				3C07C817219030C7002E67E7 /* BuyRamChain.swift in Sources */,
 				3CFE7F9E2170C632005AF4FA /* BlockHeaderStateHeader.swift in Sources */,
 				3CDCDFAF2188D4B3005D0B25 /* BuyRamBody.swift in Sources */,
 				3C5E85F7218325DD00B57D39 /* RIPEMD160-Ext.swift in Sources */,
@@ -1507,6 +1558,7 @@
 				3CFE7FF021710F82005AF4FA /* ChainApiTest.swift in Sources */,
 				3CDCDFCF2188DF82005D0B25 /* SellRamArgsTests.swift in Sources */,
 				3CDCDFE0218911D8005D0B25 /* BlockIdDetailsTest.swift in Sources */,
+				3C07C822219032D2002E67E7 /* RefundArgsTest.swift in Sources */,
 				3C07C81121902C46002E67E7 /* utils.swift in Sources */,
 				3CDCDFD12188F393005D0B25 /* UnDelegateBandwidthArgsTests.swift in Sources */,
 				3C743948217495EE0056F0E6 /* HistoryApiTest.swift in Sources */,

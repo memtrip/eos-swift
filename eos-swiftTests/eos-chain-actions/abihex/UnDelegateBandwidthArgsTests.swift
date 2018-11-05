@@ -15,10 +15,6 @@ class UnDelegateBandwidthArgsTests: XCTestCase {
         )
         let unDelegateBandwidthBody: UnDelegateBandwidthBody = UnDelegateBandwidthBody(args: unDelegateBandwidthArgs)
 
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: unDelegateBandwidthBody)
-        let hexEncodedString = abiEncoder.toData().hexEncodedString()
-
-        XCTAssertEqual(hexEncodedString, "a034c6aeba9ba592e03bbdb5ba9ba59259d107000000000004454f5300000000d9201a000000000004454f5300000000")
+        XCTAssertEqual(unDelegateBandwidthBody.toHex(), "a034c6aeba9ba592e03bbdb5ba9ba59259d107000000000004454f5300000000d9201a000000000004454f5300000000")
     }
 }

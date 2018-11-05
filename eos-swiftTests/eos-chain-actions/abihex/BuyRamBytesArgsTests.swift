@@ -13,10 +13,6 @@ class BuyRamBytesArgsTests: XCTestCase {
         )
         let buyRamBytesBody: BuyRamBytesBody = BuyRamBytesBody(args: buyRamBytesArgs)
 
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: buyRamBytesBody)
-        let hexEncodedString = abiEncoder.toData().hexEncodedString()
-
-        XCTAssertEqual(hexEncodedString, "a034c6aeba9ba592e03bbdb5ba9ba5920010000000000000")
+        XCTAssertEqual(buyRamBytesBody.toHex(), "a034c6aeba9ba592e03bbdb5ba9ba5920010000000000000")
     }
 }

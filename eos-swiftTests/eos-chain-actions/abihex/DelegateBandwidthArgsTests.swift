@@ -16,10 +16,6 @@ class DelegateBandwidthArgsTests: XCTestCase {
         )
         let delegateBandwidthBody: DelegateBandwidthBody = DelegateBandwidthBody(args: delegateBandwidthArgs)
 
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: delegateBandwidthBody)
-        let hexEncodedString = abiEncoder.toData().hexEncodedString()
-
-        XCTAssertEqual(hexEncodedString, "a034c6aeba9ba592e03bbdb5ba9ba59259d107000000000004454f5300000000d9201a000000000004454f530000000001000000")
+        XCTAssertEqual(delegateBandwidthBody.toHex(), "a034c6aeba9ba592e03bbdb5ba9ba59259d107000000000004454f5300000000d9201a000000000004454f530000000001000000")
     }
 }

@@ -12,11 +12,7 @@ class VoteArgsTests: XCTestCase {
             producers: AccountNameCollectionWriterValue(value: []))
         let voteBody: VoteBody = VoteBody(args: voteArgs)
 
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: voteBody)
-        let hexEncodedString = abiEncoder.toData().hexEncodedString()
-
-        XCTAssertEqual(hexEncodedString, "a034c6aeba9ba592e03bbdb5ba9ba59200")
+        XCTAssertEqual(voteBody.toHex(), "a034c6aeba9ba592e03bbdb5ba9ba59200")
     }
 
     func testProducerVoteDecodable() {

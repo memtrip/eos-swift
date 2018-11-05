@@ -3,6 +3,20 @@ import RxSwift
 
 class CreateAccountChain : ChainTransaction {
 
+    struct Args {
+        let newAccountName: String
+        let quantity: Quantity
+        let ownerPublicKey: EOSPublicKey
+        let activePublicKey: EOSPublicKey
+        let transfer: Bool
+    }
+
+    struct Quantity {
+        let ram: UInt64
+        let net: String
+        let cpu: String
+    }
+
     private let _chainApi: ChainApi
 
     init(chainApi: ChainApi) {
@@ -96,19 +110,5 @@ class CreateAccountChain : ChainTransaction {
             stake_cpu_quantity: AssetWriterValue(asset: args.quantity.cpu),
             transfer: args.transfer ? 1 : 0)
         return DelegateBandwidthBody(args: delegateBandwidthArgs).toHex()
-    }
-
-    struct Args {
-        let newAccountName: String
-        let quantity: Quantity
-        let ownerPublicKey: EOSPublicKey
-        let activePublicKey: EOSPublicKey
-        let transfer: Bool
-    }
-
-    struct Quantity {
-        let ram: UInt64
-        let net: String
-        let cpu: String
     }
 }

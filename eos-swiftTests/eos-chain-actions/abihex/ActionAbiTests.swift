@@ -15,12 +15,8 @@ class ActionAbiTests: XCTestCase {
                 permission: AccountNameWriterValue(name: "active"))],
             data: DataWriterValue(hex: createBuyRamBytes))
 
-        let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: actionAbi)
-        let actionAbiHex = abiEncoder.toData().hexEncodedString()
-
         XCTAssertEqual("a034c6aeba9ba592e03bbdb5ba9ba5920010000000000000", createBuyRamBytes)
-        XCTAssertEqual(actionAbiHex, "0000000000ea305500b0cafe4873bd3e01a034c6aeba9ba59200000000a8ed323218a034c6aeba9ba592e03bbdb5ba9ba5920010000000000000")
+        XCTAssertEqual(actionAbi.toHex(), "0000000000ea305500b0cafe4873bd3e01a034c6aeba9ba59200000000a8ed323218a034c6aeba9ba592e03bbdb5ba9ba5920010000000000000")
     }
 
     private func createBuyRamBytesAbi() -> String {

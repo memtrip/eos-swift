@@ -153,9 +153,9 @@
 		3C02809421907C1D00D22DF0 /* uECC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C02808B21907C1D00D22DF0 /* uECC.h */; };
 		3C02809521907C1D00D22DF0 /* asm_arm.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C02808C21907C1D00D22DF0 /* asm_arm.inc.h */; };
 		3C02809621907C1D00D22DF0 /* uECC_vli.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C02808D21907C1D00D22DF0 /* uECC_vli.h */; };
-		3C02809721907C1D00D22DF0 /* curve-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = 3C02808E21907C1D00D22DF0 /* curve-specific.inc */; };
+		3C02809721907C1D00D22DF0 /* curve-specific.inc.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C02808E21907C1D00D22DF0 /* curve-specific.inc.h */; };
 		3C02809821907C1D00D22DF0 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C02808F21907C1D00D22DF0 /* types.h */; };
-		3C02809921907C1D00D22DF0 /* platform-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = 3C02809021907C1D00D22DF0 /* platform-specific.inc */; };
+		3C02809921907C1D00D22DF0 /* platform-specific.inc.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C02809021907C1D00D22DF0 /* platform-specific.inc.h */; };
 		3C02809A21907C1D00D22DF0 /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C02809321907C1D00D22DF0 /* uECC.c */; };
 		3C0280CF21907DC700D22DF0 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280A621907DC700D22DF0 /* utils.swift */; };
 		3C0280D021907DC700D22DF0 /* AssetWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280A821907DC700D22DF0 /* AssetWriterTest.swift */; };
@@ -351,9 +351,9 @@
 		3C02808B21907C1D00D22DF0 /* uECC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uECC.h; sourceTree = "<group>"; };
 		3C02808C21907C1D00D22DF0 /* asm_arm.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asm_arm.inc.h; sourceTree = "<group>"; };
 		3C02808D21907C1D00D22DF0 /* uECC_vli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uECC_vli.h; sourceTree = "<group>"; };
-		3C02808E21907C1D00D22DF0 /* curve-specific.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "curve-specific.inc"; sourceTree = "<group>"; };
+		3C02808E21907C1D00D22DF0 /* curve-specific.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "curve-specific.inc.h"; sourceTree = "<group>"; };
 		3C02808F21907C1D00D22DF0 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
-		3C02809021907C1D00D22DF0 /* platform-specific.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "platform-specific.inc"; sourceTree = "<group>"; };
+		3C02809021907C1D00D22DF0 /* platform-specific.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "platform-specific.inc.h"; sourceTree = "<group>"; };
 		3C02809121907C1D00D22DF0 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		3C02809321907C1D00D22DF0 /* uECC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uECC.c; sourceTree = "<group>"; };
 		3C0280A621907DC700D22DF0 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
@@ -973,8 +973,8 @@
 			isa = PBXGroup;
 			children = (
 				3C02808A21907C1D00D22DF0 /* include */,
-				3C02809121907C1D00D22DF0 /* module.modulemap */,
 				3C02809221907C1D00D22DF0 /* src */,
+				3C02809121907C1D00D22DF0 /* module.modulemap */,
 			);
 			path = microecc_uref;
 			sourceTree = "<group>";
@@ -985,9 +985,9 @@
 				3C02808B21907C1D00D22DF0 /* uECC.h */,
 				3C02808C21907C1D00D22DF0 /* asm_arm.inc.h */,
 				3C02808D21907C1D00D22DF0 /* uECC_vli.h */,
-				3C02808E21907C1D00D22DF0 /* curve-specific.inc */,
+				3C02808E21907C1D00D22DF0 /* curve-specific.inc.h */,
 				3C02808F21907C1D00D22DF0 /* types.h */,
-				3C02809021907C1D00D22DF0 /* platform-specific.inc */,
+				3C02809021907C1D00D22DF0 /* platform-specific.inc.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -1352,7 +1352,7 @@
 				3C02802D21907C0E00D22DF0 /* AbiStruct.swift in Sources */,
 				3C02800321907C0E00D22DF0 /* RIPEMD160.swift in Sources */,
 				3C02802021907C0E00D22DF0 /* ChainApi.swift in Sources */,
-				3C02809721907C1D00D22DF0 /* curve-specific.inc in Sources */,
+				3C02809721907C1D00D22DF0 /* curve-specific.inc.h in Sources */,
 				3C02801F21907C0E00D22DF0 /* HistoryApi.swift in Sources */,
 				3C02800721907C0E00D22DF0 /* utils.swift in Sources */,
 				3C02808521907C0E00D22DF0 /* RefundArgs.swift in Sources */,
@@ -1459,7 +1459,7 @@
 				3C02805321907C0E00D22DF0 /* AccountRequiredAuth.swift in Sources */,
 				3C02807C21907C0E00D22DF0 /* BuyRamBody.swift in Sources */,
 				3C02804C21907C0E00D22DF0 /* GetActions.swift in Sources */,
-				3C02809921907C1D00D22DF0 /* platform-specific.inc in Sources */,
+				3C02809921907C1D00D22DF0 /* platform-specific.inc.h in Sources */,
 				3C02803821907C0E00D22DF0 /* GetCodeByAccountName.swift in Sources */,
 				3C02804321907C0E00D22DF0 /* Encodable.swift in Sources */,
 				3C02803221907C0E00D22DF0 /* CodeForAccount.swift in Sources */,

@@ -4,7 +4,7 @@ import RxCocoa
 import RxTest
 import RxBlocking
 
-@testable import eos_swift
+@testable import eosswift
 
 class HistoryApiTest: XCTestCase {
 

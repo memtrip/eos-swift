@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-@testable import eos_swift
+@testable import eosswift
 
 class RefundArgsTests: XCTestCase {
 

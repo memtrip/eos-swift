@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-@testable import eos_swift
+@testable import eosswift
 
 class CreateAccountChainTests: XCTestCase {
 
@@ -18,7 +18,7 @@ class CreateAccountChainTests: XCTestCase {
             args: CreateAccountChain.Args(
                 newAccountName: accountName,
                 quantity: CreateAccountChain.Quantity(
-                    ram: 4048,
+                    ram: 6048,
                     net: "1.0000 SYS",
                     cpu: "11.0000 SYS"
                 ),

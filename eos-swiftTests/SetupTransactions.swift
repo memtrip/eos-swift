@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-@testable import eos_swift
+@testable import eosswift
 
 class SetupTransactions {
 

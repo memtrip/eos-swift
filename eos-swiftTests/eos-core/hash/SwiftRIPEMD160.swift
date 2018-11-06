@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-@testable import eos_swift
+@testable import eosswift
 
 // Test vectors from http://homes.esat.kuleuven.be/~bosselae/ripemd160.html
 class SwiftRIPEMD160Tests: XCTestCase {

@@ -1,0 +1,4 @@
+module microecc [system][extern_c] {
+    header "include/uECC.h"
+    export *
+}

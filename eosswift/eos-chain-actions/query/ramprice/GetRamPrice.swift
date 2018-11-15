@@ -38,17 +38,17 @@ class GetRamPrice {
     }
 
     private func calculateRamPerKiloByte(row: [String:AnyJSONType]) -> Double {
-        let quote = row["quote"]!.jsonValue as! [String:String]
-        let base = row["base"]!.jsonValue as! [String:String]
-        let quoteBalance = value(balance: quote["balance"]!)
-        let baseBalance = value(balance: base["balance"]!)
+        let quote = row["quote"]!.jsonValue as! [String:AnyJSONType]
+        let base = row["base"]!.jsonValue as! [String:AnyJSONType]
+        let quoteBalance = value(balance: quote["balance"]!.jsonValue as! String)
+        let baseBalance = value(balance: base["balance"]!.jsonValue as! String)
 
-        return (Double(quoteBalance) / Double(baseBalance)) * 1024
+        return (quoteBalance / baseBalance) * 1024
     }
 
-    private func value(balance: String) -> BigInt {
-        let split = balance.split(separator: " ")[0]
-        return BigInt(split)!
+    private func value(balance: String) -> Double {
+        let split = String(balance.split(separator: " ")[0])
+        return Double(split)!
     }
 
     enum GetRamPrice : Error {

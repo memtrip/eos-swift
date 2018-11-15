@@ -17,7 +17,7 @@ class GetRegProxyInfo {
             table_key: "",
             json: true,
             limit: limit,
-            lower_bound: lowerBound(nextAccount: nextAccount),
+            lower_bound: next(nextAccount: nextAccount, offset: 1),
             upper_bound: "",
             key_type: "",
             index_position: "",
@@ -53,8 +53,8 @@ class GetRegProxyInfo {
             table_key: "",
             json: true,
             limit: 1,
-            lower_bound: lowerBound(nextAccount: accountName),
-            upper_bound: "",
+            lower_bound: next(nextAccount: accountName),
+            upper_bound: next(nextAccount: accountName, offset: 1),
             key_type: "",
             index_position: "",
             encode_type: "dec"
@@ -80,11 +80,11 @@ class GetRegProxyInfo {
         }
     }
 
-    private func lowerBound(nextAccount: String) -> String {
+    private func next(nextAccount: String, offset: Int = 0) -> String {
         if (nextAccount.count == 0) {
             return ""
         } else {
-            return String(NameWriterValue(name: nextAccount).nameAsInt64(name: nextAccount) + 1)
+            return String(NameWriterValue(name: nextAccount).nameAsInt64(name: nextAccount) + Int64.init(offset))
         }
     }
 

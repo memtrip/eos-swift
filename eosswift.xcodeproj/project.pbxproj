@@ -163,13 +163,13 @@
 		3C0280D321907DC700D22DF0 /* EOSPrivateKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280AF21907DC700D22DF0 /* EOSPrivateKeyTests.swift */; };
 		3C0280D421907DC700D22DF0 /* EOSPublicKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B021907DC700D22DF0 /* EOSPublicKeyTests.swift */; };
 		3C0280D521907DC700D22DF0 /* BlockIdDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B221907DC700D22DF0 /* BlockIdDetailsTest.swift */; };
-		3C0280D621907DC700D22DF0 /* BuyRamBytesChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B521907DC700D22DF0 /* BuyRamBytesChainTest.swift */; };
+		3C0280D621907DC700D22DF0 /* BuyRamBytesChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B521907DC700D22DF0 /* BuyRamBytesChainTests.swift */; };
 		3C0280D721907DC700D22DF0 /* CreateAccountChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B621907DC700D22DF0 /* CreateAccountChainTests.swift */; };
-		3C0280D821907DC700D22DF0 /* VoteChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B721907DC700D22DF0 /* VoteChainTest.swift */; };
-		3C0280D921907DC700D22DF0 /* TransferChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B821907DC700D22DF0 /* TransferChainTest.swift */; };
-		3C0280DA21907DC700D22DF0 /* DelegateBandwidthChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B921907DC700D22DF0 /* DelegateBandwidthChainTest.swift */; };
-		3C0280DB21907DC700D22DF0 /* SellRamChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280BA21907DC700D22DF0 /* SellRamChainTest.swift */; };
-		3C0280DC21907DC700D22DF0 /* BuyRamChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280BB21907DC700D22DF0 /* BuyRamChainTest.swift */; };
+		3C0280D821907DC700D22DF0 /* VoteChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B721907DC700D22DF0 /* VoteChainTests.swift */; };
+		3C0280D921907DC700D22DF0 /* TransferChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B821907DC700D22DF0 /* TransferChainTests.swift */; };
+		3C0280DA21907DC700D22DF0 /* DelegateBandwidthChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280B921907DC700D22DF0 /* DelegateBandwidthChainTests.swift */; };
+		3C0280DB21907DC700D22DF0 /* SellRamChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280BA21907DC700D22DF0 /* SellRamChainTests.swift */; };
+		3C0280DC21907DC700D22DF0 /* BuyRamChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280BB21907DC700D22DF0 /* BuyRamChainTests.swift */; };
 		3C0280DD21907DC700D22DF0 /* SetupTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280BC21907DC700D22DF0 /* SetupTransactions.swift */; };
 		3C0280DE21907DC700D22DF0 /* VoteArgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280BE21907DC700D22DF0 /* VoteArgsTests.swift */; };
 		3C0280DF21907DC700D22DF0 /* RefundArgsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280BF21907DC700D22DF0 /* RefundArgsTest.swift */; };
@@ -203,6 +203,10 @@
 		3C592FED219D7B6000D7C9B9 /* GetRegProxyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FEC219D7B6000D7C9B9 /* GetRegProxyInfo.swift */; };
 		3C592FEF219D7B6A00D7C9B9 /* ProxyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FEE219D7B6A00D7C9B9 /* ProxyJson.swift */; };
 		3C592FF1219D7E4100D7C9B9 /* GetRamPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FF0219D7E4100D7C9B9 /* GetRamPrice.swift */; };
+		3C592FF5219D83B200D7C9B9 /* CalculateRamPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FF3219D82B000D7C9B9 /* CalculateRamPriceTests.swift */; };
+		3C592FF8219D868600D7C9B9 /* BlockProducersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FF6219D864300D7C9B9 /* BlockProducersTests.swift */; };
+		3C592FFB219D889600D7C9B9 /* GetDelegatedBandwidthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FF9219D888600D7C9B9 /* GetDelegatedBandwidthTests.swift */; };
+		3C592FFE219D89F900D7C9B9 /* GetRegProxyInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */; };
 		3C9BFBA9219B593C00589936 /* RefundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA8219B593C00589936 /* RefundRequest.swift */; };
 		3CCE4A082190F73200484684 /* Base58String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE4A072190F73200484684 /* Base58String.swift */; };
 		D2CB4F11DE1E1973DC7C3749 /* Pods_eos_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */; };
@@ -379,13 +383,13 @@
 		3C0280AF21907DC700D22DF0 /* EOSPrivateKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOSPrivateKeyTests.swift; sourceTree = "<group>"; };
 		3C0280B021907DC700D22DF0 /* EOSPublicKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOSPublicKeyTests.swift; sourceTree = "<group>"; };
 		3C0280B221907DC700D22DF0 /* BlockIdDetailsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockIdDetailsTest.swift; sourceTree = "<group>"; };
-		3C0280B521907DC700D22DF0 /* BuyRamBytesChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyRamBytesChainTest.swift; sourceTree = "<group>"; };
+		3C0280B521907DC700D22DF0 /* BuyRamBytesChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyRamBytesChainTests.swift; sourceTree = "<group>"; };
 		3C0280B621907DC700D22DF0 /* CreateAccountChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountChainTests.swift; sourceTree = "<group>"; };
-		3C0280B721907DC700D22DF0 /* VoteChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteChainTest.swift; sourceTree = "<group>"; };
-		3C0280B821907DC700D22DF0 /* TransferChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferChainTest.swift; sourceTree = "<group>"; };
-		3C0280B921907DC700D22DF0 /* DelegateBandwidthChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthChainTest.swift; sourceTree = "<group>"; };
-		3C0280BA21907DC700D22DF0 /* SellRamChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellRamChainTest.swift; sourceTree = "<group>"; };
-		3C0280BB21907DC700D22DF0 /* BuyRamChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyRamChainTest.swift; sourceTree = "<group>"; };
+		3C0280B721907DC700D22DF0 /* VoteChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteChainTests.swift; sourceTree = "<group>"; };
+		3C0280B821907DC700D22DF0 /* TransferChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferChainTests.swift; sourceTree = "<group>"; };
+		3C0280B921907DC700D22DF0 /* DelegateBandwidthChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateBandwidthChainTests.swift; sourceTree = "<group>"; };
+		3C0280BA21907DC700D22DF0 /* SellRamChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellRamChainTests.swift; sourceTree = "<group>"; };
+		3C0280BB21907DC700D22DF0 /* BuyRamChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyRamChainTests.swift; sourceTree = "<group>"; };
 		3C0280BC21907DC700D22DF0 /* SetupTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupTransactions.swift; sourceTree = "<group>"; };
 		3C0280BE21907DC700D22DF0 /* VoteArgsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteArgsTests.swift; sourceTree = "<group>"; };
 		3C0280BF21907DC700D22DF0 /* RefundArgsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefundArgsTest.swift; sourceTree = "<group>"; };
@@ -420,6 +424,10 @@
 		3C592FEC219D7B6000D7C9B9 /* GetRegProxyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRegProxyInfo.swift; sourceTree = "<group>"; };
 		3C592FEE219D7B6A00D7C9B9 /* ProxyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyJson.swift; sourceTree = "<group>"; };
 		3C592FF0219D7E4100D7C9B9 /* GetRamPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRamPrice.swift; sourceTree = "<group>"; };
+		3C592FF3219D82B000D7C9B9 /* CalculateRamPriceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateRamPriceTests.swift; sourceTree = "<group>"; };
+		3C592FF6219D864300D7C9B9 /* BlockProducersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockProducersTests.swift; sourceTree = "<group>"; };
+		3C592FF9219D888600D7C9B9 /* GetDelegatedBandwidthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDelegatedBandwidthTests.swift; sourceTree = "<group>"; };
+		3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRegProxyInfoTest.swift; sourceTree = "<group>"; };
 		3C9BFBA8219B593C00589936 /* RefundRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundRequest.swift; sourceTree = "<group>"; };
 		3CCE4A072190F73200484684 /* Base58String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58String.swift; sourceTree = "<group>"; };
 		4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eos_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1094,8 +1102,9 @@
 		3C0280B321907DC700D22DF0 /* eos-chain-actions */ = {
 			isa = PBXGroup;
 			children = (
-				3C0280B421907DC700D22DF0 /* transaction */,
 				3C0280BD21907DC700D22DF0 /* abihex */,
+				3C592FF2219D829D00D7C9B9 /* query */,
+				3C0280B421907DC700D22DF0 /* transaction */,
 			);
 			path = "eos-chain-actions";
 			sourceTree = "<group>";
@@ -1103,13 +1112,13 @@
 		3C0280B421907DC700D22DF0 /* transaction */ = {
 			isa = PBXGroup;
 			children = (
-				3C0280B521907DC700D22DF0 /* BuyRamBytesChainTest.swift */,
+				3C0280B521907DC700D22DF0 /* BuyRamBytesChainTests.swift */,
 				3C0280B621907DC700D22DF0 /* CreateAccountChainTests.swift */,
-				3C0280B721907DC700D22DF0 /* VoteChainTest.swift */,
-				3C0280B821907DC700D22DF0 /* TransferChainTest.swift */,
-				3C0280B921907DC700D22DF0 /* DelegateBandwidthChainTest.swift */,
-				3C0280BA21907DC700D22DF0 /* SellRamChainTest.swift */,
-				3C0280BB21907DC700D22DF0 /* BuyRamChainTest.swift */,
+				3C0280B721907DC700D22DF0 /* VoteChainTests.swift */,
+				3C0280B821907DC700D22DF0 /* TransferChainTests.swift */,
+				3C0280B921907DC700D22DF0 /* DelegateBandwidthChainTests.swift */,
+				3C0280BA21907DC700D22DF0 /* SellRamChainTests.swift */,
+				3C0280BB21907DC700D22DF0 /* BuyRamChainTests.swift */,
 			);
 			path = transaction;
 			sourceTree = "<group>";
@@ -1234,6 +1243,17 @@
 				3C592FE6219D71DA00D7C9B9 /* BpSocial.swift */,
 			);
 			path = bpjson;
+			sourceTree = "<group>";
+		};
+		3C592FF2219D829D00D7C9B9 /* query */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FF3219D82B000D7C9B9 /* CalculateRamPriceTests.swift */,
+				3C592FF6219D864300D7C9B9 /* BlockProducersTests.swift */,
+				3C592FF9219D888600D7C9B9 /* GetDelegatedBandwidthTests.swift */,
+				3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */,
+			);
+			path = query;
 			sourceTree = "<group>";
 		};
 		5C83E9FD20C6D6EF820F0006 /* Frameworks */ = {
@@ -1621,18 +1641,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0280D621907DC700D22DF0 /* BuyRamBytesChainTest.swift in Sources */,
+				3C0280D621907DC700D22DF0 /* BuyRamBytesChainTests.swift in Sources */,
 				3C0280D421907DC700D22DF0 /* EOSPublicKeyTests.swift in Sources */,
+				3C592FF8219D868600D7C9B9 /* BlockProducersTests.swift in Sources */,
 				3C0280E321907DC700D22DF0 /* BuyRamArgsTests.swift in Sources */,
 				3C0280EB21907DC700D22DF0 /* HistoryApiTest.swift in Sources */,
-				3C0280D921907DC700D22DF0 /* TransferChainTest.swift in Sources */,
+				3C0280D921907DC700D22DF0 /* TransferChainTests.swift in Sources */,
 				3C0280D521907DC700D22DF0 /* BlockIdDetailsTest.swift in Sources */,
 				3C0280D721907DC700D22DF0 /* CreateAccountChainTests.swift in Sources */,
-				3C0280DA21907DC700D22DF0 /* DelegateBandwidthChainTest.swift in Sources */,
+				3C0280DA21907DC700D22DF0 /* DelegateBandwidthChainTests.swift in Sources */,
 				3C0280DF21907DC700D22DF0 /* RefundArgsTest.swift in Sources */,
+				3C592FF5219D83B200D7C9B9 /* CalculateRamPriceTests.swift in Sources */,
 				3C0280EA21907DC700D22DF0 /* util.swift in Sources */,
 				3C0280E421907DC700D22DF0 /* SellRamArgsTests.swift in Sources */,
-				3C0280D821907DC700D22DF0 /* VoteChainTest.swift in Sources */,
+				3C0280D821907DC700D22DF0 /* VoteChainTests.swift in Sources */,
+				3C592FFB219D889600D7C9B9 /* GetDelegatedBandwidthTests.swift in Sources */,
 				3C0280E921907DC700D22DF0 /* ChainApiTest.swift in Sources */,
 				3C0280D221907DC700D22DF0 /* SwiftRIPEMD160.swift in Sources */,
 				3C0280D121907DC700D22DF0 /* HexWriterTests.swift in Sources */,
@@ -1646,9 +1669,10 @@
 				3C0280DD21907DC700D22DF0 /* SetupTransactions.swift in Sources */,
 				3C0280DE21907DC700D22DF0 /* VoteArgsTests.swift in Sources */,
 				3C0280E721907DC700D22DF0 /* TransferArgsTests.swift in Sources */,
-				3C0280DB21907DC700D22DF0 /* SellRamChainTest.swift in Sources */,
+				3C0280DB21907DC700D22DF0 /* SellRamChainTests.swift in Sources */,
+				3C592FFE219D89F900D7C9B9 /* GetRegProxyInfoTest.swift in Sources */,
 				3C0280D321907DC700D22DF0 /* EOSPrivateKeyTests.swift in Sources */,
-				3C0280DC21907DC700D22DF0 /* BuyRamChainTest.swift in Sources */,
+				3C0280DC21907DC700D22DF0 /* BuyRamChainTests.swift in Sources */,
 				3C0280E121907DC700D22DF0 /* NewAccountArgsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

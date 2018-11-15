@@ -1,6 +1,6 @@
 import Foundation
 
-public struct HistoricTransaction : Codable {
+public struct HistoricTransaction : Decodable {
     public let id: String
     public let trx: ExecutedTransactionParent
     public let block_time: Date

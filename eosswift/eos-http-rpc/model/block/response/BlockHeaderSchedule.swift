@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BlockHeaderSchedule : Codable {
+public struct BlockHeaderSchedule : Decodable {
     public let version: Int
     public let producers: Array<BlockHeaderProducer>
 

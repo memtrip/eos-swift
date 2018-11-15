@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ExecutedTransactionReceipt : Codable {
+public struct ExecutedTransactionReceipt : Decodable {
     public let status: String
     public let cpu_usage_us: Int
     public let net_usage_words: Int

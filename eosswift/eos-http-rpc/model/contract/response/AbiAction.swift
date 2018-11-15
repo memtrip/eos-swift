@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AbiAction : Codable {
+public struct AbiAction : Decodable {
     public let name: String
     public let type: String
     public let ricardian_contract: String

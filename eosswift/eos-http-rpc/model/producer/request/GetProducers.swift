@@ -1,6 +1,6 @@
 import Foundation
 
-public struct GetProducers : Codable {
+public struct GetProducers : Encodable {
     public let json: Bool
     public let lower_bound: String
     public let limit: Int

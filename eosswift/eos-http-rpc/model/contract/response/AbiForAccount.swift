@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AbiForAccount : Codable {
+public struct AbiForAccount : Decodable {
     public let account_name: String
     public let abi: AbiContract
 

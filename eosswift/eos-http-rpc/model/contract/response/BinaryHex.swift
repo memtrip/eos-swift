@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BinaryHex : Codable {
+public struct BinaryHex : Decodable {
     public let binargs: String
     public let required_scope: Array<String>?
     public let required_auth: Array<String>?

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AbiBinToJson : Codable {
+public struct AbiBinToJson : Encodable {
     public let code: String
     public let action: String
     public let binargs: String

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Transaction : Codable {
+public struct Transaction : Encodable {
     public let expiration: Date
     public let ref_block_num: Int
     public let ref_block_prefix: Int64

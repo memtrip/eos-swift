@@ -1,6 +1,6 @@
 import Foundation
 
-public struct GetRequiredKeysBody : Codable {
+public struct GetRequiredKeysBody : Encodable {
     public let transaction: Transaction
     public let available_keys: Array<String>
 

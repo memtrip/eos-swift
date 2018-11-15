@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BlockHeaderStateHeader : Codable {
+public struct BlockHeaderStateHeader : Decodable {
     public let timestamp: Date
     public let producer: String
     public let confirmed: Int

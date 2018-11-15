@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AbiTable : Codable {
+public struct AbiTable : Decodable {
     public let name: String
     public let index_type: String
     public let key_names: Array<String>

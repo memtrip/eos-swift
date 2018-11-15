@@ -1,6 +1,6 @@
 import Foundation
 
-public struct TransactionProcessed : Codable {
+public struct TransactionProcessed : Decodable {
     public let id: String
     public let receipt: TransactionParentReceipt
     public let elapsed: Int

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ExecutedTransactionParent : Codable {
+public struct ExecutedTransactionParent : Decodable {
     public let receipt: ExecutedTransactionReceipt
     public let trx: ExecutedTransaction
 

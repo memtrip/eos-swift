@@ -1,6 +1,6 @@
 import Foundation
 
-public struct TransactionActionTrace : Codable {
+public struct TransactionActionTrace : Decodable {
     public let receipt: TransactionReceipt
     public let act: TransactionAct
     public let elapsed: Int

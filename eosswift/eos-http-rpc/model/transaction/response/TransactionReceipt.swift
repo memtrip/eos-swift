@@ -1,6 +1,6 @@
 import Foundation
 
-public struct TransactionReceipt : Codable {
+public struct TransactionReceipt : Decodable {
     public let receiver: String
     public let act_digest: String
     public let global_sequence: Int

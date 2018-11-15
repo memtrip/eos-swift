@@ -4,8 +4,9 @@ import BigInt
 public class EOSPrivateKey {
 
     private let ecKeyPrivateKey: ECPrivateKey
-    let base58: String
-    let publicKey: EOSPublicKey
+    
+    public let publicKey: EOSPublicKey
+    public let base58: String
 
     public init() throws {
         ecKeyPrivateKey = ECPrivateKey()
@@ -36,22 +37,26 @@ public class EOSPrivateKey {
     private static func getPrivateKeyFromBase58Bytes(base58: String) throws -> Data {
         if (base58.split(separator: "_").count == 1) {
             let base58Bytes = Data(base58Decoding: base58)!
-            let checkSumBytes = base58Bytes.subdata(in: 0..<base58Bytes.count-4)
+            if (base58Bytes.count > 4) {
+                let checkSumBytes = base58Bytes.subdata(in: 0..<base58Bytes.count-4)
 
-            let checkOne = Sha256Hash.hash(data: checkSumBytes)
-            let checkTwo = Sha256Hash.hash(data: checkOne)
-            if (equalsFromOffset(hashBytes: checkTwo, toCompareData: base58Bytes, offset: base58Bytes.count - 4) ||
-                equalsFromOffset(hashBytes: checkOne, toCompareData: base58Bytes, offset: base58Bytes.count - 4)) {
-                let keyBytes = base58Bytes.subdata(in: 1..<base58Bytes.count-4)
-                if (keyBytes.count < 5) {
-                    fatalError("Invalid private key length.")
+                let checkOne = Sha256Hash.hash(data: checkSumBytes)
+                let checkTwo = Sha256Hash.hash(data: checkOne)
+                if (equalsFromOffset(hashBytes: checkTwo, toCompareData: base58Bytes, offset: base58Bytes.count - 4) ||
+                    equalsFromOffset(hashBytes: checkOne, toCompareData: base58Bytes, offset: base58Bytes.count - 4)) {
+                    let keyBytes = base58Bytes.subdata(in: 1..<base58Bytes.count-4)
+                    if (keyBytes.count < 5) {
+                        throw InvalidPrivateKeyFormat.invalidLength("Invalid private key length.")
+                    }
+                    return keyBytes
+                } else {
+                    throw InvalidPrivateKeyFormat.checksum("Invalid private key format, not expecting a prefix")
                 }
-                return keyBytes
             } else {
-                fatalError("Checksum mismatch")
+                throw InvalidPrivateKeyFormat.invalidLength("Invalid private key length.")
             }
         } else {
-            fatalError("Invalid private key format, not expecting a prefix")
+            throw InvalidPrivateKeyFormat.prefixNotExpected("Invalid private key format, not expecting a prefix")
         }
     }
 
@@ -78,5 +83,11 @@ public class EOSPrivateKey {
         let checksum = Sha256Hash.hashTwice(data: resultBytes.subdata(in: 0..<33))
         resultBytes[33..<resultBytes.count] = checksum[0..<4]
         return String(base58Encoding: resultBytes)
+    }
+
+    enum InvalidPrivateKeyFormat: Error {
+        case invalidLength(String)
+        case checksum(String)
+        case prefixNotExpected(String)
     }
 }

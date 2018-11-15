@@ -1,6 +1,6 @@
 import Foundation
 
-public struct CycleSummaryTransaction : Codable {
+public struct CycleSummaryTransaction : Decodable {
     public let id: String
     public let status: String
     public let kcpu_usage: Int

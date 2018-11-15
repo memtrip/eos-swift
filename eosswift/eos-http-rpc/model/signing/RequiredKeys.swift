@@ -1,6 +1,6 @@
 import Foundation
 
-public struct RequiredKeys : Codable {
+public struct RequiredKeys : Decodable {
     public let required_keys: Array<String>
 
     public init(required_keys: Array<String>) {

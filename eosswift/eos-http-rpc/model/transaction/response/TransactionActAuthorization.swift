@@ -1,6 +1,6 @@
 import Foundation
 
-public struct TransactionAuthorization : Encodable {
+public struct TransactionActAuthorization : Decodable {
     public let actor: String
     public let permission: String
 

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct RawCodeForAccount : Codable {
+public struct RawCodeForAccount : Decodable {
     public let account_name: String
     public let wasm: String?
     public let abi: String?

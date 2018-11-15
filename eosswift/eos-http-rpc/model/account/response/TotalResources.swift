@@ -1,6 +1,6 @@
 import Foundation
 
-public struct TotalResources : Codable {
+public struct TotalResources : Decodable {
     public let owner: String
     public let net_weight: String
     public let cpu_weight: String

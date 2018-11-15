@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ContractTableRows : Codable {
+public struct ContractTableRows : Decodable {
     public let rows: Array<[String:String]>
     public let more: Bool
 

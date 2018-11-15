@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BlockHeaderProducer : Codable {
+public struct BlockHeaderProducer : Decodable {
     public let producer_name: String
     public let block_signing_key: String
 

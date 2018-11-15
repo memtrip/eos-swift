@@ -1,6 +1,6 @@
 import Foundation
 
-public struct VoterInfo : Codable {
+public struct VoterInfo : Decodable {
     public let owner: String
     public let proxy: String
     public let producers: Array<String>

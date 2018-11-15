@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AccountKey : Codable {
+public struct AccountKey : Decodable {
     public let key: String
     public let weight: Int
 

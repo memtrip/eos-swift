@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Info : Codable {
+public struct Info : Decodable {
     public let server_version: String
     public let chain_id: String
     public let head_block_num: Int

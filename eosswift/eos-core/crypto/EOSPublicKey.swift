@@ -3,7 +3,8 @@ import Foundation
 public class EOSPublicKey {
 
     private let pubKeyData: Data
-    let base58: String
+    
+    public let base58: String
 
     public func bytes() -> Data {
         return pubKeyData

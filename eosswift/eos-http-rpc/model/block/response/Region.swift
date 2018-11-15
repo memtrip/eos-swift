@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Region : Codable {
+public struct Region : Decodable {
     public let region: Int
     public let cycles_summary: Array<CycleSummary>
 

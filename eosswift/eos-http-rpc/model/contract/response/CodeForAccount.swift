@@ -1,6 +1,6 @@
 import Foundation
 
-public struct CodeForAccount : Codable {
+public struct CodeForAccount : Decodable {
     public let account_name: String
     public let code_hash: String
     public let wast: String

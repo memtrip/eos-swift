@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AbiField : Codable {
+public struct AbiField : Decodable {
     public let name: String
     public let type: String
 

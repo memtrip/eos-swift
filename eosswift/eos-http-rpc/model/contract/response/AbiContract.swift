@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AbiContract : Codable {
+public struct AbiContract : Decodable {
     public let version: String
     public let types: Array<AbiType>
     public let structs: Array<AbiStruct>

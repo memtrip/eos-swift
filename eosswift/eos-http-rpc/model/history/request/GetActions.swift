@@ -1,6 +1,6 @@
 import Foundation
 
-public struct GetActions : Codable {
+public struct GetActions : Encodable {
     public let account_name: String
     public let pos: Int?
     public let offset: Int?

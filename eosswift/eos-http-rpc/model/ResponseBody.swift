@@ -1,4 +1,4 @@
 import Foundation
 
-public class ResponseBody : Codable {
+public class ResponseBody : Decodable {
 }

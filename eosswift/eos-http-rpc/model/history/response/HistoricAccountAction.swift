@@ -1,6 +1,6 @@
 import Foundation
 
-public struct HistoricAccountAction : Codable {
+public struct HistoricAccountAction : Decodable {
     public let global_action_seq: Int
     public let account_action_seq: Int
     public let block_num: Int

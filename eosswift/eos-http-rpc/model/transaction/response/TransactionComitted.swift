@@ -1,6 +1,6 @@
 import Foundation
 
-public struct TransactionCommitted : Codable {
+public struct TransactionCommitted : Decodable {
     public let transaction_id: String
     public let processed: TransactionProcessed
 

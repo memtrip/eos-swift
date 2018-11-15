@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AccountName : Codable {
+public struct AccountName : Encodable {
     public let account_name: String
 
     public init(account_name: String) {

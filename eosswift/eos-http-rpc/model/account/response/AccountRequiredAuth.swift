@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AccountRequiredAuth : Codable {
+public struct AccountRequiredAuth : Decodable {
     public let threshold: Int
     public let keys: Array<AccountKey>
     public let accounts: Array<String>

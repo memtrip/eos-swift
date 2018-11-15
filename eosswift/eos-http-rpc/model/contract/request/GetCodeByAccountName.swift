@@ -1,6 +1,6 @@
 import Foundation
 
-public struct GetCodeByAccountName : Codable {
+public struct GetCodeByAccountName : Encodable {
     public let account_name: String
     public let code_as_wasm: Bool
 

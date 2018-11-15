@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Block : Codable {
+public struct Block : Decodable {
     public let id: String
     public let block_num: Int
     public let ref_block_prefix: UInt64

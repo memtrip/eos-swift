@@ -1,6 +1,6 @@
 import Foundation
 
-public struct GetControlledAccounts : Codable {
+public struct GetControlledAccounts : Encodable {
     public let controlling_account: String
 
     public init(controlling_account: String) {

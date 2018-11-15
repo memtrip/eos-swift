@@ -1,6 +1,6 @@
 import Foundation
 
-public struct GetTableRows : Codable {
+public struct GetTableRows : Encodable {
     public let scope: String
     public let code: String
     public let table: String

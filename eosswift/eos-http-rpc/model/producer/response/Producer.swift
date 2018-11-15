@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Producer : Codable {
+public struct Producer : Decodable {
     public let owner: String
     public let total_votes: String
     public let producer_key: String

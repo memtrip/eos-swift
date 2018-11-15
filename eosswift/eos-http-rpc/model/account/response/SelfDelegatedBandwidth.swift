@@ -1,6 +1,6 @@
 import Foundation
 
-public struct SelfDelegatedBandwidth : Codable {
+public struct SelfDelegatedBandwidth : Decodable {
     public let from: String
     public let to: String
     public let net_weight: String

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BlockHeaderState : Codable {
+public struct BlockHeaderState : Decodable {
     public let id: String
     public let block_num: Int
     public let header: BlockHeaderStateHeader

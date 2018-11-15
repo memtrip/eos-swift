@@ -1,6 +1,6 @@
 import Foundation
 
-public struct GetCurrencyStats : Codable {
+public struct GetCurrencyStats : Encodable {
     public let code: String
     public let symbol: String
 

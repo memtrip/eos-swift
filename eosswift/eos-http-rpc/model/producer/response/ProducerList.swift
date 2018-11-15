@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ProducerList : Codable {
+public struct ProducerList : Decodable {
     public let rows: Array<Producer>
     public let total_producer_vote_weight: String
     public let more: String

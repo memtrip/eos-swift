@@ -189,6 +189,20 @@
 		3C291B91219D4F3C00562448 /* codable_type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291B90219D4F3C00562448 /* codable_type.swift */; };
 		3C291B94219D54A100562448 /* TransactionActAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291B93219D54A100562448 /* TransactionActAuthorization.swift */; };
 		3C291B96219D550800562448 /* ExecutedTransactionAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291B95219D550800562448 /* ExecutedTransactionAction.swift */; };
+		3C592FD6219D6EE100D7C9B9 /* CheckAccountNameExists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FD5219D6EE100D7C9B9 /* CheckAccountNameExists.swift */; };
+		3C592FD8219D6F7E00D7C9B9 /* BandwidthJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FD7219D6F7E00D7C9B9 /* BandwidthJson.swift */; };
+		3C592FDA219D6F8900D7C9B9 /* GetDelegatedBandwidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FD9219D6F8900D7C9B9 /* GetDelegatedBandwidth.swift */; };
+		3C592FDD219D71B800D7C9B9 /* BpBranding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FDC219D71B800D7C9B9 /* BpBranding.swift */; };
+		3C592FDF219D71C000D7C9B9 /* BpLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FDE219D71C000D7C9B9 /* BpLocation.swift */; };
+		3C592FE1219D71C600D7C9B9 /* BpNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FE0219D71C600D7C9B9 /* BpNode.swift */; };
+		3C592FE3219D71CC00D7C9B9 /* BpOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FE2219D71CC00D7C9B9 /* BpOrg.swift */; };
+		3C592FE5219D71D200D7C9B9 /* BpParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FE4219D71D200D7C9B9 /* BpParent.swift */; };
+		3C592FE7219D71DA00D7C9B9 /* BpSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FE6219D71DA00D7C9B9 /* BpSocial.swift */; };
+		3C592FE9219D71E400D7C9B9 /* BlockProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FE8219D71E400D7C9B9 /* BlockProducer.swift */; };
+		3C592FEB219D71EE00D7C9B9 /* GetBlockProducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FEA219D71EE00D7C9B9 /* GetBlockProducers.swift */; };
+		3C592FED219D7B6000D7C9B9 /* GetRegProxyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FEC219D7B6000D7C9B9 /* GetRegProxyInfo.swift */; };
+		3C592FEF219D7B6A00D7C9B9 /* ProxyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FEE219D7B6A00D7C9B9 /* ProxyJson.swift */; };
+		3C592FF1219D7E4100D7C9B9 /* GetRamPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FF0219D7E4100D7C9B9 /* GetRamPrice.swift */; };
 		3C9BFBA9219B593C00589936 /* RefundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA8219B593C00589936 /* RefundRequest.swift */; };
 		3CCE4A082190F73200484684 /* Base58String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE4A072190F73200484684 /* Base58String.swift */; };
 		D2CB4F11DE1E1973DC7C3749 /* Pods_eos_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */; };
@@ -392,6 +406,20 @@
 		3C291B93219D54A100562448 /* TransactionActAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionActAuthorization.swift; sourceTree = "<group>"; };
 		3C291B95219D550800562448 /* ExecutedTransactionAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutedTransactionAction.swift; sourceTree = "<group>"; };
 		3C5799F12191D9C200B9A3D7 /* eos_swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eos_swift.h; sourceTree = "<group>"; };
+		3C592FD5219D6EE100D7C9B9 /* CheckAccountNameExists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAccountNameExists.swift; sourceTree = "<group>"; };
+		3C592FD7219D6F7E00D7C9B9 /* BandwidthJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandwidthJson.swift; sourceTree = "<group>"; };
+		3C592FD9219D6F8900D7C9B9 /* GetDelegatedBandwidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDelegatedBandwidth.swift; sourceTree = "<group>"; };
+		3C592FDC219D71B800D7C9B9 /* BpBranding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpBranding.swift; sourceTree = "<group>"; };
+		3C592FDE219D71C000D7C9B9 /* BpLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpLocation.swift; sourceTree = "<group>"; };
+		3C592FE0219D71C600D7C9B9 /* BpNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpNode.swift; sourceTree = "<group>"; };
+		3C592FE2219D71CC00D7C9B9 /* BpOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpOrg.swift; sourceTree = "<group>"; };
+		3C592FE4219D71D200D7C9B9 /* BpParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpParent.swift; sourceTree = "<group>"; };
+		3C592FE6219D71DA00D7C9B9 /* BpSocial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BpSocial.swift; sourceTree = "<group>"; };
+		3C592FE8219D71E400D7C9B9 /* BlockProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockProducer.swift; sourceTree = "<group>"; };
+		3C592FEA219D71EE00D7C9B9 /* GetBlockProducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockProducers.swift; sourceTree = "<group>"; };
+		3C592FEC219D7B6000D7C9B9 /* GetRegProxyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRegProxyInfo.swift; sourceTree = "<group>"; };
+		3C592FEE219D7B6A00D7C9B9 /* ProxyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyJson.swift; sourceTree = "<group>"; };
+		3C592FF0219D7E4100D7C9B9 /* GetRamPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRamPrice.swift; sourceTree = "<group>"; };
 		3C9BFBA8219B593C00589936 /* RefundRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundRequest.swift; sourceTree = "<group>"; };
 		3CCE4A072190F73200484684 /* Base58String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58String.swift; sourceTree = "<group>"; };
 		4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eos_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -827,6 +855,7 @@
 		3C027FC721907C0E00D22DF0 /* eos-chain-actions */ = {
 			isa = PBXGroup;
 			children = (
+				3C592FCF219D6E8400D7C9B9 /* query */,
 				3C027FC821907C0E00D22DF0 /* transaction */,
 				3C027FCE21907C0E00D22DF0 /* TransactionContext.swift */,
 				3C027FCF21907C0E00D22DF0 /* ChainTransaction.swift */,
@@ -1138,6 +1167,75 @@
 			path = request;
 			sourceTree = "<group>";
 		};
+		3C592FCF219D6E8400D7C9B9 /* query */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FD0219D6E8C00D7C9B9 /* accountname */,
+				3C592FD1219D6E9100D7C9B9 /* bandwidth */,
+				3C592FD2219D6E9B00D7C9B9 /* producer */,
+				3C592FD3219D6EA900D7C9B9 /* proxy */,
+				3C592FD4219D6EB200D7C9B9 /* ramprice */,
+			);
+			path = query;
+			sourceTree = "<group>";
+		};
+		3C592FD0219D6E8C00D7C9B9 /* accountname */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FD5219D6EE100D7C9B9 /* CheckAccountNameExists.swift */,
+			);
+			path = accountname;
+			sourceTree = "<group>";
+		};
+		3C592FD1219D6E9100D7C9B9 /* bandwidth */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FD7219D6F7E00D7C9B9 /* BandwidthJson.swift */,
+				3C592FD9219D6F8900D7C9B9 /* GetDelegatedBandwidth.swift */,
+			);
+			path = bandwidth;
+			sourceTree = "<group>";
+		};
+		3C592FD2219D6E9B00D7C9B9 /* producer */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FDB219D71A500D7C9B9 /* bpjson */,
+				3C592FE8219D71E400D7C9B9 /* BlockProducer.swift */,
+				3C592FEA219D71EE00D7C9B9 /* GetBlockProducers.swift */,
+			);
+			path = producer;
+			sourceTree = "<group>";
+		};
+		3C592FD3219D6EA900D7C9B9 /* proxy */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FEC219D7B6000D7C9B9 /* GetRegProxyInfo.swift */,
+				3C592FEE219D7B6A00D7C9B9 /* ProxyJson.swift */,
+			);
+			path = proxy;
+			sourceTree = "<group>";
+		};
+		3C592FD4219D6EB200D7C9B9 /* ramprice */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FF0219D7E4100D7C9B9 /* GetRamPrice.swift */,
+			);
+			path = ramprice;
+			sourceTree = "<group>";
+		};
+		3C592FDB219D71A500D7C9B9 /* bpjson */ = {
+			isa = PBXGroup;
+			children = (
+				3C592FDC219D71B800D7C9B9 /* BpBranding.swift */,
+				3C592FDE219D71C000D7C9B9 /* BpLocation.swift */,
+				3C592FE0219D71C600D7C9B9 /* BpNode.swift */,
+				3C592FE2219D71CC00D7C9B9 /* BpOrg.swift */,
+				3C592FE4219D71D200D7C9B9 /* BpParent.swift */,
+				3C592FE6219D71DA00D7C9B9 /* BpSocial.swift */,
+			);
+			path = bpjson;
+			sourceTree = "<group>";
+		};
 		5C83E9FD20C6D6EF820F0006 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1385,12 +1483,15 @@
 				3C02805B21907C0E00D22DF0 /* BlockHeaderRootMerkle.swift in Sources */,
 				3C02803A21907C0E00D22DF0 /* GetCurrencyStats.swift in Sources */,
 				3C02800F21907C0E00D22DF0 /* TimestampWriter.swift in Sources */,
+				3C592FD8219D6F7E00D7C9B9 /* BandwidthJson.swift in Sources */,
 				3C02807421907C0E00D22DF0 /* UnDelegateBandwidth.swift in Sources */,
+				3C592FDA219D6F8900D7C9B9 /* GetDelegatedBandwidth.swift in Sources */,
 				3C02800421907C0E00D22DF0 /* RIPEMD160-HMAC.swift in Sources */,
 				3C02804A21907C0E00D22DF0 /* ExecutedTransaction.swift in Sources */,
 				3C02805221907C0E00D22DF0 /* AccountKey.swift in Sources */,
 				3C02805F21907C0E00D22DF0 /* Block.swift in Sources */,
 				3C02802721907C0E00D22DF0 /* TransactionReceipt.swift in Sources */,
+				3C592FEF219D7B6A00D7C9B9 /* ProxyJson.swift in Sources */,
 				3C02807921907C0E00D22DF0 /* AccountRequiredAuthAbi.swift in Sources */,
 				3C02802321907C0E00D22DF0 /* TransactionProcessed.swift in Sources */,
 				3C02807621907C0E00D22DF0 /* DelegateBandwidthBody.swift in Sources */,
@@ -1408,11 +1509,15 @@
 				3C02808121907C0E00D22DF0 /* SellRamBody.swift in Sources */,
 				3C02806A21907C0E00D22DF0 /* TransferChain.swift in Sources */,
 				3C02802F21907C0E00D22DF0 /* AbiContract.swift in Sources */,
+				3C592FD6219D6EE100D7C9B9 /* CheckAccountNameExists.swift in Sources */,
+				3C592FE5219D71D200D7C9B9 /* BpParent.swift in Sources */,
 				3C02804221907C0E00D22DF0 /* RequestBody.swift in Sources */,
 				3C02808021907C0E00D22DF0 /* SellRamArgs.swift in Sources */,
 				3C02801321907C0E00D22DF0 /* BlockNumWriter.swift in Sources */,
 				3C02807821907C0E00D22DF0 /* NewAccountBody.swift in Sources */,
 				3C02803F21907C0E00D22DF0 /* PushTransaction.swift in Sources */,
+				3C592FED219D7B6000D7C9B9 /* GetRegProxyInfo.swift in Sources */,
+				3C592FEB219D71EE00D7C9B9 /* GetBlockProducers.swift in Sources */,
 				3C02800D21907C0E00D22DF0 /* StringCollectionWriter.swift in Sources */,
 				3C02805E21907C0E00D22DF0 /* BlockHeaderStateHeader.swift in Sources */,
 				3C02801821907C0E00D22DF0 /* regex.swift in Sources */,
@@ -1438,12 +1543,15 @@
 				3C027FFE21907C0E00D22DF0 /* ECPrivateKey.swift in Sources */,
 				3C027FFD21907C0E00D22DF0 /* EOSPrivateKey.swift in Sources */,
 				3C02800921907C0E00D22DF0 /* AssetWriter.swift in Sources */,
+				3C592FDF219D71C000D7C9B9 /* BpLocation.swift in Sources */,
 				3C02807D21907C0E00D22DF0 /* BuyRamBytesBody.swift in Sources */,
 				3C02802621907C0E00D22DF0 /* TransactionAct.swift in Sources */,
 				3C02800C21907C0E00D22DF0 /* AbiTypeWriter.swift in Sources */,
 				3C02806821907C0E00D22DF0 /* TransactionContext.swift in Sources */,
+				3C592FF1219D7E4100D7C9B9 /* GetRamPrice.swift in Sources */,
 				3C02806021907C0E00D22DF0 /* CycleSummaryTransaction.swift in Sources */,
 				3C02800521907C0E00D22DF0 /* primitive_type.swift in Sources */,
+				3C592FDD219D71B800D7C9B9 /* BpBranding.swift in Sources */,
 				3C02800621907C0E00D22DF0 /* Base58.swift in Sources */,
 				3C02806621907C0E00D22DF0 /* VoteArgs.swift in Sources */,
 				3C02806221907C0E00D22DF0 /* BlockHeaderState.swift in Sources */,
@@ -1456,9 +1564,11 @@
 				3C02805821907C0E00D22DF0 /* AccountName.swift in Sources */,
 				3C02801D21907C0E00D22DF0 /* HttpResponse.swift in Sources */,
 				3C02801621907C0E00D22DF0 /* AbiEncoder.swift in Sources */,
+				3C592FE9219D71E400D7C9B9 /* BlockProducer.swift in Sources */,
 				3C02808721907C0E00D22DF0 /* SellRamChain.swift in Sources */,
 				3C02802C21907C0E00D22DF0 /* GetProducers.swift in Sources */,
 				3C02807521907C0E00D22DF0 /* CreateAccountChain.swift in Sources */,
+				3C592FE7219D71DA00D7C9B9 /* BpSocial.swift in Sources */,
 				3C02802421907C0E00D22DF0 /* TransactionComitted.swift in Sources */,
 				3C02801B21907C0E00D22DF0 /* Logger.swift in Sources */,
 				3C02809A21907C1D00D22DF0 /* uECC.c in Sources */,
@@ -1488,6 +1598,8 @@
 				3C02803C21907C0E00D22DF0 /* GetTableRows.swift in Sources */,
 				3C02807F21907C0E00D22DF0 /* BuyRamArgs.swift in Sources */,
 				3C02801921907C0E00D22DF0 /* Connection.swift in Sources */,
+				3C592FE3219D71CC00D7C9B9 /* BpOrg.swift in Sources */,
+				3C592FE1219D71C600D7C9B9 /* BpNode.swift in Sources */,
 				3C0280ED219088D000D22DF0 /* Sha256.swift in Sources */,
 				3C02807321907C0E00D22DF0 /* BuyRamBytesChain.swift in Sources */,
 				3C02804121907C0E00D22DF0 /* ResponseBody.swift in Sources */,

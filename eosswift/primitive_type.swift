@@ -20,9 +20,9 @@ extension String {
     }
 }
 
-extension Date {
+public extension Date {
 
-    static func defaultTransactionExpiry() -> Date {
+    public static func defaultTransactionExpiry() -> Date {
         return Date(timeIntervalSince1970: (Date().timeIntervalSince1970) + 120)
     }
 }

@@ -17,7 +17,7 @@ public class NameWriterValue : NameWriter, Encodable {
         try writer.encode(nameAsInt64(name: name))
     }
 
-    private func nameAsInt64(name: String) -> Int64 {
+    func nameAsInt64(name: String) -> Int64 {
         let len = name.count
         var value: Int64 = 0
 

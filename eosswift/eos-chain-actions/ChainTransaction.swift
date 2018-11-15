@@ -36,8 +36,7 @@ extension ChainTransaction {
                     ChainResponse<TransactionCommitted>(
                         success: response.success,
                         statusCode: response.statusCode,
-                        body: response.body,
-                        errorBody: nil)
+                        body: response.body)
                 }.catchErrorJustReturn(ChainResponse.errorResponse())
             } else {
                 return Single.just(ChainResponse.errorResponse())

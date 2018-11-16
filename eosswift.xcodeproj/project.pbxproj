@@ -209,6 +209,8 @@
 		3C592FFE219D89F900D7C9B9 /* GetRegProxyInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */; };
 		3C9BFBA9219B593C00589936 /* RefundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA8219B593C00589936 /* RefundRequest.swift */; };
 		3CCE4A082190F73200484684 /* Base58String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE4A072190F73200484684 /* Base58String.swift */; };
+		3D07B6E4316429C03642301E /* Pods_eosswift_eosswiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D0ED85A4C240BB0149AE93 /* Pods_eosswift_eosswiftTests.framework */; };
+		A319CB2584D79C91989BED11 /* Pods_eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC98C293614C9CE6F2831D /* Pods_eosswift.framework */; };
 		D2CB4F11DE1E1973DC7C3749 /* Pods_eos_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +225,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9A6555E472F61561778E6B /* Pods-eosswift-eosswiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosswift-eosswiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosswift-eosswiftTests/Pods-eosswift-eosswiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		0D52F885ABE55D7E647D1664 /* Pods-eosswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosswift.release.xcconfig"; path = "Pods/Target Support Files/Pods-eosswift/Pods-eosswift.release.xcconfig"; sourceTree = "<group>"; };
+		136A657F22CE2E323741067F /* Pods-eosswift-eosswiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosswift-eosswiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosswift-eosswiftTests/Pods-eosswift-eosswiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B97D801407BF7E3DB2FAE59 /* Pods-eosswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosswift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eosswift/Pods-eosswift.debug.xcconfig"; sourceTree = "<group>"; };
 		1FED14906751D4B4C0879855 /* Pods_eos_swift_eos_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eos_swift_eos_swiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C027DA821907B8500D22DF0 /* eosswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = eosswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C027DAC21907B8500D22DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -431,10 +437,8 @@
 		3C9BFBA8219B593C00589936 /* RefundRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundRequest.swift; sourceTree = "<group>"; };
 		3CCE4A072190F73200484684 /* Base58String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58String.swift; sourceTree = "<group>"; };
 		4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eos_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AD60DE406BF4327E65369DC /* Pods-eos-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eos-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-eos-swift/Pods-eos-swift.release.xcconfig"; sourceTree = "<group>"; };
-		9341E3955AA45D07E7D15BEC /* Pods-eos-swift-eos-swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eos-swift-eos-swiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eos-swift-eos-swiftTests/Pods-eos-swift-eos-swiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		F58C036B9E6D5FF202B4C1E4 /* Pods-eos-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eos-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eos-swift/Pods-eos-swift.debug.xcconfig"; sourceTree = "<group>"; };
-		F70DF284F9E9A91A807F72E6 /* Pods-eos-swift-eos-swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eos-swift-eos-swiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eos-swift-eos-swiftTests/Pods-eos-swift-eos-swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BBDC98C293614C9CE6F2831D /* Pods_eosswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D0ED85A4C240BB0149AE93 /* Pods_eosswift_eosswiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosswift_eosswiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CB4F11DE1E1973DC7C3749 /* Pods_eos_swift.framework in Frameworks */,
+				A319CB2584D79C91989BED11 /* Pods_eosswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +457,7 @@
 			files = (
 				3C027DB221907B8500D22DF0 /* eosswift.framework in Frameworks */,
 				31FE19EFE5F35E37080694D0 /* Pods_eos_swift_eos_swiftTests.framework in Frameworks */,
+				3D07B6E4316429C03642301E /* Pods_eosswift_eosswiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				3C027DAA21907B8500D22DF0 /* eosswift */,
-				3C027DB521907B8500D22DF0 /* eos-swiftTests */,
+				3C027DB521907B8500D22DF0 /* eosswiftTests */,
 				3C027DA921907B8500D22DF0 /* Products */,
 				7AB3AAB2122A757BFB715821 /* Pods */,
 				5C83E9FD20C6D6EF820F0006 /* Frameworks */,
@@ -494,7 +500,7 @@
 			path = eosswift;
 			sourceTree = "<group>";
 		};
-		3C027DB521907B8500D22DF0 /* eos-swiftTests */ = {
+		3C027DB521907B8500D22DF0 /* eosswiftTests */ = {
 			isa = PBXGroup;
 			children = (
 				3C0280A721907DC700D22DF0 /* eos-abi-writer */,
@@ -505,7 +511,7 @@
 				3C0280BC21907DC700D22DF0 /* SetupTransactions.swift */,
 				3C027DB821907B8500D22DF0 /* Info.plist */,
 			);
-			path = "eos-swiftTests";
+			path = eosswiftTests;
 			sourceTree = "<group>";
 		};
 		3C027F3D21907C0E00D22DF0 /* eos-core */ = {
@@ -1261,6 +1267,8 @@
 			children = (
 				4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */,
 				1FED14906751D4B4C0879855 /* Pods_eos_swift_eos_swiftTests.framework */,
+				BBDC98C293614C9CE6F2831D /* Pods_eosswift.framework */,
+				C0D0ED85A4C240BB0149AE93 /* Pods_eosswift_eosswiftTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1268,10 +1276,10 @@
 		7AB3AAB2122A757BFB715821 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F58C036B9E6D5FF202B4C1E4 /* Pods-eos-swift.debug.xcconfig */,
-				8AD60DE406BF4327E65369DC /* Pods-eos-swift.release.xcconfig */,
-				F70DF284F9E9A91A807F72E6 /* Pods-eos-swift-eos-swiftTests.debug.xcconfig */,
-				9341E3955AA45D07E7D15BEC /* Pods-eos-swift-eos-swiftTests.release.xcconfig */,
+				1B97D801407BF7E3DB2FAE59 /* Pods-eosswift.debug.xcconfig */,
+				0D52F885ABE55D7E647D1664 /* Pods-eosswift.release.xcconfig */,
+				136A657F22CE2E323741067F /* Pods-eosswift-eosswiftTests.debug.xcconfig */,
+				0C9A6555E472F61561778E6B /* Pods-eosswift-eosswiftTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1394,7 +1402,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-eos-swift-eos-swiftTests/Pods-eos-swift-eos-swiftTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-eosswift-eosswiftTests/Pods-eosswift-eosswiftTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -1417,7 +1425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eos-swift-eos-swiftTests/Pods-eos-swift-eos-swiftTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eosswift-eosswiftTests/Pods-eosswift-eosswiftTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB21B494D799CC7B5D093DC9 /* [CP] Check Pods Manifest.lock */ = {
@@ -1435,7 +1443,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eos-swift-eos-swiftTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-eosswift-eosswiftTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1457,7 +1465,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eos-swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-eosswift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1814,7 +1822,7 @@
 		};
 		3C027DBD21907B8500D22DF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F58C036B9E6D5FF202B4C1E4 /* Pods-eos-swift.debug.xcconfig */;
+			baseConfigurationReference = 1B97D801407BF7E3DB2FAE59 /* Pods-eosswift.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1841,7 +1849,7 @@
 		};
 		3C027DBE21907B8500D22DF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AD60DE406BF4327E65369DC /* Pods-eos-swift.release.xcconfig */;
+			baseConfigurationReference = 0D52F885ABE55D7E647D1664 /* Pods-eosswift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1868,7 +1876,7 @@
 		};
 		3C027DC021907B8500D22DF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F70DF284F9E9A91A807F72E6 /* Pods-eos-swift-eos-swiftTests.debug.xcconfig */;
+			baseConfigurationReference = 136A657F22CE2E323741067F /* Pods-eosswift-eosswiftTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/eos-swift/microecc_uref";
@@ -1887,7 +1895,7 @@
 		};
 		3C027DC121907B8500D22DF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9341E3955AA45D07E7D15BEC /* Pods-eos-swift-eos-swiftTests.release.xcconfig */;
+			baseConfigurationReference = 0C9A6555E472F61561778E6B /* Pods-eosswift-eosswiftTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "eos-swiftTests/Info.plist";

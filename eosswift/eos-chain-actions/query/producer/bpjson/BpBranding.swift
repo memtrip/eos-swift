@@ -1,7 +1,7 @@
 import Foundation
 
-struct BpBranding : Decodable {
-    let logo_256: String?
-    let logo_1024: String?
-    let logo_svg: String?
+public struct BpBranding : Decodable {
+    public let logo_256: String?
+    public let logo_1024: String?
+    public let logo_svg: String?
 }

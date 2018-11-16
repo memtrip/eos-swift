@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 import BigInt
 
-class GetRamPrice {
+public class GetRamPrice {
 
     private let chainApi: ChainApi
 
@@ -10,7 +10,7 @@ class GetRamPrice {
         self.chainApi = chainApi
     }
 
-    func getPricePerKilobyte() -> Single<Double> {
+    public func getPricePerKilobyte() -> Single<Double> {
         return chainApi.getTableRows(body: GetTableRows(
             scope: "eosio",
             code: "eosio",
@@ -29,10 +29,10 @@ class GetRamPrice {
                 if (rows.count > 0) {
                     return self.calculateRamPerKiloByte(row: rows[0])
                 } else {
-                    throw GetRamPrice.failed()
+                    throw GetRamPriceError.failed()
                 }
             } else {
-                throw GetRamPrice.failed()
+                throw GetRamPriceError.failed()
             }
         }
     }
@@ -50,8 +50,8 @@ class GetRamPrice {
         let split = String(balance.split(separator: " ")[0])
         return Double(split)!
     }
+}
 
-    enum GetRamPrice : Error {
-        case failed()
-    }
+public enum GetRamPriceError : Error {
+    case failed()
 }

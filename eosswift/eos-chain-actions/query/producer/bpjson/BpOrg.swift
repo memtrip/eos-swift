@@ -1,12 +1,12 @@
 import Foundation
 
-struct BpOrg : Decodable {
-    let candidate_name: String
-    let website: String
-    let code_of_conduct: String
-    let ownership_disclosure: String
-    let email: String
-    let branding: BpBranding
-    let location: BpLocation
-    let social: BpSocial
+public struct BpOrg : Decodable {
+    public let candidate_name: String
+    public let website: String
+    public let code_of_conduct: String
+    public let ownership_disclosure: String
+    public let email: String
+    public let branding: BpBranding
+    public let location: BpLocation
+    public let social: BpSocial
 }

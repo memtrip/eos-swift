@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class CheckAccountNameExists {
+public class CheckAccountNameExists {
 
     private let chainApi: ChainApi
 

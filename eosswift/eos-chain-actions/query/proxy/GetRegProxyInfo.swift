@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class GetRegProxyInfo {
+public class GetRegProxyInfo {
 
     private let chainApi: ChainApi
 
@@ -87,8 +87,8 @@ class GetRegProxyInfo {
             return String(NameWriterValue(name: nextAccount).nameAsInt64(name: nextAccount) + Int64.init(offset))
         }
     }
+}
 
-    enum FetchProxyError : Error {
-        case failed()
-    }
+public enum FetchProxyError : Error {
+    case failed()
 }

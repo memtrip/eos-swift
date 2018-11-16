@@ -1,15 +1,15 @@
 import Foundation
 import RxSwift
 
-class GetDelegatedBandwidth {
+public class GetDelegatedBandwidth {
 
     private let chainApi: ChainApi
 
-    init(chainApi: ChainApi) {
+    public init(chainApi: ChainApi) {
         self.chainApi = chainApi
     }
 
-    func getBandwidth(accountName: String) -> Single<[BandwidthJson]> {
+    public func getBandwidth(accountName: String) -> Single<[BandwidthJson]> {
         return chainApi.getTableRows(body: GetTableRows(
             scope: accountName,
             code: "eosio",
@@ -38,8 +38,8 @@ class GetDelegatedBandwidth {
             }
         }
     }
+}
 
-    enum FailedToFetchDelegatedBandwidth : Error {
-        case generic()
-    }
+public enum FailedToFetchDelegatedBandwidth : Error {
+    case generic()
 }

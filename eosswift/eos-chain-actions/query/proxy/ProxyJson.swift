@@ -1,15 +1,15 @@
 import Foundation
 
-struct ProxyJson {
-    let owner: String
-    let name: String
-    let website: String
-    let slogan: String
-    let philosophy: String
-    let background: String
-    let logo_256: String
-    let telegram: String
-    let steemit: String
-    let twitter: String
-    let wechat: String
+public struct ProxyJson {
+    public let owner: String
+    public let name: String
+    public let website: String
+    public let slogan: String
+    public let philosophy: String
+    public let background: String
+    public let logo_256: String
+    public let telegram: String
+    public let steemit: String
+    public let twitter: String
+    public let wechat: String
 }

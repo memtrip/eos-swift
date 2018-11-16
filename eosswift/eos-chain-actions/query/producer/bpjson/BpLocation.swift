@@ -1,8 +1,8 @@
 import Foundation
 
-struct BpLocation : Decodable {
-    let name: String
-    let country: String
-    let latitude: Double
-    let longitude: Double
+public struct BpLocation : Decodable {
+    public let name: String
+    public let country: String
+    public let latitude: Double
+    public let longitude: Double
 }

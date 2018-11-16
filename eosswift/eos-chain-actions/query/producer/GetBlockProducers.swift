@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class GetBlockProducers {
+public class GetBlockProducers {
 
     private let chainApi: ChainApi
     private let decode = JSONDecoder()
@@ -10,7 +10,7 @@ class GetBlockProducers {
         self.chainApi = chainApi
     }
 
-    func getSingleProducer(accountName: String) -> Single<BlockProducer> {
+    public func getSingleProducer(accountName: String) -> Single<BlockProducer> {
          let primaryKey = NameWriterValue(name: accountName).nameAsInt64(name: accountName)
         return getBpJson(limit: 1, lowerBound: String(primaryKey), upperBound: String(primaryKey+1)).map { bps in
             if (bps.count > 0) {
@@ -29,7 +29,7 @@ class GetBlockProducers {
         }
     }
 
-    func getProducers(limit: Int) -> Single<[BlockProducer]> {
+    public func getProducers(limit: Int) -> Single<[BlockProducer]> {
         return getBpJson(limit: limit, lowerBound: "", upperBound: "").flatMap { blockProducersContract in
             return self.chainApi.getProducers(body: GetProducers(
                 json: true,
@@ -104,9 +104,9 @@ class GetBlockProducers {
             })?.api_endpoint
         }
     }
+}
 
-    enum GetBlockProducerError : Error {
-        case chainProducerJsonMissing()
-        case failedToFetchBlockProducer
-    }
+public enum GetBlockProducerError : Error {
+    case chainProducerJsonMissing()
+    case failedToFetchBlockProducer
 }

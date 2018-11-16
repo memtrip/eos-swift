@@ -240,7 +240,7 @@ class ChainApiTest: XCTestCase {
         // TODO - requires byte writer
 //        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 //
-//        let response = try! chainApi.pushTransaction(
+//        let response = try chainApi.pushTransaction(
 //            body: PushTransaction(signatures: [], compression: "", packed_context_free_data: "", packed_trx: "")
 //        ).asObservable().toBlocking().first()
 //

@@ -4,9 +4,9 @@ public struct TransactionActionTrace : Decodable {
     public let receipt: TransactionReceipt
     public let act: TransactionAct
     public let elapsed: Int
-    public let cpu_usage: Int
+    public let cpu_usage: Int?
     public let console: String
-    public let total_cpu_usage: Int
+    public let total_cpu_usage: Int?
     public let trx_id: String
     public let inline_traces: Array<TransactionActionTrace>
 

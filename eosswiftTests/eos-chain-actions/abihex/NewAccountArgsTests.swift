@@ -5,9 +5,9 @@ import XCTest
 
 class NewAccountArgsTests: XCTestCase {
 
-    func testNewAccountDecodable() {
+    func testNewAccountDecodable() throws {
 
-        let eosPublicKey = try! EOSPublicKey(base58: "EOS7iZvLHdreeArYBGGat3Ciky5eR8mwBt1TD8pekcGEZCe1gVVQH")
+        let eosPublicKey = try EOSPublicKey(base58: "EOS7iZvLHdreeArYBGGat3Ciky5eR8mwBt1TD8pekcGEZCe1gVVQH")
 
         let newAccountArgs: NewAccountArgs = NewAccountArgs(
             creator: AccountNameWriterValue(name: "memtripissue"),

@@ -26,7 +26,7 @@ class HistoryApiTest: XCTestCase {
             body: GetActions(account_name: "eosio.token", pos: -1, offset: -20)).asObservable().toBlocking().first()
         let firstPageActionsItems = responseSetOne!.body!.actions
 
-        let responseSetTwo = try! historyApi.getActions(body: GetActions(
+        let responseSetTwo = try historyApi.getActions(body: GetActions(
             account_name: "eosio.token",
             pos: firstPageActionsItems[firstPageActionsItems.count - 1].account_action_seq - 1,
             offset: -20
@@ -67,7 +67,7 @@ class HistoryApiTest: XCTestCase {
     func testGetTransaction() throws {
         let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
 
-        let actionsResponse = try! historyApi.getActions(
+        let actionsResponse = try historyApi.getActions(
             body: GetActions(account_name: "eosio.token", pos: nil, offset: nil)).asObservable().toBlocking().first()
         let action = actionsResponse!.body!.actions[0]
 

@@ -5,8 +5,8 @@ import XCTest
 
 class ActionAbiTests: XCTestCase {
 
-    func testActionAbiDecodable() {
-        let createBuyRamBytes = createBuyRamBytesAbi()
+    func testActionAbiDecodable() throws {
+        let createBuyRamBytes = try createBuyRamBytesAbi()
         let actionAbi = ActionAbi(
             account: AccountNameWriterValue(name: "eosio"),
             name: AccountNameWriterValue(name: "buyrambytes"),
@@ -19,7 +19,7 @@ class ActionAbiTests: XCTestCase {
         XCTAssertEqual(actionAbi.toHex(), "0000000000ea305500b0cafe4873bd3e01a034c6aeba9ba59200000000a8ed323218a034c6aeba9ba592e03bbdb5ba9ba5920010000000000000")
     }
 
-    private func createBuyRamBytesAbi() -> String {
+    private func createBuyRamBytesAbi() throws -> String {
         let buyRamBytesArgs: BuyRamBytesArgs = BuyRamBytesArgs(
             payer: AccountNameWriterValue(name: "memtripissue"),
             receiver: AccountNameWriterValue(name: "memtripproxy"),
@@ -28,7 +28,7 @@ class ActionAbiTests: XCTestCase {
         let buyRamBytesBody: BuyRamBytesBody = BuyRamBytesBody(args: buyRamBytesArgs)
 
         let abiEncoder = AbiEncoder(capacity: 512)
-        try! abiEncoder.encode(encodable: buyRamBytesBody)
+        try abiEncoder.encode(encodable: buyRamBytesBody)
         return abiEncoder.toData().hexEncodedString()
     }
 }

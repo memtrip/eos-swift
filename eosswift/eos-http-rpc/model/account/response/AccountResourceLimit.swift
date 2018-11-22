@@ -19,22 +19,31 @@ public struct AccountResourceLimit : Codable {
         if let parseUsed: Int64 = try keyedContainer.decodeIfPresent(Int64.self, forKey: .used) {
             used = parseUsed
         } else {
-            used = -1
+            if let parseUsedString: String = try keyedContainer.decodeIfPresent(String.self, forKey: .used) {
+                used = Int64.init(parseUsedString)!
+            } else {
+                used = -1
+            }
         }
-
-        var avaliableVal: Int64 = -1
-        var maxVal: Int64 = -1
-
-        do {
-            if let parseAvailable: String = try keyedContainer.decodeIfPresent(String.self, forKey: .available) {
-                avaliableVal = Int64.init(parseAvailable)!
+        
+        if let parseAvailable: Int64 = try keyedContainer.decodeIfPresent(Int64.self, forKey: .available) {
+            available = parseAvailable
+        } else {
+            if let parseAvailableString: String = try keyedContainer.decodeIfPresent(String.self, forKey: .available) {
+                available = Int64.init(parseAvailableString)!
+            } else {
+                available = -1
             }
-            if let parseMax: String = try keyedContainer.decodeIfPresent(String.self, forKey: .max) {
-                maxVal = Int64.init(parseMax)!
+        }
+        
+        if let parseMax: Int64 = try keyedContainer.decodeIfPresent(Int64.self, forKey: .max) {
+            max = parseMax
+        } else {
+            if let parseMaxString: String = try keyedContainer.decodeIfPresent(String.self, forKey: .max) {
+                max = Int64.init(parseMaxString)!
+            } else {
+                max = -1
             }
-        } catch { }
-
-        available = avaliableVal
-        max = maxVal
+        }
     }
 }

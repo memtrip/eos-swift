@@ -50,10 +50,10 @@ class ChainApiTest: XCTestCase {
     }
 
     func testAccount() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        let chainApi = ChainApiFactory.create(rootUrl: "http://api.eosnewyork.io/")
 
         let response = try chainApi.getAccount(body: AccountName(
-            account_name: "eosio.token")).asObservable().toBlocking().first()
+            account_name: "eoscanadacom")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
@@ -234,17 +234,5 @@ class ChainApiTest: XCTestCase {
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
-    }
-
-    func testPushTransaction() {
-        // TODO - requires byte writer
-//        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-//
-//        let response = try chainApi.pushTransaction(
-//            body: PushTransaction(signatures: [], compression: "", packed_context_free_data: "", packed_trx: "")
-//        ).asObservable().toBlocking().first()
-//
-//        XCTAssertTrue(response!.success)
-//        XCTAssertNotNil(response!.body)
     }
 }

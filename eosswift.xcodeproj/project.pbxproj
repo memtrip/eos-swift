@@ -185,6 +185,10 @@
 		3C0280EA21907DC700D22DF0 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CC21907DC700D22DF0 /* util.swift */; };
 		3C0280EB21907DC700D22DF0 /* HistoryApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */; };
 		3C0280ED219088D000D22DF0 /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280EC219088D000D22DF0 /* Sha256.swift */; };
+		3C1F1F7F21A34B7F0075BD71 /* AccountAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7E21A34B7F0075BD71 /* AccountAuth.swift */; };
+		3C1F1F8121A34BA60075BD71 /* AccountAuthPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8021A34BA60075BD71 /* AccountAuthPermission.swift */; };
+		3C1F1F8321A34C290075BD71 /* AccountAuthWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8221A34C290075BD71 /* AccountAuthWait.swift */; };
+		3C1F1F8621A34D4D0075BD71 /* Pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8521A34D4D0075BD71 /* Pretty.swift */; };
 		3C291B91219D4F3C00562448 /* codable_type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291B90219D4F3C00562448 /* codable_type.swift */; };
 		3C291B94219D54A100562448 /* TransactionActAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291B93219D54A100562448 /* TransactionActAuthorization.swift */; };
 		3C291B96219D550800562448 /* ExecutedTransactionAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C291B95219D550800562448 /* ExecutedTransactionAction.swift */; };
@@ -410,6 +414,10 @@
 		3C0280CC21907DC700D22DF0 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryApiTest.swift; sourceTree = "<group>"; };
 		3C0280EC219088D000D22DF0 /* Sha256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sha256.swift; sourceTree = "<group>"; };
+		3C1F1F7E21A34B7F0075BD71 /* AccountAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuth.swift; sourceTree = "<group>"; };
+		3C1F1F8021A34BA60075BD71 /* AccountAuthPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthPermission.swift; sourceTree = "<group>"; };
+		3C1F1F8221A34C290075BD71 /* AccountAuthWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthWait.swift; sourceTree = "<group>"; };
+		3C1F1F8521A34D4D0075BD71 /* Pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pretty.swift; sourceTree = "<group>"; };
 		3C291B90219D4F3C00562448 /* codable_type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codable_type.swift; sourceTree = "<group>"; };
 		3C291B93219D54A100562448 /* TransactionActAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionActAuthorization.swift; sourceTree = "<group>"; };
 		3C291B95219D550800562448 /* ExecutedTransactionAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutedTransactionAction.swift; sourceTree = "<group>"; };
@@ -518,6 +526,7 @@
 				3C027F4721907C0E00D22DF0 /* hash */,
 				3C027F4E21907C0E00D22DF0 /* encode */,
 				3C027F5121907C0E00D22DF0 /* block */,
+				3C1F1F8421A34D410075BD71 /* utils */,
 			);
 			path = "eos-core";
 			sourceTree = "<group>";
@@ -812,6 +821,9 @@
 				3C027FAF21907C0E00D22DF0 /* AccountPermission.swift */,
 				3C027FB021907C0E00D22DF0 /* AccountKey.swift */,
 				3C027FB121907C0E00D22DF0 /* AccountRequiredAuth.swift */,
+				3C1F1F7E21A34B7F0075BD71 /* AccountAuth.swift */,
+				3C1F1F8021A34BA60075BD71 /* AccountAuthPermission.swift */,
+				3C1F1F8221A34C290075BD71 /* AccountAuthWait.swift */,
 				3C027FB221907C0E00D22DF0 /* VoterInfo.swift */,
 				3C027FB321907C0E00D22DF0 /* AccountResourceLimit.swift */,
 				3C027FB421907C0E00D22DF0 /* TotalResources.swift */,
@@ -1167,6 +1179,14 @@
 				3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */,
 			);
 			path = history;
+			sourceTree = "<group>";
+		};
+		3C1F1F8421A34D410075BD71 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				3C1F1F8521A34D4D0075BD71 /* Pretty.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		3C291B92219D548400562448 /* request */ = {
@@ -1532,6 +1552,7 @@
 				3C02802E21907C0E00D22DF0 /* AbiAction.swift in Sources */,
 				3C02808121907C0E00D22DF0 /* SellRamBody.swift in Sources */,
 				3C02806A21907C0E00D22DF0 /* TransferChain.swift in Sources */,
+				3C1F1F8621A34D4D0075BD71 /* Pretty.swift in Sources */,
 				3C02802F21907C0E00D22DF0 /* AbiContract.swift in Sources */,
 				3C592FD6219D6EE100D7C9B9 /* CheckAccountNameExists.swift in Sources */,
 				3C592FE5219D71D200D7C9B9 /* BpParent.swift in Sources */,
@@ -1586,6 +1607,7 @@
 				3C02807121907C0E00D22DF0 /* ActionAbi.swift in Sources */,
 				3C02805D21907C0E00D22DF0 /* BlockHeaderSchedule.swift in Sources */,
 				3C02805821907C0E00D22DF0 /* AccountName.swift in Sources */,
+				3C1F1F7F21A34B7F0075BD71 /* AccountAuth.swift in Sources */,
 				3C02801D21907C0E00D22DF0 /* HttpResponse.swift in Sources */,
 				3C02801621907C0E00D22DF0 /* AbiEncoder.swift in Sources */,
 				3C592FE9219D71E400D7C9B9 /* BlockProducer.swift in Sources */,
@@ -1626,12 +1648,14 @@
 				3C592FE1219D71C600D7C9B9 /* BpNode.swift in Sources */,
 				3C0280ED219088D000D22DF0 /* Sha256.swift in Sources */,
 				3C02807321907C0E00D22DF0 /* BuyRamBytesChain.swift in Sources */,
+				3C1F1F8321A34C290075BD71 /* AccountAuthWait.swift in Sources */,
 				3C02804121907C0E00D22DF0 /* ResponseBody.swift in Sources */,
 				3CCE4A082190F73200484684 /* Base58String.swift in Sources */,
 				3C02803721907C0E00D22DF0 /* AbiTable.swift in Sources */,
 				3C02805A21907C0E00D22DF0 /* ChainErrorItem.swift in Sources */,
 				3C02805521907C0E00D22DF0 /* AccountResourceLimit.swift in Sources */,
 				3C027FFF21907C0E00D22DF0 /* HexWriter.swift in Sources */,
+				3C1F1F8121A34BA60075BD71 /* AccountAuthPermission.swift in Sources */,
 				3C02801721907C0E00D22DF0 /* AbiEncodingContainer.swift in Sources */,
 				3C027FFA21907C0E00D22DF0 /* PrivateKeySigning.swift in Sources */,
 				3C02804521907C0E00D22DF0 /* HistoricAccountAction.swift in Sources */,

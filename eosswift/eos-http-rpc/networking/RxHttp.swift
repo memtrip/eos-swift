@@ -1,11 +1,14 @@
 import Foundation
 import RxSwift
 
-class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
+public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
 
     let connection: Connection = ConnectionFactory.create()
 
-    func single(httpRequest: HttpRequest<REQ>) -> Single<HttpResponse<RES>> {
+    public init() {
+    }
+    
+    public func single(httpRequest: HttpRequest<REQ>) -> Single<HttpResponse<RES>> {
         return Single<HttpResponse<RES>>.create { single in
             return self.call(
                 httpRequest: httpRequest,
@@ -15,7 +18,7 @@ class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
         }
     }
 
-    func completable(httpRequest: HttpRequest<REQ>) -> Completable {
+    public func completable(httpRequest: HttpRequest<REQ>) -> Completable {
         return Completable.create { completable in
             return self.call(
                 httpRequest: httpRequest,

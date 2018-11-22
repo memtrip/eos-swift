@@ -80,11 +80,12 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
                         let bodyString = String(describing: String(data: body, encoding: .utf8))
                         Logger.log(value: "error_response: \(bodyString)")
                         do {
-                            let decodedBody = try JSONDecoder().decode(ERR.self, from: body)
-                            onError(HttpErrorResponse(statusCode: res.statusCode, body: decodedBody, bodyString: bodyString))
-                        } catch {
-                            Logger.log(value: "Error info: \(error)")
-                            onError(HttpErrorResponse(statusCode: res.statusCode, body: nil, bodyString: bodyString))
+                            do {
+                                let decodedBody = try JSONDecoder().decode(ERR.self, from: body)
+                                onError(HttpErrorResponse(statusCode: res.statusCode, body: decodedBody, bodyString: bodyString))
+                            } catch {
+                                onError(HttpErrorResponse(statusCode: res.statusCode, body: nil, bodyString: bodyString))
+                            }
                         }
                     } else {
                         onError(HttpErrorResponse(statusCode: res.statusCode, body: nil, bodyString: nil))

@@ -37,6 +37,12 @@ extension ChainTransaction {
                         success: response.success,
                         statusCode: response.statusCode,
                         body: response.body)
+                }.catchError { error in
+                    let errorResponse = (error as! HttpErrorResponse<ChainError>)
+                    return Single.just(ChainResponse<TransactionCommitted>(
+                        success: false,
+                        statusCode: errorResponse.statusCode,
+                        errorBody: errorResponse.bodyString!))
                 }.catchErrorJustReturn(ChainResponse.errorResponse())
             } else {
                 return Single.just(ChainResponse.errorResponse())

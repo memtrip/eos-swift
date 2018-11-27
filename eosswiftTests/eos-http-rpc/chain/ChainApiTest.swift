@@ -50,10 +50,10 @@ class ChainApiTest: XCTestCase {
     }
 
     func testAccount() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: "http://api.eosnewyork.io/")
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
         let response = try chainApi.getAccount(body: AccountName(
-            account_name: "eoscanadacom")).asObservable().toBlocking().first()
+            account_name: "eosio.token")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)

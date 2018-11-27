@@ -14,14 +14,16 @@ public protocol HistoryApi {
 
 class HistoryApiImpl : HistoryApi {
 
-    let rootUrl: String
+    private let rootUrl: String
+    private let useLogger: Bool
 
-    fileprivate init(rootUrl: String) {
+    fileprivate init(rootUrl: String, useLogger: Bool) {
         self.rootUrl = rootUrl
+        self.useLogger = useLogger
     }
 
     func getActions(body: GetActions) -> Single<HttpResponse<HistoricAccountActionParent>> {
-        return RxHttp<GetActions, HistoricAccountActionParent, ChainError>().single(
+        return RxHttp<GetActions, HistoricAccountActionParent, ChainError>(useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_actions",
                 method: "POST",
@@ -31,7 +33,7 @@ class HistoryApiImpl : HistoryApi {
     }
 
     func getTransaction(body: GetTransaction) -> Single<HttpResponse<HistoricTransaction>> {
-        return RxHttp<GetTransaction, HistoricTransaction, ChainError>().single(
+        return RxHttp<GetTransaction, HistoricTransaction, ChainError>(useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_transaction",
                 method: "POST",
@@ -41,7 +43,7 @@ class HistoryApiImpl : HistoryApi {
     }
 
     func getKeyAccounts(body: GetKeyAccounts) -> Single<HttpResponse<Accounts>> {
-        return RxHttp<GetKeyAccounts, Accounts, ChainError>().single(
+        return RxHttp<GetKeyAccounts, Accounts, ChainError>(useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_key_accounts",
                 method: "POST",
@@ -51,7 +53,7 @@ class HistoryApiImpl : HistoryApi {
     }
 
     func getControlledAccounts(body: GetControlledAccounts) -> Single<HttpResponse<Accounts>> {
-        return RxHttp<GetControlledAccounts, Accounts, ChainError>().single(
+        return RxHttp<GetControlledAccounts, Accounts, ChainError>(useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_controlled_accounts",
                 method: "POST",
@@ -62,7 +64,7 @@ class HistoryApiImpl : HistoryApi {
 }
 
 public class HistoryApiFactory {
-    public static func create(rootUrl: String) -> HistoryApi {
-        return HistoryApiImpl(rootUrl: rootUrl)
+    public static func create(rootUrl: String, useLogger: Bool = false) -> HistoryApi {
+        return HistoryApiImpl(rootUrl: rootUrl, useLogger: useLogger)
     }
 }

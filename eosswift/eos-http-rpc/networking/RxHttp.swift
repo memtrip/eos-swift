@@ -3,9 +3,13 @@ import RxSwift
 
 public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
 
-    let connection: Connection = ConnectionFactory.create()
-
-    public init() {
+    private let connection: Connection = ConnectionFactory.create()
+    private let useLogger: Bool
+    private let logger: Logger
+    
+    public init(_ useLogger: Bool) {
+        self.useLogger = useLogger
+        self.logger = Logger(useLogger: useLogger)
     }
     
     public func single(httpRequest: HttpRequest<REQ>) -> Single<HttpResponse<RES>> {
@@ -37,9 +41,9 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
         onError: @escaping ((_ error: HttpErrorResponse<ERR>) -> Void)
     ) -> Disposable {
 
-        Logger.log(value: httpRequest.url)
-        Logger.log(value: "method:\(String(describing: httpRequest.method))")
-        Logger.log(value: "headers:\(String(describing: httpRequest.headers))")
+        logger.log(value: httpRequest.url)
+        logger.log(value: "method:\(String(describing: httpRequest.method))")
+        logger.log(value: "headers:\(String(describing: httpRequest.headers))")
 
         var request = URLRequest(url: URL(string: httpRequest.url)!)
 
@@ -52,23 +56,23 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
         if let json = body(httpRequest: httpRequest) {
             request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
             request.httpBody = json
-            Logger.log(value: json)
+            logger.log(value: json)
         }
 
         let task = connection.request(urlRequest: request) { (data, response, error) in
 
             if let res = response as? HTTPURLResponse {
-                Logger.log(value: "status_code: \(res.statusCode)")
+                self.logger.log(value: "status_code: \(res.statusCode)")
 
                 if res.statusCode >= 200 && res.statusCode < 300 {
 
                     if let body = data {
                         do {
-                            Logger.log(value: data)
+                            self.logger.log(value: data)
                             let decodedBody = try self.jsonDecoder().decode(RES.self, from: body)
                             onSuccess(HttpResponse(statusCode: res.statusCode, body: decodedBody))
                         } catch {
-                            Logger.log(value: "Error info: \(error)")
+                            self.logger.log(value: "Error info: \(error)")
                             onError(HttpErrorResponse(statusCode: -999, body: nil, bodyString: nil))
                         }
                     } else {
@@ -78,7 +82,7 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
 
                     if let body = data {
                         let bodyString = String(describing: String(data: body, encoding: .utf8))
-                        Logger.log(value: "error_response: \(bodyString)")
+                        self.logger.log(value: "error_response: \(bodyString)")
                         do {
                             do {
                                 let decodedBody = try JSONDecoder().decode(ERR.self, from: body)
@@ -92,7 +96,7 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
                     }
                 }
             } else {
-                Logger.err(value: error!)
+                self.logger.err(value: error!)
                 onError(HttpErrorResponse(statusCode: -111, body: nil, bodyString: ""))
             }
         }

@@ -211,6 +211,7 @@
 		3C592FFB219D889600D7C9B9 /* GetDelegatedBandwidthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FF9219D888600D7C9B9 /* GetDelegatedBandwidthTests.swift */; };
 		3C592FFE219D89F900D7C9B9 /* GetRegProxyInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */; };
 		3C9BFBA9219B593C00589936 /* RefundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA8219B593C00589936 /* RefundRequest.swift */; };
+		3CCE0EFA21AAB42D00D81458 /* parsing_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF921AAB42D00D81458 /* parsing_types.swift */; };
 		3CCE4A082190F73200484684 /* Base58String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE4A072190F73200484684 /* Base58String.swift */; };
 		3D07B6E4316429C03642301E /* Pods_eosswift_eosswiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D0ED85A4C240BB0149AE93 /* Pods_eosswift_eosswiftTests.framework */; };
 		A319CB2584D79C91989BED11 /* Pods_eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC98C293614C9CE6F2831D /* Pods_eosswift.framework */; };
@@ -441,6 +442,7 @@
 		3C592FF9219D888600D7C9B9 /* GetDelegatedBandwidthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDelegatedBandwidthTests.swift; sourceTree = "<group>"; };
 		3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRegProxyInfoTest.swift; sourceTree = "<group>"; };
 		3C9BFBA8219B593C00589936 /* RefundRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundRequest.swift; sourceTree = "<group>"; };
+		3CCE0EF921AAB42D00D81458 /* parsing_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing_types.swift; sourceTree = "<group>"; };
 		3CCE4A072190F73200484684 /* Base58String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58String.swift; sourceTree = "<group>"; };
 		4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eos_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDC98C293614C9CE6F2831D /* Pods_eosswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -653,6 +655,7 @@
 				3C027F9E21907C0E00D22DF0 /* history */,
 				3C027FAC21907C0E00D22DF0 /* account */,
 				3C027FBA21907C0E00D22DF0 /* block */,
+				3CCE0EF921AAB42D00D81458 /* parsing_types.swift */,
 				3C027F9421907C0E00D22DF0 /* ChainError.swift */,
 				3C027F9921907C0E00D22DF0 /* ResponseBody.swift */,
 				3C027F9A21907C0E00D22DF0 /* RequestBody.swift */,
@@ -1613,6 +1616,7 @@
 				3C592FE9219D71E400D7C9B9 /* BlockProducer.swift in Sources */,
 				3C02808721907C0E00D22DF0 /* SellRamChain.swift in Sources */,
 				3C02802C21907C0E00D22DF0 /* GetProducers.swift in Sources */,
+				3CCE0EFA21AAB42D00D81458 /* parsing_types.swift in Sources */,
 				3C02807521907C0E00D22DF0 /* CreateAccountChain.swift in Sources */,
 				3C592FE7219D71DA00D7C9B9 /* BpSocial.swift in Sources */,
 				3C02802421907C0E00D22DF0 /* TransactionComitted.swift in Sources */,

@@ -14,7 +14,7 @@ extension Encodable {
     }
 }
 
-public protocol JSONType: Decodable {
+public protocol JSONType: Codable {
     var jsonValue: Any { get }
 }
 
@@ -50,7 +50,11 @@ public struct AnyJSONType: JSONType {
         } else if let doubleValue = try? container.decode(Dictionary<String, AnyJSONType>.self) {
             jsonValue = doubleValue
         } else {
-            throw DecodingError.typeMismatch(JSONType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unsupported JSON tyep"))
+            throw DecodingError.typeMismatch(JSONType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unsupported JSON type"))
         }
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        fatalError("encoding not supported")
     }
 }

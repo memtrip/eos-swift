@@ -29,6 +29,7 @@ class TransferChainTests: XCTestCase {
 
         /* Transfer funds -> from account - to account */
         let transferResponse = try TransferChain(chainApi: chainApi).transfer(
+            contract: "eosio.token",
             args: TransferChain.Args(
                 fromAccount: fromAccountName,
                 toAccount: toAccountName,

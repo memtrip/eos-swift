@@ -65,11 +65,11 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
                 self.logger.log(value: "status_code: \(res.statusCode)")
 
                 if res.statusCode >= 200 && res.statusCode < 300 {
-
                     if let body = data {
                         do {
-                            self.logger.log(value: data)
-                            let decodedBody = try self.jsonDecoder().decode(RES.self, from: body)
+                            self.logger.log(value: body)
+                            let stringBody = String(decoding: body, as: UTF8.self)
+                            let decodedBody = try self.jsonDecoder().decode(RES.self, from: stringBody.data(using: .utf8)!)
                             onSuccess(HttpResponse(statusCode: res.statusCode, body: decodedBody))
                         } catch {
                             self.logger.log(value: "Error info: \(error)")

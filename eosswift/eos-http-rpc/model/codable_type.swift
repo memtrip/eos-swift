@@ -15,24 +15,24 @@ extension Encodable {
 }
 
 public protocol JSONType: Codable {
-    var jsonValue: Any { get }
+    var jsonValue: Any? { get }
 }
 
 extension Int: JSONType {
-    public var jsonValue: Any { return self }
+    public var jsonValue: Any? { return self }
 }
 extension String: JSONType {
-    public var jsonValue: Any { return self }
+    public var jsonValue: Any? { return self }
 }
 extension Double: JSONType {
-    public var jsonValue: Any { return self }
+    public var jsonValue: Any? { return self }
 }
 extension Bool: JSONType {
-    public var jsonValue: Any { return self }
+    public var jsonValue: Any? { return self }
 }
 
 public struct AnyJSONType: JSONType {
-    public let jsonValue: Any
+    public let jsonValue: Any?
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -50,7 +50,7 @@ public struct AnyJSONType: JSONType {
         } else if let doubleValue = try? container.decode(Dictionary<String, AnyJSONType>.self) {
             jsonValue = doubleValue
         } else {
-            throw DecodingError.typeMismatch(JSONType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unsupported JSON type"))
+            jsonValue = nil
         }
     }
     

@@ -27,14 +27,22 @@ public class TransferChain : ChainTransaction {
         return _chainApi
     }
 
-    public func transfer(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
+    public func transfer(
+        contract: String,
+        args: Args,
+        transactionContext: TransactionContext
+    ) -> Single<ChainResponse<TransactionCommitted>> {
         return push(
             expirationDate: Date.defaultTransactionExpiry(),
-            actions: buildAbiList(args: args, transactionContext: transactionContext),
+            actions: buildAbiList(contract: contract, args: args, transactionContext: transactionContext),
             authorizingPrivateKey: transactionContext.authorizingPrivateKey)
     }
 
-    private func buildAbiList(args: Args, transactionContext: TransactionContext) -> [ActionAbi] {
+    private func buildAbiList(
+        contract: String,
+        args: Args,
+        transactionContext: TransactionContext
+    ) -> [ActionAbi] {
 
         let transferArgs: TransferArgs = TransferArgs(
             from: AccountNameWriterValue(name: args.fromAccount),
@@ -43,7 +51,7 @@ public class TransferChain : ChainTransaction {
             memo: args.memo)
 
         return [ActionAbi(
-            account: AccountNameWriterValue(name: "eosio.token"),
+            account: AccountNameWriterValue(name: contract),
             name: AccountNameWriterValue(name: "transfer"),
             authorization: [TransactionAuthorizationAbi(
                 actor: AccountNameWriterValue(name: transactionContext.authorizingAccountName),

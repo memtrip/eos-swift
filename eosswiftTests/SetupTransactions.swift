@@ -40,6 +40,7 @@ class SetupTransactions {
         let signatureProvider = try EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
 
         return TransferChain(chainApi: chainApi).transfer(
+            contract: "eosio.token",
             args: TransferChain.Args(
                 fromAccount: "eosio",
                 toAccount: to,

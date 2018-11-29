@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name                   = 'eos-swift'
+  spec.name                   = 'eosswift'
   spec.version                = '1.0.13'
   spec.ios.deployment_target  = '11.0'
   spec.swift_version          = '4.2'
@@ -8,9 +8,9 @@ Pod::Spec.new do |spec|
   spec.authors                = { 'Samuel Kirton' => 'sam@memtrip.com' }
   spec.summary                = 'EOS libraries for swift, designed primarily for iOS development.'
   spec.source                 = { :git => 'https://samkirton@bitbucket.org/samkirton/eos-swift.git', :tag => 'v1.0.13' }
-  spec.source_files           = 'eosswift/**/*.{swift}'
+  spec.source_files           = 'eosswift/**/*.{swift}', 'eosswift/microecc_uref/src/*.c','eosswift/microecc_uref/include/*.h'
   spec.public_header_files    = 'eosswift/**/*.h'
-  spec.pod_target_xcconfig    = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/eosswift/microecc_uref/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/eosswift/microecc_uref'}
+  spec.pod_target_xcconfig    = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/eosswift/microecc_uref/**', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/eosswift/microecc_uref/'}
   spec.preserve_paths         = 'eosswift/microecc_uref/module.modulemap'
   spec.requires_arc           = true
   spec.dependency               'RxSwift','~> 4.0'

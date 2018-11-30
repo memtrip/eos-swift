@@ -1,4 +1,9 @@
 /* Copyright 2015, Kenneth MacKay. Licensed under the BSD 2-clause license. */
+#include "types.h"
+
+#ifndef uECC_VLI_API
+#define uECC_VLI_API
+#endif
 
 #ifndef _UECC_ASM_ARM_H_
 #define _UECC_ASM_ARM_H_
@@ -159,9 +164,9 @@ uECC_VLI_API uECC_word_t uECC_vli_sub(uECC_word_t *result,
 #if (uECC_PLATFORM != uECC_arm_thumb)
 
 #if uECC_ARM_USE_UMAAL
-#include "asm_arm_mult_square_umaal.inc"
+#include "asm_arm_mult_square_umaal.inc.h"
 #else
-#include "asm_arm_mult_square.inc"
+#include "asm_arm_mult_square.inc.h"
 #endif
 
 #if (uECC_OPTIMIZATION_LEVEL == 3)

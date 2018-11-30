@@ -81,7 +81,7 @@
 DEFER(CONCAT(REPEATM_NAME_, SOME_OR_0(DEC(N))))()(DEC(N), macro)
 #define REPEATM(N, macro) EVAL(REPEATM_SOME(N, macro))
 
-#include "../include/platform-specific.inc.h"
+#include "platform-specific.inc.h"
 
 #if (uECC_WORD_SIZE == 1)
 #if uECC_SUPPORTS_secp160r1
@@ -174,11 +174,11 @@ static cmpresult_t uECC_vli_cmp_unsafe(const uECC_word_t *left,
 
 #if (uECC_PLATFORM == uECC_arm || uECC_PLATFORM == uECC_arm_thumb || \
 uECC_PLATFORM == uECC_arm_thumb2)
-#include "asm_arm.inc"
+#include "asm_arm.inc.h"
 #endif
 
 #if (uECC_PLATFORM == uECC_avr)
-#include "asm_avr.inc"
+#include "asm_avr.inc.h"
 #endif
 
 #if default_RNG_defined
@@ -735,7 +735,7 @@ uECC_VLI_API void uECC_vli_modInv(uECC_word_t *result,
 
 /* ------ Point operations ------ */
 
-#include "../include/curve-specific.inc.h"
+#include "curve-specific.inc.h"
 
 /* Returns 1 if 'point' is the point at infinity, 0 otherwise. */
 #define EccPoint_isZero(point, curve) uECC_vli_isZero((point), (curve)->num_words * 2)

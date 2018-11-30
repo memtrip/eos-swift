@@ -493,7 +493,7 @@
 		3C027DAA21907B8500D22DF0 /* eosswift */ = {
 			isa = PBXGroup;
 			children = (
-				3C02808921907C1D00D22DF0 /* microecc_uref */,
+				3C02808921907C1D00D22DF0 /* microecc */,
 				3C027F5321907C0E00D22DF0 /* eos-abi-writer */,
 				3C027FC721907C0E00D22DF0 /* eos-chain-actions */,
 				3C027F3D21907C0E00D22DF0 /* eos-core */,
@@ -1033,17 +1033,7 @@
 			path = refund;
 			sourceTree = "<group>";
 		};
-		3C02808921907C1D00D22DF0 /* microecc_uref */ = {
-			isa = PBXGroup;
-			children = (
-				3C02808A21907C1D00D22DF0 /* include */,
-				3C02809221907C1D00D22DF0 /* src */,
-				3C02809121907C1D00D22DF0 /* module.modulemap */,
-			);
-			path = microecc_uref;
-			sourceTree = "<group>";
-		};
-		3C02808A21907C1D00D22DF0 /* include */ = {
+		3C02808921907C1D00D22DF0 /* microecc */ = {
 			isa = PBXGroup;
 			children = (
 				3C02808B21907C1D00D22DF0 /* uECC.h */,
@@ -1052,16 +1042,10 @@
 				3C02808E21907C1D00D22DF0 /* curve-specific.inc.h */,
 				3C02808F21907C1D00D22DF0 /* types.h */,
 				3C02809021907C1D00D22DF0 /* platform-specific.inc.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		3C02809221907C1D00D22DF0 /* src */ = {
-			isa = PBXGroup;
-			children = (
 				3C02809321907C1D00D22DF0 /* uECC.c */,
+				3C02809121907C1D00D22DF0 /* module.modulemap */,
 			);
-			path = src;
+			path = microecc;
 			sourceTree = "<group>";
 		};
 		3C0280A721907DC700D22DF0 /* eos-abi-writer */ = {
@@ -1724,6 +1708,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1778,7 +1763,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				"SWIFT_INCLUDE_PATHS[arch=*]" = "${SRCROOT}/eosswift/microecc_uref/**";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "${SRCROOT}/eosswift/microecc/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1789,6 +1774,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1836,7 +1822,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				"SWIFT_INCLUDE_PATHS[arch=*]" = "${SRCROOT}/eosswift/microecc_uref/**";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "${SRCROOT}/eosswift/microecc/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

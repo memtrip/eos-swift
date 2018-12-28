@@ -23,15 +23,15 @@ EOS keypairs are generated using the [micro-ecc](https://github.com/kmackay/micr
 
 Create a new keypair:
 ```swift
-# generate new key pair
+// new key pair
 let eosPrivateKey = try! EOSPrivateKey()
 let eosPublicKey = eosPrivateKey.publicKey
 
-# from encoded string
-let fromEncodedPrivateKey = try! EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+// private key from encoded string
+let privKey1 = try! EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
 
-# from bytes
-let fromBytesPrivateKey = try! EOSPrivateKey(ecKeyPrivateKey: ECPrivateKey(privKeyData: eosPrivateKey.bytes()))
+// private key from bytes
+let privKey2 = try! EOSPrivateKey(ecKeyPrivateKey: ECPrivateKey(privKeyData: eosPrivateKey.bytes()))
 ```
 
 ### Sign bytes with a private key
@@ -123,5 +123,5 @@ historyApi.getTransaction(body: GetTransaction(id: action.action_trace.trx_id)).
 - [Developed by memtrip.com](http://memtrip.com)
 
 ### Vote for memtripblock
-If you find this app useful, please vote for [memtripblock](https://www.memtrip.com/code_of_conduct.html)
+If you find this SDK useful, please vote for [memtripblock](https://www.memtrip.com/code_of_conduct.html)
 as a block producer. We are committed to open sourcing all the software we develop, let’s build the future of EOS on mobile together!

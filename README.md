@@ -16,8 +16,11 @@ pod install
 ```
 
 ### Getting started
-The `eosswiftTests` directory contains a full suite of integration tests. The `eos-chain-actions`
-and `eos-http-rpc` tests illustrate the core EOS functionality against the jungle2.0 testnet. 
+The `eosswiftTests` directory contains a full suite of integration tests, explore these
+tests to quickly guage what functionality is provided by the SDK.
+- `eos-chain-actions` tests the highest level of abstraction; pushing transactions composed of actions.
+- `eos-http-rpc` tests the interaction with nodeos HTTP RPC api.
+- `eos-chain-actions` tests the building of local abi bytes
 
 ## eos-core
 The core module contains the core building blocks required to interact with the EOS network.

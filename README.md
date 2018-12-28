@@ -1,7 +1,19 @@
 # eos-swift
 EOS libraries for swift, designed primarily for iOS development.
 
-## Pod
+## CocoaPods
+Tested with pod --version: 1.5.3
+```ruby
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+  pod 'eosswift', '1.0'
+end
+```
+Replace YOUR_TARGET_NAME and then, in the Podfile directory, type:
+```
+pod install
+```
 
 ## eos-core
 The core module contains the core building blocks required to interact with the EOS network.
@@ -10,7 +22,7 @@ The core module contains the core building blocks required to interact with the 
 EOS keypairs are generated using the [micro-ecc](https://github.com/kmackay/micro-ecc) lib.
 
 Create a new keypair:
-```
+```swift
 # generate new key pair
 let eosPrivateKey = try! EOSPrivateKey()
 let eosPublicKey = eosPrivateKey.publicKey
@@ -25,10 +37,7 @@ let fromBytesPrivateKey = try! EOSPrivateKey(ecKeyPrivateKey: ECPrivateKey(privK
 ### Sign bytes with a private key
 When a transaction is pushed to the EOS network, the packed transaction bytes must be
 signed by an EOS private key.
-
-Sign bytes with an EOS private key:
-```
-#
+```swift
 let bytesToSign = imaginaryAbi.toData()
 let privateKey = try! EOSPrivateKey()
 let signature = PrivateKeySigning().sign(digest: bytesToSign, eosPrivateKey: privateKey)
@@ -36,7 +45,7 @@ let signature = PrivateKeySigning().sign(digest: bytesToSign, eosPrivateKey: pri
 
 ### Block Id details
 Extract the block number and prefix from a block id.
-```
+```swift
 let blockIdDetails = BlockIdDetails(blockId: "0000000ac7619ca01df1e0b4964921020e772ceb7343ec51f65537cdbce192d3")
 let blockNum = blockIdDetails.blockNum
 let blockPrefix = blockIdDetails.blockPrefix
@@ -50,8 +59,8 @@ values to a byte array.
 Byte writer models are structs that adopt the `Encodable` protocol, the type of the member variable
 is used to determine how the data will be written to the byte array. For more complex types a derivative
 of `AbiTypeWriter` can be used, such as; `AssetWriterValue`, `AccountNameWriter` or `PublicKeyWriter`.
-[List of supported complex `AbiTypeWriter` types](https://github.com/kmackay/micro-ecc)
-```
+- [List of complex `AbiTypeWriter` types](https://github.com/memtrip/eos-swift/tree/master/eosswift/eos-abi-writer/types)
+```swift
 struct TransactionAbi : Encodable {
     let expiration: TimestampWriterValue
     let ref_block_num: BlockNumWriterValue
@@ -76,3 +85,43 @@ See the `eos-swiftTests/eos-chain-actions/abihex` test package for abi byte writ
 
 ## eos-http-rpc
 A http client used to makes requests to the nodeos RPC HTTP API.
+
+### Factory
+The http client interfaces can be created using `ChainApiFactory` and `HistoryApiFactory`.
+```swift
+let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+```
+
+### ChainApi
+The `ChainApi` interface contains all the network requests for the `chain/` resource.
+e.g; chain/get_info
+```swift
+chainApi.getInfo().subscribe(onSuccess: { response in
+    let info: Info = response.body!
+}, onError: { error in
+    let httpErrorResponse = error as! HttpErrorResponse<ChainError>
+    print(httpErrorResponse.bodyString)
+})
+```
+
+The `HistoryApi` interface contains all the network requests for the `history/` resource.
+e.g; history/get_transaction
+```swift
+historyApi.getTransaction(body: GetTransaction(id: action.action_trace.trx_id)).subscribe(onSuccess: { response in
+     let historicTransaction: HistoricTransaction = response.body!
+ }, onError: { error in
+     let httpErrorResponse = error as! HttpErrorResponse<ChainError>
+     print(httpErrorResponse.bodyString)
+ })
+```
+
+### Integration tests
+`eosswiftTests/eos-http-rpc/` directory contains a full suite of integration tests.
+
+## Credits
+- [Join us on telegram](http://t.me/joinchat/JcIXl0x7wC9cRI5uF_EiQA)
+- [Developed by memtrip.com](http://memtrip.com)
+
+### Vote for memtripblock
+If you find this app useful, please vote for [memtripblock](https://www.memtrip.com/code_of_conduct.html)
+as a block producer. We are committed to open sourcing all the software we develop, let’s build the future of EOS on mobile together!

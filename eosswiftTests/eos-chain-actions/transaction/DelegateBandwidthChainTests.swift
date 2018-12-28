@@ -6,7 +6,7 @@ import XCTest
 class DelegateBandwidthChainTests: XCTestCase {
 
     func testDelegateBandwidth() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL, useLogger: true)
         let setupTransactions = SetupTransactions(chainApi: chainApi)
 
         let accountName = TestUtils.generateUniqueAccountName()
@@ -18,13 +18,13 @@ class DelegateBandwidthChainTests: XCTestCase {
         /* Transfer funds to new account */
         let transferResponse = try setupTransactions.transfer(to: accountName).asObservable().toBlocking().first()
 
-        /* Buy ram */
+        /* Delegate bandwidth */
         let delegateBandwidthResponse = try DelegateBandwidthChain(chainApi: chainApi).delegateBandwidth(
             args: DelegateBandwidthChain.Args(
                 from: accountName,
                 receiver: accountName,
-                netQuantity: "1.0000 SYS",
-                cpuQuantity: "1.0000 SYS",
+                netQuantity: "0.0001 EOS",
+                cpuQuantity: "0.0001 EOS",
                 transfer: false
             ),
             transactionContext: TransactionContext(
@@ -43,7 +43,7 @@ class DelegateBandwidthChainTests: XCTestCase {
 
         /* Verify bandwidth has increased */
         let afterAccount = try chainApi.getAccount(body: AccountName(account_name: accountName)).asObservable().toBlocking().first()
-        XCTAssertEqual("2.0000 SYS", afterAccount!.body!.total_resources!.cpu_weight)
-        XCTAssertEqual("2.0000 SYS", afterAccount!.body!.total_resources!.net_weight)
+        XCTAssertEqual("1.0001 EOS", afterAccount!.body!.total_resources!.cpu_weight)
+        XCTAssertEqual("0.1001 EOS", afterAccount!.body!.total_resources!.net_weight)
     }
 }

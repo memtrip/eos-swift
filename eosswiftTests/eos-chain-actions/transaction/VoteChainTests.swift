@@ -6,7 +6,7 @@ import XCTest
 class VoteChainTests: XCTestCase {
 
     func testVoteForProxy() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL, useLogger: true)
         let setupTransactions = SetupTransactions(chainApi: chainApi)
 
         let accountName = TestUtils.generateUniqueAccountName()
@@ -14,9 +14,6 @@ class VoteChainTests: XCTestCase {
 
         /* New account */
         let newAccountResponse = try setupTransactions.createAccount(accountName: accountName, privateKey: accountPrivateKey).asObservable().toBlocking().first()
-
-        /* Transfer funds to new account */
-        let transferResponse = try setupTransactions.transfer(to: accountName).asObservable().toBlocking().first()
 
         /* Vote */
         let voteResponse = try VoteChain(chainApi: chainApi).vote(
@@ -28,8 +25,6 @@ class VoteChainTests: XCTestCase {
 
         XCTAssertTrue(newAccountResponse!.success)
         XCTAssertNotNil(newAccountResponse!.body)
-        XCTAssertTrue(transferResponse!.success)
-        XCTAssertNotNil(transferResponse!.body)
         XCTAssertTrue(voteResponse!.success)
         XCTAssertNotNil(voteResponse!.body)
     }

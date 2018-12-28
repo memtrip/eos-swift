@@ -1,6 +1,6 @@
 import Foundation
 
 class Config {
-    static let CHAIN_API_BASE_URL = "http://localhost:8888/"
-    static let HISTORY_API_BASE_URL = "http://localhost:8888/"
+    static let CHAIN_API_BASE_URL = "https://jungle2.cryptolions.io:443/"
+    static let HISTORY_API_BASE_URL = "https://jungle2.cryptolions.io:443/"
 }

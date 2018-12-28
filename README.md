@@ -1,7 +1,7 @@
 # eos-swift
 EOS libraries for swift, designed primarily for iOS development.
 
-## CocoaPods
+## Install with CocoaPods
 Tested with pod --version: 1.5.3
 ```ruby
 use_frameworks!
@@ -14,6 +14,10 @@ Replace YOUR_TARGET_NAME and then, in the Podfile directory, type:
 ```
 pod install
 ```
+
+### Getting started
+The `eosswiftTests` directory contains a full suite of integration tests. The `eos-chain-actions`
+and `eos-http-rpc` tests illustrate the core EOS functionality against the jungle2.0 testnet. 
 
 ## eos-core
 The core module contains the core building blocks required to interact with the EOS network.
@@ -114,9 +118,6 @@ historyApi.getTransaction(body: GetTransaction(id: action.action_trace.trx_id)).
      print(httpErrorResponse.bodyString)
  })
 ```
-
-### Integration tests
-`eosswiftTests/eos-http-rpc/` directory contains a full suite of integration tests.
 
 ## Credits
 - [Join us on telegram](http://t.me/joinchat/JcIXl0x7wC9cRI5uF_EiQA)

@@ -6,11 +6,22 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
     private let connection: Connection = ConnectionFactory.create()
     private let useLogger: Bool
     private let logger: Logger
+    private let dateDecoder: DateDecoder
     
     public init(_ useLogger: Bool) {
         self.useLogger = useLogger
         self.logger = Logger(useLogger: useLogger)
+        self.dateDecoder = DateDecoder(formatter: DateFormatter())
     }
+    
+    private lazy var jsonDecoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+            let container = try decoder.singleValueContainer()
+            return try self.dateDecoder.decode(dateStr: try container.decode(String.self))
+        })
+        return decoder
+    }()
     
     public func single(httpRequest: HttpRequest<REQ>) -> Single<HttpResponse<RES>> {
         return Single<HttpResponse<RES>>.create { single in
@@ -69,7 +80,7 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
                         do {
                             self.logger.log(value: body)
                             let stringBody = String(decoding: body, as: UTF8.self)
-                            let decodedBody = try self.jsonDecoder().decode(RES.self, from: stringBody.data(using: .utf8)!)
+                            let decodedBody = try self.jsonDecoder.decode(RES.self, from: stringBody.data(using: .utf8)!)
                             onSuccess(HttpResponse(statusCode: res.statusCode, body: decodedBody))
                         } catch {
                             self.logger.log(value: "Error info: \(error)")
@@ -119,37 +130,6 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
     private func logJsonData(data: Data) -> String {
         let str = String(describing: String(data: data, encoding: String.Encoding.utf8))
         return String(str.filter { !" \n\t\r\\".contains($0) })
-    }
-
-    enum DateError: String, Error {
-        case invalidDate
-    }
-
-    private func jsonDecoder() -> JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
-            let container = try decoder.singleValueContainer()
-            let dateStr = try container.decode(String.self)
-
-            let formatter = DateFormatter()
-            formatter.calendar = Calendar(identifier: .iso8601)
-            formatter.locale = Locale(identifier: "en_US_POSIX")
-            formatter.timeZone = TimeZone(secondsFromGMT: 0)
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-            if let date = formatter.date(from: dateStr) {
-                return date
-            }
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-            if let date = formatter.date(from: dateStr) {
-                return date
-            }
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"
-            if let date = formatter.date(from: dateStr) {
-                return date
-            }
-            throw DateError.invalidDate
-        })
-        return decoder
     }
 
     private func jsonEncoder() -> JSONEncoder {

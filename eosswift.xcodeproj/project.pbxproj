@@ -185,6 +185,8 @@
 		3C0280EA21907DC700D22DF0 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CC21907DC700D22DF0 /* util.swift */; };
 		3C0280EB21907DC700D22DF0 /* HistoryApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */; };
 		3C0280ED219088D000D22DF0 /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280EC219088D000D22DF0 /* Sha256.swift */; };
+		3C11B6BB21D66EA200D2371A /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11B6BA21D66EA200D2371A /* DateDecoder.swift */; };
+		3C11B6BD21D68CE100D2371A /* UndelegateBandwidthChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11B6BC21D68CE100D2371A /* UndelegateBandwidthChainTests.swift */; };
 		3C1F1F7F21A34B7F0075BD71 /* AccountAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F7E21A34B7F0075BD71 /* AccountAuth.swift */; };
 		3C1F1F8121A34BA60075BD71 /* AccountAuthPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8021A34BA60075BD71 /* AccountAuthPermission.swift */; };
 		3C1F1F8321A34C290075BD71 /* AccountAuthWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F1F8221A34C290075BD71 /* AccountAuthWait.swift */; };
@@ -415,6 +417,8 @@
 		3C0280CC21907DC700D22DF0 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryApiTest.swift; sourceTree = "<group>"; };
 		3C0280EC219088D000D22DF0 /* Sha256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sha256.swift; sourceTree = "<group>"; };
+		3C11B6BA21D66EA200D2371A /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
+		3C11B6BC21D68CE100D2371A /* UndelegateBandwidthChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndelegateBandwidthChainTests.swift; sourceTree = "<group>"; };
 		3C1F1F7E21A34B7F0075BD71 /* AccountAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuth.swift; sourceTree = "<group>"; };
 		3C1F1F8021A34BA60075BD71 /* AccountAuthPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthPermission.swift; sourceTree = "<group>"; };
 		3C1F1F8221A34C290075BD71 /* AccountAuthWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthWait.swift; sourceTree = "<group>"; };
@@ -633,6 +637,7 @@
 		3C027F6621907C0E00D22DF0 /* networking */ = {
 			isa = PBXGroup;
 			children = (
+				3C11B6B921D66E9200D2371A /* decoding */,
 				3C027F6721907C0E00D22DF0 /* Connection.swift */,
 				3C027F6821907C0E00D22DF0 /* RxHttp.swift */,
 				3C027F6921907C0E00D22DF0 /* Logger.swift */,
@@ -1118,6 +1123,7 @@
 				3C0280B721907DC700D22DF0 /* VoteChainTests.swift */,
 				3C0280B821907DC700D22DF0 /* TransferChainTests.swift */,
 				3C0280B921907DC700D22DF0 /* DelegateBandwidthChainTests.swift */,
+				3C11B6BC21D68CE100D2371A /* UndelegateBandwidthChainTests.swift */,
 				3C0280BA21907DC700D22DF0 /* SellRamChainTests.swift */,
 				3C0280BB21907DC700D22DF0 /* BuyRamChainTests.swift */,
 			);
@@ -1166,6 +1172,14 @@
 				3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */,
 			);
 			path = history;
+			sourceTree = "<group>";
+		};
+		3C11B6B921D66E9200D2371A /* decoding */ = {
+			isa = PBXGroup;
+			children = (
+				3C11B6BA21D66EA200D2371A /* DateDecoder.swift */,
+			);
+			path = decoding;
 			sourceTree = "<group>";
 		};
 		3C1F1F8421A34D410075BD71 /* utils */ = {
@@ -1529,6 +1543,7 @@
 				3C02805121907C0E00D22DF0 /* AccountPermission.swift in Sources */,
 				3C02806B21907C0E00D22DF0 /* TransferArgs.swift in Sources */,
 				3C02804E21907C0E00D22DF0 /* GetTransaction.swift in Sources */,
+				3C11B6BB21D66EA200D2371A /* DateDecoder.swift in Sources */,
 				3C02803D21907C0E00D22DF0 /* ChainError.swift in Sources */,
 				3C02805421907C0E00D22DF0 /* VoterInfo.swift in Sources */,
 				3C02800821907C0E00D22DF0 /* BlockIdDetails.swift in Sources */,
@@ -1676,6 +1691,7 @@
 				3C0280D221907DC700D22DF0 /* SwiftRIPEMD160.swift in Sources */,
 				3C0280D121907DC700D22DF0 /* HexWriterTests.swift in Sources */,
 				3C0280E621907DC700D22DF0 /* UnDelegateBandwidthArgsTests.swift in Sources */,
+				3C11B6BD21D68CE100D2371A /* UndelegateBandwidthChainTests.swift in Sources */,
 				3C0280E221907DC700D22DF0 /* SignedTransactionAbiTest.swift in Sources */,
 				3C0280E521907DC700D22DF0 /* DelegateBandwidthArgsTests.swift in Sources */,
 				3C0280E821907DC700D22DF0 /* ActionAbiTests.swift in Sources */,

@@ -69,6 +69,17 @@ class ChainApiTest: XCTestCase {
         XCTAssertNotNil(response!.body!.voter_info)
         XCTAssertTrue(response!.body!.voter_info!.producers.count == 0)
     }
+    
+    func testVoterAccountForProxy() throws {
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        
+        let response = try chainApi.getAccount(body: AccountName(
+            account_name: "memtripadmin")).asObservable().toBlocking().first()
+        
+        XCTAssertTrue(response!.success)
+        XCTAssertNotNil(response!.body!.voter_info)
+        XCTAssertTrue(response!.body!.voter_info!.proxy == "memtripproxy")
+    }
 
     func testVoterProxy() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
@@ -100,17 +111,6 @@ class ChainApiTest: XCTestCase {
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)
         XCTAssertNotEqual(response!.body!.wasm, "")
-    }
-
-    func testGetCodeWast() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-
-        let response = try chainApi.getCode(body: GetCodeByAccountName(
-            account_name: "eosio.token", code_as_wasm: false)).asObservable().toBlocking().first()
-
-        XCTAssertTrue(response!.success)
-        XCTAssertNotNil(response!.body)
-        XCTAssertNotNil(response!.body!.wast, "")
     }
 
     func testGetRawCodeAndAbi() throws {
@@ -184,15 +184,15 @@ class ChainApiTest: XCTestCase {
     }
 
     func testGetRequiredKeys() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-        let privateKey = try EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL, useLogger: true)
+        let privateKey = try EOSPrivateKey(base58: "5HvDsbgjH574GALj5gRcnscMfAGBQD9JSWn3sHFsD7bNrkqXqpr")
 
         let info = try chainApi.getInfo().asObservable().toBlocking().first()!
 
         let blockIdDetails = BlockIdDetails(blockId: info.body!.head_block_id)
 
         let transferArgs: TransferArgs = TransferArgs(
-            from: AccountNameWriterValue(name: "memtripissu5"),
+            from: AccountNameWriterValue(name: "memtripissue"),
             to: AccountNameWriterValue(name: "memtripblock"),
             quantity: AssetWriterValue(asset: "12.3040 EOS"),
             memo: "this is a memo")
@@ -211,7 +211,7 @@ class ChainApiTest: XCTestCase {
                     account: "eosio",
                     name: "transfer",
                     authorization: [TransactionAuthorization(
-                        actor: "eosio",
+                        actor: "memtripissue",
                         permission: "active")],
                     data: transferBody.toHex()),
             ],

@@ -6,8 +6,8 @@ import XCTest
 class CreateAccountChainTests: XCTestCase {
 
     func testCreateAccount() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
-        let signatureProvider = try EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL, useLogger: true)
+        let signatureProvider = try EOSPrivateKey(base58: "5HvDsbgjH574GALj5gRcnscMfAGBQD9JSWn3sHFsD7bNrkqXqpr")
 
         /* New account */
         let accountName = TestUtils.generateUniqueAccountName()
@@ -18,16 +18,16 @@ class CreateAccountChainTests: XCTestCase {
             args: CreateAccountChain.Args(
                 newAccountName: accountName,
                 quantity: CreateAccountChain.Quantity(
-                    ram: 6048,
-                    net: "1.0000 SYS",
-                    cpu: "11.0000 SYS"
+                    ram: 2048,
+                    net: "0.0001 EOS",
+                    cpu: "0.0001 EOS"
                 ),
                 ownerPublicKey: newAccountPrivateKey.publicKey,
                 activePublicKey: newAccountPrivateKey.publicKey,
                 transfer: true
             ),
             transactionContext: TransactionContext(
-                authorizingAccountName: "eosio",
+                authorizingAccountName: "memtripissue",
                 authorizingPrivateKey: signatureProvider,
                 expirationDate: Date.defaultTransactionExpiry()
             ),

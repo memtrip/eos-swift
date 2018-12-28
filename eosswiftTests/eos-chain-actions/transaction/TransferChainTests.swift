@@ -6,7 +6,7 @@ import XCTest
 class TransferChainTests: XCTestCase {
 
     func testTransfer() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL, useLogger: true)
         let setupTransactions = SetupTransactions(chainApi: chainApi)
 
         let fromAccountName = TestUtils.generateUniqueAccountName()
@@ -33,8 +33,8 @@ class TransferChainTests: XCTestCase {
             args: TransferChain.Args(
                 fromAccount: fromAccountName,
                 toAccount: toAccountName,
-                quantity: "15.1234 SYS",
-                memo: "leeeeeeave it."),
+                quantity: "0.0001 EOS",
+                memo: "eos-swift test suite"),
             transactionContext: TransactionContext(
                 authorizingAccountName: fromAccountName,
                 authorizingPrivateKey: fromAccountPrivateKey,

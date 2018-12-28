@@ -71,7 +71,18 @@ public struct Producer : Codable {
 
         do {
             if let parseLastClaimTime: String = try keyedContainer.decodeIfPresent(String.self, forKey: .last_claim_time) {
-                last_claim_time = Int64.init(parseLastClaimTime)!
+       
+                if let last_claim_time = Int64.init(parseLastClaimTime) {
+                    self.last_claim_time = last_claim_time
+                } else {
+                    do {
+                        let dateDecoder = DateDecoder(formatter: DateFormatter())
+                        let dateValue = try dateDecoder.decode(dateStr: parseLastClaimTime)
+                        last_claim_time = Int64.init(dateValue.timeIntervalSince1970)
+                    } catch {
+                        last_claim_time = 0
+                    }
+                }
             } else if let parseLastClaimTime: Int64 = try keyedContainer.decodeIfPresent(Int64.self, forKey: .last_claim_time) {
                 last_claim_time = parseLastClaimTime
             } else {

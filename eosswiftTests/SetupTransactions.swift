@@ -13,23 +13,23 @@ class SetupTransactions {
 
     func createAccount(accountName: String, privateKey: EOSPrivateKey) throws -> Single<ChainResponse<TransactionCommitted>> {
         
-        let signatureProvider = try EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+        let signatureProvider = try EOSPrivateKey(base58: "5HvDsbgjH574GALj5gRcnscMfAGBQD9JSWn3sHFsD7bNrkqXqpr")
 
         let createAccountChain = CreateAccountChain(chainApi: chainApi)
         return createAccountChain.createAccount(
             args: CreateAccountChain.Args(
                 newAccountName: accountName,
                 quantity: CreateAccountChain.Quantity(
-                    ram: 20048,
-                    net: "1.0000 SYS",
-                    cpu: "1.0000 SYS"
+                    ram: 3248,
+                    net: "0.1000 EOS",
+                    cpu: "1.0000 EOS"
                 ),
                 ownerPublicKey: privateKey.publicKey,
                 activePublicKey: privateKey.publicKey,
                 transfer: true
             ),
             transactionContext: TransactionContext(
-                authorizingAccountName: "eosio",
+                authorizingAccountName: "memtripissue",
                 authorizingPrivateKey: signatureProvider,
                 expirationDate: Date.defaultTransactionExpiry()
             ),
@@ -37,17 +37,17 @@ class SetupTransactions {
     }
 
     func transfer(to: String) throws -> Single<ChainResponse<TransactionCommitted>> {
-        let signatureProvider = try EOSPrivateKey(base58: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")
+        let signatureProvider = try EOSPrivateKey(base58: "5HvDsbgjH574GALj5gRcnscMfAGBQD9JSWn3sHFsD7bNrkqXqpr")
 
         return TransferChain(chainApi: chainApi).transfer(
             contract: "eosio.token",
             args: TransferChain.Args(
-                fromAccount: "eosio",
+                fromAccount: "memtripissue",
                 toAccount: to,
-                quantity: "100.0000 SYS",
-                memo: "here are some tokens for you to delegate to resources."),
+                quantity: "0.2000 EOS",
+                memo: "eos-swift test suite -> transfer"),
             transactionContext: TransactionContext(
-                authorizingAccountName: "eosio",
+                authorizingAccountName: "memtripissue",
                 authorizingPrivateKey: signatureProvider,
                 expirationDate: Date.defaultTransactionExpiry()
             )

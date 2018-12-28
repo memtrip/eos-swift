@@ -6,7 +6,7 @@ import XCTest
 class BuyRamBytesChainTests: XCTestCase {
 
     func testBuyRamBytes() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL, useLogger: true)
         let setupTransactions = SetupTransactions(chainApi: chainApi)
 
         let accountName = TestUtils.generateUniqueAccountName()
@@ -24,7 +24,7 @@ class BuyRamBytesChainTests: XCTestCase {
 
         /* Buy ram */
         let buyRamBytesResponse = try BuyRamBytesChain(chainApi: chainApi).buyRamBytes(
-            args: BuyRamBytesChain.Args(receiver: accountName, quantity: 4096),
+            args: BuyRamBytesChain.Args(receiver: accountName, quantity: 500),
             transactionContext: TransactionContext(authorizingAccountName: accountName, authorizingPrivateKey: accountPrivateKey, expirationDate: Date.defaultTransactionExpiry())).asObservable().toBlocking().first()
 
         XCTAssertTrue(newAccountResponse!.success)

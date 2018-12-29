@@ -20,7 +20,7 @@ class SetupTransactions {
             args: CreateAccountChain.Args(
                 newAccountName: accountName,
                 quantity: CreateAccountChain.Quantity(
-                    ram: 3248,
+                    ram: 3048,
                     net: "0.1000 EOS",
                     cpu: "1.0000 EOS"
                 ),

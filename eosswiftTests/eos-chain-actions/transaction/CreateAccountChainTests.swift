@@ -18,7 +18,7 @@ class CreateAccountChainTests: XCTestCase {
             args: CreateAccountChain.Args(
                 newAccountName: accountName,
                 quantity: CreateAccountChain.Quantity(
-                    ram: 2048,
+                    ram: 3048,
                     net: "0.0001 EOS",
                     cpu: "0.0001 EOS"
                 ),

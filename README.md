@@ -20,7 +20,7 @@ The `eosswiftTests` directory contains a full suite of integration tests, explor
 tests to quickly gauge what functionality is provided by the SDK.
 - `eos-chain-actions` tests the highest level of abstraction; pushing transactions composed of actions.
 - `eos-http-rpc` tests the interaction with nodeos HTTP RPC api.
-- `eos-chain-actions` tests the building of local abi bytes
+- `eos-abi-writer` tests the building of local abi bytes
 
 ## eos-core
 The core module contains the core building blocks required to interact with the EOS network.

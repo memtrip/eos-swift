@@ -9,7 +9,7 @@ import RxBlocking
 class HistoryApiTest: XCTestCase {
 
     func testGetActions() throws {
-        let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL, useLogger: true)
+        let historyApi = HistoryApiFactory.create(rootUrl: Config.MAIN_NET_API_BASE_URL, useLogger: true)
 
         let response = try historyApi.getActions(
             body: GetActions(account_name: "memtripissue", pos: nil, offset: nil)).asObservable().toBlocking().first()
@@ -20,7 +20,7 @@ class HistoryApiTest: XCTestCase {
     }
 
     func testGetActionsPagination() throws {
-        let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
+        let historyApi = HistoryApiFactory.create(rootUrl: Config.MAIN_NET_API_BASE_URL)
 
         let responseSetOne = try historyApi.getActions(
             body: GetActions(account_name: "memtripissue", pos: -1, offset: -20)).asObservable().toBlocking().first()
@@ -63,7 +63,7 @@ class HistoryApiTest: XCTestCase {
     }
 
     func testGetTransaction() throws {
-        let historyApi = HistoryApiFactory.create(rootUrl: Config.HISTORY_API_BASE_URL)
+        let historyApi = HistoryApiFactory.create(rootUrl: Config.MAIN_NET_API_BASE_URL)
 
         let actionsResponse = try historyApi.getActions(
             body: GetActions(account_name: "memtripissue", pos: nil, offset: nil)).asObservable().toBlocking().first()

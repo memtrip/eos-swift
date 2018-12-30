@@ -49,11 +49,11 @@ class ChainApiTest: XCTestCase {
         XCTAssertNotNil(response!.body)
     }
 
-    func testAccount() throws {
+    func testGetAccount() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
         let response = try chainApi.getAccount(body: AccountName(
-            account_name: "eosio.token")).asObservable().toBlocking().first()
+            account_name: "lioninjungle")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body)

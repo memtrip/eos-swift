@@ -8,19 +8,19 @@ public struct Account : Decodable {
     public let last_code_update: Date
     public let created: Date
     public let core_liquid_balance: String?
-    public let ram_quota: Int64
-    public let net_weight: Int64
-    public let cpu_weight: Int64
+    public let ram_quota: SafeInt64
+    public let net_weight: SafeInt64
+    public let cpu_weight: SafeInt64
     public let net_limit: AccountResourceLimit
     public let cpu_limit: AccountResourceLimit
-    public let ram_usage: Int64
+    public let ram_usage: SafeInt64
     public let permissions: Array<AccountPermission>
     public let total_resources: TotalResources?
     public let self_delegated_bandwidth: SelfDelegatedBandwidth?
     public let refund_request: RefundRequest?
     public let voter_info: VoterInfo?
 
-    public init(account_name: String, head_block_num: Int, head_block_time: Date, privileged: Bool, last_code_update: Date, created: Date, core_liquid_balance: String?, ram_quota: Int64, net_weight: Int64, cpu_weight: Int64, net_limit: AccountResourceLimit, cpu_limit: AccountResourceLimit, ram_usage: Int64, permissions: Array<AccountPermission>, total_resources: TotalResources?, self_delegated_bandwidth: SelfDelegatedBandwidth?, refund_request: RefundRequest, voter_info: VoterInfo?) {
+    public init(account_name: String, head_block_num: Int, head_block_time: Date, privileged: Bool, last_code_update: Date, created: Date, core_liquid_balance: String?, ram_quota: SafeInt64, net_weight: SafeInt64, cpu_weight: SafeInt64, net_limit: AccountResourceLimit, cpu_limit: AccountResourceLimit, ram_usage: SafeInt64, permissions: Array<AccountPermission>, total_resources: TotalResources?, self_delegated_bandwidth: SelfDelegatedBandwidth?, refund_request: RefundRequest, voter_info: VoterInfo?) {
         self.account_name = account_name
         self.head_block_num = head_block_num
         self.head_block_time = head_block_time

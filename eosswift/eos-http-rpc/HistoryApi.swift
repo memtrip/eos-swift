@@ -15,15 +15,17 @@ public protocol HistoryApi {
 class HistoryApiImpl : HistoryApi {
 
     private let rootUrl: String
+    private let urlSession: URLSession
     private let useLogger: Bool
 
-    fileprivate init(rootUrl: String, useLogger: Bool) {
+    fileprivate init(rootUrl: String, urlSession: URLSession, useLogger: Bool) {
         self.rootUrl = rootUrl
+        self.urlSession = urlSession
         self.useLogger = useLogger
     }
 
     func getActions(body: GetActions) -> Single<HttpResponse<HistoricAccountActionParent>> {
-        return RxHttp<GetActions, HistoricAccountActionParent, ChainError>(useLogger).single(
+        return RxHttp<GetActions, HistoricAccountActionParent, ChainError>(urlSession, useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_actions",
                 method: "POST",
@@ -33,7 +35,7 @@ class HistoryApiImpl : HistoryApi {
     }
 
     func getTransaction(body: GetTransaction) -> Single<HttpResponse<HistoricTransaction>> {
-        return RxHttp<GetTransaction, HistoricTransaction, ChainError>(useLogger).single(
+        return RxHttp<GetTransaction, HistoricTransaction, ChainError>(urlSession, useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_transaction",
                 method: "POST",
@@ -43,7 +45,7 @@ class HistoryApiImpl : HistoryApi {
     }
 
     func getKeyAccounts(body: GetKeyAccounts) -> Single<HttpResponse<Accounts>> {
-        return RxHttp<GetKeyAccounts, Accounts, ChainError>(useLogger).single(
+        return RxHttp<GetKeyAccounts, Accounts, ChainError>(urlSession, useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_key_accounts",
                 method: "POST",
@@ -53,7 +55,7 @@ class HistoryApiImpl : HistoryApi {
     }
 
     func getControlledAccounts(body: GetControlledAccounts) -> Single<HttpResponse<Accounts>> {
-        return RxHttp<GetControlledAccounts, Accounts, ChainError>(useLogger).single(
+        return RxHttp<GetControlledAccounts, Accounts, ChainError>(urlSession, useLogger).single(
             httpRequest: HttpRequest(
                 url: self.rootUrl + "v1/history/get_controlled_accounts",
                 method: "POST",
@@ -64,7 +66,11 @@ class HistoryApiImpl : HistoryApi {
 }
 
 public class HistoryApiFactory {
-    public static func create(rootUrl: String, useLogger: Bool = false) -> HistoryApi {
-        return HistoryApiImpl(rootUrl: rootUrl, useLogger: useLogger)
+    public static func create(
+        rootUrl: String,
+        urlSession: URLSession = URLSession.shared,
+        useLogger: Bool = false
+    ) -> HistoryApi {
+        return HistoryApiImpl(rootUrl: rootUrl, urlSession: urlSession, useLogger: useLogger)
     }
 }

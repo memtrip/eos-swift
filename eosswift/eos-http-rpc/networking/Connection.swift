@@ -1,6 +1,7 @@
 import Foundation
 
-protocol Connection {
+public protocol Connection {
+    
     func request(
         urlRequest: URLRequest,
         closure: @escaping (Data?, URLResponse?, Error?) -> Void
@@ -9,21 +10,24 @@ protocol Connection {
 
 class ConnectionImpl: Connection {
 
-    fileprivate init() {
+    private let urlSession: URLSession
+    
+    fileprivate init(urlSession: URLSession) {
+        self.urlSession = urlSession
     }
 
     func request(
         urlRequest: URLRequest,
         closure: @escaping (Data?, URLResponse?, Error?) -> Void
     ) -> URLSessionDataTask {
-        return URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+        return self.urlSession.dataTask(with: urlRequest) { (data, response, error) in
             closure(data, response, error)
         }
     }
 }
 
 class ConnectionFactory {
-    static func create() -> Connection {
-        return ConnectionImpl()
+    static func create(urlSession: URLSession) -> Connection {
+        return ConnectionImpl(urlSession: urlSession)
     }
 }

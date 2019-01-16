@@ -155,7 +155,7 @@
 		3C02809821907C1D00D22DF0 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C02808F21907C1D00D22DF0 /* types.h */; };
 		3C02809921907C1D00D22DF0 /* platform-specific.inc.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C02809021907C1D00D22DF0 /* platform-specific.inc.h */; };
 		3C02809A21907C1D00D22DF0 /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C02809321907C1D00D22DF0 /* uECC.c */; };
-		3C0280CF21907DC700D22DF0 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280A621907DC700D22DF0 /* utils.swift */; };
+		3C0280CF21907DC700D22DF0 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280A621907DC700D22DF0 /* TestUtils.swift */; };
 		3C0280D021907DC700D22DF0 /* AssetWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280A821907DC700D22DF0 /* AssetWriterTest.swift */; };
 		3C0280D121907DC700D22DF0 /* HexWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280AB21907DC700D22DF0 /* HexWriterTests.swift */; };
 		3C0280D221907DC700D22DF0 /* SwiftRIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280AD21907DC700D22DF0 /* SwiftRIPEMD160.swift */; };
@@ -182,7 +182,7 @@
 		3C0280E721907DC700D22DF0 /* TransferArgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280C721907DC700D22DF0 /* TransferArgsTests.swift */; };
 		3C0280E821907DC700D22DF0 /* ActionAbiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280C821907DC700D22DF0 /* ActionAbiTests.swift */; };
 		3C0280E921907DC700D22DF0 /* ChainApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CB21907DC700D22DF0 /* ChainApiTest.swift */; };
-		3C0280EA21907DC700D22DF0 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CC21907DC700D22DF0 /* util.swift */; };
+		3C0280EA21907DC700D22DF0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CC21907DC700D22DF0 /* Config.swift */; };
 		3C0280EB21907DC700D22DF0 /* HistoryApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */; };
 		3C0280ED219088D000D22DF0 /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0280EC219088D000D22DF0 /* Sha256.swift */; };
 		3C11B6BB21D66EA200D2371A /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11B6BA21D66EA200D2371A /* DateDecoder.swift */; };
@@ -387,7 +387,7 @@
 		3C02809021907C1D00D22DF0 /* platform-specific.inc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "platform-specific.inc.h"; sourceTree = "<group>"; };
 		3C02809121907C1D00D22DF0 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		3C02809321907C1D00D22DF0 /* uECC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uECC.c; sourceTree = "<group>"; };
-		3C0280A621907DC700D22DF0 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		3C0280A621907DC700D22DF0 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		3C0280A821907DC700D22DF0 /* AssetWriterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetWriterTest.swift; sourceTree = "<group>"; };
 		3C0280AB21907DC700D22DF0 /* HexWriterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexWriterTests.swift; sourceTree = "<group>"; };
 		3C0280AD21907DC700D22DF0 /* SwiftRIPEMD160.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRIPEMD160.swift; sourceTree = "<group>"; };
@@ -414,7 +414,7 @@
 		3C0280C721907DC700D22DF0 /* TransferArgsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferArgsTests.swift; sourceTree = "<group>"; };
 		3C0280C821907DC700D22DF0 /* ActionAbiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionAbiTests.swift; sourceTree = "<group>"; };
 		3C0280CB21907DC700D22DF0 /* ChainApiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainApiTest.swift; sourceTree = "<group>"; };
-		3C0280CC21907DC700D22DF0 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
+		3C0280CC21907DC700D22DF0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3C0280CE21907DC700D22DF0 /* HistoryApiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryApiTest.swift; sourceTree = "<group>"; };
 		3C0280EC219088D000D22DF0 /* Sha256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sha256.swift; sourceTree = "<group>"; };
 		3C11B6BA21D66EA200D2371A /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
@@ -516,7 +516,7 @@
 				3C0280B321907DC700D22DF0 /* eos-chain-actions */,
 				3C0280A921907DC700D22DF0 /* eos-core */,
 				3C0280C921907DC700D22DF0 /* eos-http-rpc */,
-				3C0280A621907DC700D22DF0 /* utils.swift */,
+				3C0280A621907DC700D22DF0 /* TestUtils.swift */,
 				3C0280BC21907DC700D22DF0 /* SetupTransactions.swift */,
 				3C027DB821907B8500D22DF0 /* Info.plist */,
 			);
@@ -1153,7 +1153,7 @@
 			children = (
 				3C0280CA21907DC700D22DF0 /* chain */,
 				3C0280CD21907DC700D22DF0 /* history */,
-				3C0280CC21907DC700D22DF0 /* util.swift */,
+				3C0280CC21907DC700D22DF0 /* Config.swift */,
 			);
 			path = "eos-http-rpc";
 			sourceTree = "<group>";
@@ -1683,7 +1683,7 @@
 				3C0280DA21907DC700D22DF0 /* DelegateBandwidthChainTests.swift in Sources */,
 				3C0280DF21907DC700D22DF0 /* RefundArgsTest.swift in Sources */,
 				3C592FF5219D83B200D7C9B9 /* CalculateRamPriceTests.swift in Sources */,
-				3C0280EA21907DC700D22DF0 /* util.swift in Sources */,
+				3C0280EA21907DC700D22DF0 /* Config.swift in Sources */,
 				3C0280E421907DC700D22DF0 /* SellRamArgsTests.swift in Sources */,
 				3C0280D821907DC700D22DF0 /* VoteChainTests.swift in Sources */,
 				3C592FFB219D889600D7C9B9 /* GetDelegatedBandwidthTests.swift in Sources */,
@@ -1696,7 +1696,7 @@
 				3C0280E521907DC700D22DF0 /* DelegateBandwidthArgsTests.swift in Sources */,
 				3C0280E821907DC700D22DF0 /* ActionAbiTests.swift in Sources */,
 				3C0280E021907DC700D22DF0 /* BuyRamBytesArgsTests.swift in Sources */,
-				3C0280CF21907DC700D22DF0 /* utils.swift in Sources */,
+				3C0280CF21907DC700D22DF0 /* TestUtils.swift in Sources */,
 				3C0280D021907DC700D22DF0 /* AssetWriterTest.swift in Sources */,
 				3C0280DD21907DC700D22DF0 /* SetupTransactions.swift in Sources */,
 				3C0280DE21907DC700D22DF0 /* VoteArgsTests.swift in Sources */,

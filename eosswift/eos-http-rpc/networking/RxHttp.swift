@@ -3,12 +3,13 @@ import RxSwift
 
 public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
 
-    private let connection: Connection = ConnectionFactory.create()
+    private let connection: Connection
     private let useLogger: Bool
     private let logger: Logger
     private let dateDecoder: DateDecoder
     
-    public init(_ useLogger: Bool) {
+    public init(_ urlSession: URLSession = URLSession.shared, _ useLogger: Bool) {
+        self.connection = ConnectionFactory.create(urlSession: urlSession)
         self.useLogger = useLogger
         self.logger = Logger(useLogger: useLogger)
         self.dateDecoder = DateDecoder(formatter: DateFormatter())
@@ -55,7 +56,7 @@ public class RxHttp<REQ: Encodable, RES: Decodable, ERR: Decodable> {
         logger.log(value: httpRequest.url)
         logger.log(value: "method:\(String(describing: httpRequest.method))")
         logger.log(value: "headers:\(String(describing: httpRequest.headers))")
-
+        
         var request = URLRequest(url: URL(string: httpRequest.url)!)
 
         request.httpMethod = httpRequest.method

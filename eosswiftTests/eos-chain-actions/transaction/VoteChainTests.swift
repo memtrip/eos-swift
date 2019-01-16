@@ -6,7 +6,7 @@ import XCTest
 class VoteChainTests: XCTestCase {
 
     func testVoteForProxy() throws {
-        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL, useLogger: true)
+        let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
         let setupTransactions = SetupTransactions(chainApi: chainApi)
 
         let accountName = TestUtils.generateUniqueAccountName()

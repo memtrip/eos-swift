@@ -28,7 +28,7 @@ class HistoryApiTest: XCTestCase {
 
         let responseSetTwo = try historyApi.getActions(body: GetActions(
             account_name: "memtripissue",
-            pos: firstPageActionsItems[firstPageActionsItems.count - 1].account_action_seq - 1,
+            pos: firstPageActionsItems[firstPageActionsItems.count - 1].account_action_seq.value - 1,
             offset: -20
         )).asObservable().toBlocking().first()
 

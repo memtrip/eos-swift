@@ -18,4 +18,13 @@ class EOSPrivateKeyTests: XCTestCase {
         let eosPrivateKeyFromBytes = EOSPrivateKey(ecKeyPrivateKey: ECPrivateKey(privKeyData: eosPrivateKey.bytes()))
         XCTAssertEqual(eosPrivateKey.base58, eosPrivateKeyFromBytes.base58)
     }
+    
+    func testNewEOSPrivateKey() throws {
+        let eosPrivateKey = try EOSPrivateKey()
+        let eosPrivateKeyFromBytes = EOSPrivateKey(ecKeyPrivateKey: ECPrivateKey(privKeyData: eosPrivateKey.bytes()))
+        let eosPrivateKeyFromBase58 = try EOSPrivateKey(base58: eosPrivateKeyFromBytes.base58)
+        
+        XCTAssertEqual(eosPrivateKey.base58, eosPrivateKeyFromBytes.base58)
+        XCTAssertEqual(eosPrivateKey.base58, eosPrivateKeyFromBase58.base58)
+    }
 }

@@ -38,6 +38,6 @@ class BuyRamChainTests: XCTestCase {
         let afterAccount = try chainApi.getAccount(body: AccountName(account_name: accountName)).asObservable().toBlocking().first()
         let ramBytesAfter = afterAccount!.body!.total_resources!.ram_bytes
 
-        XCTAssertTrue(ramBytesAfter > ramBytesBefore)
+        XCTAssertTrue(ramBytesAfter.value > ramBytesBefore.value)
     }
 }

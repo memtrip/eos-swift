@@ -2,8 +2,8 @@ import Foundation
 
 public struct Block : Decodable {
     public let id: String
-    public let block_num: Int
-    public let ref_block_prefix: UInt64
+    public let block_num: SafeInt64
+    public let ref_block_prefix: SafeInt64
     public let previous: String
     public let timestamp: Date
     public let transaction_mroot: String
@@ -14,7 +14,7 @@ public struct Block : Decodable {
     public let producer_signature: String
     public let regions: Array<Region>?
 
-    public init(id: String, block_num: Int, ref_block_prefix: UInt64, previous: String, timestamp: Date, transaction_mroot: String, action_mroot: String, block_mroot: String?, producer: String, schedule_version: Int, producer_signature: String, regions: Array<Region>?) {
+    public init(id: String, block_num: SafeInt64, ref_block_prefix: SafeInt64, previous: String, timestamp: Date, transaction_mroot: String, action_mroot: String, block_mroot: String?, producer: String, schedule_version: Int, producer_signature: String, regions: Array<Region>?) {
         self.id = id
         self.block_num = block_num
         self.ref_block_prefix = ref_block_prefix

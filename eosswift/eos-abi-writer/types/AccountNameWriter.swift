@@ -22,10 +22,6 @@ public class AccountNameWriterValue : AccountNameWriter, Encodable {
         if (name.count > MAX_LENGTH) {
             throw AccountNameError.error("Account name cannot be more than 12 characters. => $name")
         }
-        if (name.contains(ILLEGAL_CHARACTER) && !name.starts(with: "eosio.")) {
-            throw AccountNameError.error("Account name cannot contain '.' or start with 'eosio'. => $name")
-        }
-
         try NameWriterValue(name: name).encode(writer: writer)
     }
 

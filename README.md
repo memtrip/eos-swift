@@ -7,7 +7,7 @@ Tested with pod --version: 1.5.3
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-  pod 'eosswift', '1.3'
+  pod 'eosswift', '1.4'
 end
 ```
 Replace YOUR_TARGET_NAME and then, in the Podfile directory, type:

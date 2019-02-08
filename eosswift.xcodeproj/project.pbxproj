@@ -213,8 +213,16 @@
 		3C592FFB219D889600D7C9B9 /* GetDelegatedBandwidthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FF9219D888600D7C9B9 /* GetDelegatedBandwidthTests.swift */; };
 		3C592FFE219D89F900D7C9B9 /* GetRegProxyInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */; };
 		3C9BFBA9219B593C00589936 /* RefundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA8219B593C00589936 /* RefundRequest.swift */; };
+		3C9CDAE72208138B007BDB61 /* StringWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9CDAE62208138B007BDB61 /* StringWriterTest.swift */; };
 		3CCE0EFA21AAB42D00D81458 /* parsing_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF921AAB42D00D81458 /* parsing_types.swift */; };
 		3CCE4A082190F73200484684 /* Base58String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE4A072190F73200484684 /* Base58String.swift */; };
+		3CEA5FDA220E2F030069E716 /* AccountNameWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FD9220E2F030069E716 /* AccountNameWriterTest.swift */; };
+		3CEA5FDC220E32100069E716 /* BlockNumWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FDB220E32100069E716 /* BlockNumWriterTest.swift */; };
+		3CEA5FDE220E324B0069E716 /* BlockPrefixWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FDD220E324B0069E716 /* BlockPrefixWriterTest.swift */; };
+		3CEA5FE0220E32740069E716 /* ChainIdWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FDF220E32740069E716 /* ChainIdWriterTest.swift */; };
+		3CEA5FE2220E32D60069E716 /* DataWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FE1220E32D60069E716 /* DataWriterTest.swift */; };
+		3CEA5FE6220E34790069E716 /* PublicKeyWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FE5220E34790069E716 /* PublicKeyWriterTest.swift */; };
+		3CEA5FE8220E358B0069E716 /* TimestampWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FE7220E358B0069E716 /* TimestampWriterTest.swift */; };
 		3D07B6E4316429C03642301E /* Pods_eosswift_eosswiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D0ED85A4C240BB0149AE93 /* Pods_eosswift_eosswiftTests.framework */; };
 		A319CB2584D79C91989BED11 /* Pods_eosswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC98C293614C9CE6F2831D /* Pods_eosswift.framework */; };
 /* End PBXBuildFile section */
@@ -446,8 +454,16 @@
 		3C592FF9219D888600D7C9B9 /* GetDelegatedBandwidthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDelegatedBandwidthTests.swift; sourceTree = "<group>"; };
 		3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRegProxyInfoTest.swift; sourceTree = "<group>"; };
 		3C9BFBA8219B593C00589936 /* RefundRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundRequest.swift; sourceTree = "<group>"; };
+		3C9CDAE62208138B007BDB61 /* StringWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringWriterTest.swift; sourceTree = "<group>"; };
 		3CCE0EF921AAB42D00D81458 /* parsing_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing_types.swift; sourceTree = "<group>"; };
 		3CCE4A072190F73200484684 /* Base58String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58String.swift; sourceTree = "<group>"; };
+		3CEA5FD9220E2F030069E716 /* AccountNameWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNameWriterTest.swift; sourceTree = "<group>"; };
+		3CEA5FDB220E32100069E716 /* BlockNumWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNumWriterTest.swift; sourceTree = "<group>"; };
+		3CEA5FDD220E324B0069E716 /* BlockPrefixWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockPrefixWriterTest.swift; sourceTree = "<group>"; };
+		3CEA5FDF220E32740069E716 /* ChainIdWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainIdWriterTest.swift; sourceTree = "<group>"; };
+		3CEA5FE1220E32D60069E716 /* DataWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriterTest.swift; sourceTree = "<group>"; };
+		3CEA5FE5220E34790069E716 /* PublicKeyWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKeyWriterTest.swift; sourceTree = "<group>"; };
+		3CEA5FE7220E358B0069E716 /* TimestampWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampWriterTest.swift; sourceTree = "<group>"; };
 		4932DCA7DC0BD5480001864E /* Pods_eos_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eos_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDC98C293614C9CE6F2831D /* Pods_eosswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D0ED85A4C240BB0149AE93 /* Pods_eosswift_eosswiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosswift_eosswiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1057,6 +1073,14 @@
 			isa = PBXGroup;
 			children = (
 				3C0280A821907DC700D22DF0 /* AssetWriterTest.swift */,
+				3C9CDAE62208138B007BDB61 /* StringWriterTest.swift */,
+				3CEA5FD9220E2F030069E716 /* AccountNameWriterTest.swift */,
+				3CEA5FDB220E32100069E716 /* BlockNumWriterTest.swift */,
+				3CEA5FDD220E324B0069E716 /* BlockPrefixWriterTest.swift */,
+				3CEA5FDF220E32740069E716 /* ChainIdWriterTest.swift */,
+				3CEA5FE1220E32D60069E716 /* DataWriterTest.swift */,
+				3CEA5FE5220E34790069E716 /* PublicKeyWriterTest.swift */,
+				3CEA5FE7220E358B0069E716 /* TimestampWriterTest.swift */,
 			);
 			path = "eos-abi-writer";
 			sourceTree = "<group>";
@@ -1676,16 +1700,22 @@
 				3C0280D421907DC700D22DF0 /* EOSPublicKeyTests.swift in Sources */,
 				3C592FF8219D868600D7C9B9 /* BlockProducersTests.swift in Sources */,
 				3C0280E321907DC700D22DF0 /* BuyRamArgsTests.swift in Sources */,
+				3CEA5FE8220E358B0069E716 /* TimestampWriterTest.swift in Sources */,
 				3C0280EB21907DC700D22DF0 /* HistoryApiTest.swift in Sources */,
 				3C0280D921907DC700D22DF0 /* TransferChainTests.swift in Sources */,
 				3C0280D521907DC700D22DF0 /* BlockIdDetailsTest.swift in Sources */,
+				3CEA5FE0220E32740069E716 /* ChainIdWriterTest.swift in Sources */,
 				3C0280D721907DC700D22DF0 /* CreateAccountChainTests.swift in Sources */,
 				3C0280DA21907DC700D22DF0 /* DelegateBandwidthChainTests.swift in Sources */,
+				3CEA5FE2220E32D60069E716 /* DataWriterTest.swift in Sources */,
 				3C0280DF21907DC700D22DF0 /* RefundArgsTest.swift in Sources */,
 				3C592FF5219D83B200D7C9B9 /* CalculateRamPriceTests.swift in Sources */,
 				3C0280EA21907DC700D22DF0 /* Config.swift in Sources */,
 				3C0280E421907DC700D22DF0 /* SellRamArgsTests.swift in Sources */,
+				3C9CDAE72208138B007BDB61 /* StringWriterTest.swift in Sources */,
+				3CEA5FDC220E32100069E716 /* BlockNumWriterTest.swift in Sources */,
 				3C0280D821907DC700D22DF0 /* VoteChainTests.swift in Sources */,
+				3CEA5FE6220E34790069E716 /* PublicKeyWriterTest.swift in Sources */,
 				3C592FFB219D889600D7C9B9 /* GetDelegatedBandwidthTests.swift in Sources */,
 				3C0280E921907DC700D22DF0 /* ChainApiTest.swift in Sources */,
 				3C0280D221907DC700D22DF0 /* SwiftRIPEMD160.swift in Sources */,
@@ -1697,10 +1727,12 @@
 				3C0280E821907DC700D22DF0 /* ActionAbiTests.swift in Sources */,
 				3C0280E021907DC700D22DF0 /* BuyRamBytesArgsTests.swift in Sources */,
 				3C0280CF21907DC700D22DF0 /* TestUtils.swift in Sources */,
+				3CEA5FDE220E324B0069E716 /* BlockPrefixWriterTest.swift in Sources */,
 				3C0280D021907DC700D22DF0 /* AssetWriterTest.swift in Sources */,
 				3C0280DD21907DC700D22DF0 /* SetupTransactions.swift in Sources */,
 				3C0280DE21907DC700D22DF0 /* VoteArgsTests.swift in Sources */,
 				3C0280E721907DC700D22DF0 /* TransferArgsTests.swift in Sources */,
+				3CEA5FDA220E2F030069E716 /* AccountNameWriterTest.swift in Sources */,
 				3C0280DB21907DC700D22DF0 /* SellRamChainTests.swift in Sources */,
 				3C592FFE219D89F900D7C9B9 /* GetRegProxyInfoTest.swift in Sources */,
 				3C0280D321907DC700D22DF0 /* EOSPrivateKeyTests.swift in Sources */,

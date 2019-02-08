@@ -32,8 +32,9 @@ class AbiEncodingContainer : UnkeyedEncodingContainer {
     }
 
     func encode(_ value: String) throws {
-        try encode(UInt64.init(value.count))
-        try encodeBytes(value: [UInt8](value.utf8))
+        let bytes = [UInt8](value.utf8)
+        try encode(UInt64.init(bytes.count))
+        try encodeBytes(value: bytes)
     }
 
     func encode(_ value: Double) throws {

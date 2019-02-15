@@ -14,7 +14,7 @@ class AbiEncodingContainer : UnkeyedEncodingContainer {
     private func ensureCapacity(_ capacity: Int) {
         if (buffer.count - index < capacity) {
             var temp = Array<UInt8>(repeating: 0, count: buffer.count * 2 + capacity)
-            temp[0..<temp.count] = buffer[0..<index]
+            temp[0..<index] = buffer[0..<index]
             buffer = temp
         }
     }

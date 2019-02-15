@@ -214,6 +214,7 @@
 		3C592FFE219D89F900D7C9B9 /* GetRegProxyInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */; };
 		3C9BFBA9219B593C00589936 /* RefundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9BFBA8219B593C00589936 /* RefundRequest.swift */; };
 		3C9CDAE72208138B007BDB61 /* StringWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9CDAE62208138B007BDB61 /* StringWriterTest.swift */; };
+		3CA29785221731E8001DC2D5 /* LargeCapacityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA29784221731E8001DC2D5 /* LargeCapacityTest.swift */; };
 		3CCE0EFA21AAB42D00D81458 /* parsing_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE0EF921AAB42D00D81458 /* parsing_types.swift */; };
 		3CCE4A082190F73200484684 /* Base58String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE4A072190F73200484684 /* Base58String.swift */; };
 		3CEA5FDA220E2F030069E716 /* AccountNameWriterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA5FD9220E2F030069E716 /* AccountNameWriterTest.swift */; };
@@ -455,6 +456,7 @@
 		3C592FFC219D89E600D7C9B9 /* GetRegProxyInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRegProxyInfoTest.swift; sourceTree = "<group>"; };
 		3C9BFBA8219B593C00589936 /* RefundRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundRequest.swift; sourceTree = "<group>"; };
 		3C9CDAE62208138B007BDB61 /* StringWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringWriterTest.swift; sourceTree = "<group>"; };
+		3CA29784221731E8001DC2D5 /* LargeCapacityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCapacityTest.swift; sourceTree = "<group>"; };
 		3CCE0EF921AAB42D00D81458 /* parsing_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing_types.swift; sourceTree = "<group>"; };
 		3CCE4A072190F73200484684 /* Base58String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58String.swift; sourceTree = "<group>"; };
 		3CEA5FD9220E2F030069E716 /* AccountNameWriterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNameWriterTest.swift; sourceTree = "<group>"; };
@@ -1081,6 +1083,7 @@
 				3CEA5FE1220E32D60069E716 /* DataWriterTest.swift */,
 				3CEA5FE5220E34790069E716 /* PublicKeyWriterTest.swift */,
 				3CEA5FE7220E358B0069E716 /* TimestampWriterTest.swift */,
+				3CA29784221731E8001DC2D5 /* LargeCapacityTest.swift */,
 			);
 			path = "eos-abi-writer";
 			sourceTree = "<group>";
@@ -1724,6 +1727,7 @@
 				3C11B6BD21D68CE100D2371A /* UndelegateBandwidthChainTests.swift in Sources */,
 				3C0280E221907DC700D22DF0 /* SignedTransactionAbiTest.swift in Sources */,
 				3C0280E521907DC700D22DF0 /* DelegateBandwidthArgsTests.swift in Sources */,
+				3CA29785221731E8001DC2D5 /* LargeCapacityTest.swift in Sources */,
 				3C0280E821907DC700D22DF0 /* ActionAbiTests.swift in Sources */,
 				3C0280E021907DC700D22DF0 /* BuyRamBytesArgsTests.swift in Sources */,
 				3C0280CF21907DC700D22DF0 /* TestUtils.swift in Sources */,

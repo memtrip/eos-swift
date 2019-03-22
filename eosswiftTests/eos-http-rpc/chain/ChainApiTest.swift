@@ -63,18 +63,19 @@ class ChainApiTest: XCTestCase {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
 
         let response = try chainApi.getAccount(body: AccountName(
-            account_name: "memtripadmin")).asObservable().toBlocking().first()
+            account_name: "memtripissue")).asObservable().toBlocking().first()
 
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body!.voter_info)
-        XCTAssertTrue(response!.body!.voter_info!.producers.count == 0)
+        XCTAssertTrue(response!.body!.voter_info!.producers.count == 1)
+        XCTAssertTrue(response!.body!.voter_info!.producers[0] == "memtripblock")
     }
     
     func testVoterAccountForProxy() throws {
         let chainApi = ChainApiFactory.create(rootUrl: Config.CHAIN_API_BASE_URL)
         
         let response = try chainApi.getAccount(body: AccountName(
-            account_name: "memtripadmin")).asObservable().toBlocking().first()
+            account_name: "memtripblock")).asObservable().toBlocking().first()
         
         XCTAssertTrue(response!.success)
         XCTAssertNotNil(response!.body!.voter_info)

@@ -31,9 +31,9 @@ public class DelegateBandwidthChain : ChainTransaction {
 
     public func delegateBandwidth(args: Args, transactionContext: TransactionContext) -> Single<ChainResponse<TransactionCommitted>> {
         return push(
-            expirationDate: Date.defaultTransactionExpiry(),
             actions: buildAbiList(args: args, transactionContext: transactionContext),
-            authorizingPrivateKey: transactionContext.authorizingPrivateKey)
+            transactionContext: transactionContext
+        )
     }
 
     private func buildAbiList(args: Args, transactionContext: TransactionContext) -> [ActionAbi] {
@@ -52,7 +52,7 @@ public class DelegateBandwidthChain : ChainTransaction {
             authorization: [TransactionAuthorizationAbi(
                 actor: AccountNameWriterValue(name: transactionContext.authorizingAccountName),
                 permission: AccountNameWriterValue(name: "active"))],
-            data: DataWriterValue(hex: DelegateBandwidthBody(args: delegateBandwidthArgs).toHex())
-            )]
+            data: DataWriterValue(hex: DelegateBandwidthBody(args: delegateBandwidthArgs).toHex(transactionContext.abiEncoder()))
+        )]
     }
 }

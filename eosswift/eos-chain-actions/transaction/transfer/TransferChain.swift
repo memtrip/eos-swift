@@ -33,9 +33,9 @@ public class TransferChain : ChainTransaction {
         transactionContext: TransactionContext
     ) -> Single<ChainResponse<TransactionCommitted>> {
         return push(
-            expirationDate: Date.defaultTransactionExpiry(),
             actions: buildAbiList(contract: contract, args: args, transactionContext: transactionContext),
-            authorizingPrivateKey: transactionContext.authorizingPrivateKey)
+            transactionContext: transactionContext
+        )
     }
 
     private func buildAbiList(
@@ -56,7 +56,7 @@ public class TransferChain : ChainTransaction {
             authorization: [TransactionAuthorizationAbi(
                 actor: AccountNameWriterValue(name: transactionContext.authorizingAccountName),
                 permission: AccountNameWriterValue(name: "active"))],
-            data: DataWriterValue(hex: TransferBody(args: transferArgs).toHex())
-            )]
+            data: DataWriterValue(hex: TransferBody(args: transferArgs).toHex(transactionContext.abiEncoder()))
+        )]
     }
 }

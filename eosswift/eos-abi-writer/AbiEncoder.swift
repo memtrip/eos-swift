@@ -1,10 +1,10 @@
 import Foundation
 
-class AbiEncoder : Encoder {
+public class AbiEncoder : Encoder {
 
-    var codingPath: [CodingKey] = []
+    public var codingPath: [CodingKey] = []
 
-    var userInfo: [CodingUserInfoKey : Any] = [:]
+    public var userInfo: [CodingUserInfoKey : Any] = [:]
 
     private let abiEncodingContainer: AbiEncodingContainer
 
@@ -12,19 +12,19 @@ class AbiEncoder : Encoder {
         return abiEncodingContainer.toData()
     }
 
-    init(capacity: Int) {
+    public init(capacity: Int) {
         abiEncodingContainer = AbiEncodingContainer(capacity: capacity)
     }
 
-    func container<Key>(keyedBy type: Key.Type) -> KeyedEncodingContainer<Key> where Key : CodingKey {
+    public func container<Key>(keyedBy type: Key.Type) -> KeyedEncodingContainer<Key> where Key : CodingKey {
         fatalError("container<Key> not supported")
     }
 
-    func unkeyedContainer() -> UnkeyedEncodingContainer {
+    public func unkeyedContainer() -> UnkeyedEncodingContainer {
         return abiEncodingContainer
     }
 
-    func singleValueContainer() -> SingleValueEncodingContainer {
+    public func singleValueContainer() -> SingleValueEncodingContainer {
         fatalError("singleValueContainer not supported")
     }
 }

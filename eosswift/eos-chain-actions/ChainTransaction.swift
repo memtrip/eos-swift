@@ -7,14 +7,13 @@ public protocol ChainTransaction {
 
 public extension ChainTransaction {
     public func push(
-        expirationDate: Date,
         actions: [ActionAbi],
-        authorizingPrivateKey: EOSPrivateKey
+        transactionContext: TransactionContext
     ) -> Single<ChainResponse<TransactionCommitted>> {
         return chainApi().getInfo().flatMap { info in
             if (info.success) {
                 let transactionAbi = self.createTransactionAbi(
-                    expirationDate: expirationDate,
+                    expirationDate: transactionContext.expirationDate,
                     blockIdDetails: BlockIdDetails(blockId: info.body!.head_block_id),
                     actions: actions)
 
@@ -24,14 +23,14 @@ public extension ChainTransaction {
                     context_free_data: HexCollectionWriterValue(value: []))
 
                 let signature = PrivateKeySigning().sign(
-                    digest: signedTransactionAbi.toData(),
-                    eosPrivateKey: authorizingPrivateKey)
+                    digest: signedTransactionAbi.toData(transactionContext.abiEncoder()),
+                    eosPrivateKey: transactionContext.authorizingPrivateKey)
 
                 return self.chainApi().pushTransaction(body: PushTransaction(
                     signatures: [signature],
                     compression: "none",
                     packed_context_free_data: "",
-                    packed_trx: transactionAbi.toHex()
+                    packed_trx: transactionAbi.toHex(transactionContext.abiEncoder())
                 )).map { response in
                     ChainResponse<TransactionCommitted>(
                         success: response.success,

@@ -1,14 +1,12 @@
 import Foundation
 
 extension Encodable {
-    public func toHex() -> String {
-        let abiEncoder = AbiEncoder(capacity: 512)
+    public func toHex(_ abiEncoder: AbiEncoder = AbiEncoder(capacity: 512)) -> String {
         try! abiEncoder.encode(encodable: self)
         return abiEncoder.toData().hexEncodedString()
     }
 
-    public func toData() -> Data {
-        let abiEncoder = AbiEncoder(capacity: 512)
+    public func toData(_ abiEncoder: AbiEncoder = AbiEncoder(capacity: 512)) -> Data {
         try! abiEncoder.encode(encodable: self)
         return abiEncoder.toData()
     }

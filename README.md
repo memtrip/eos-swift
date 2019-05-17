@@ -87,6 +87,24 @@ The `toData()` function will write the struct values to a byte array. The `toHex
 function will write the struct values to a byte array and encode the bytes as a hexadecimal string,
 in other words, an `abi_bin`.
 
+```swift
+public struct TransferArgs : Encodable {
+    let from: AccountNameWriterValue
+    let to: AccountNameWriterValue
+    let quantity: AssetWriterValue
+    let memo: String
+}
+
+let args = TransferArgs(
+    from: AccountNameWriterValue(name: "memtripblock"),
+    to: AccountNameWriterValue(name: "memtripproxy"),
+    quantity: AssetWriterValue(asset: "0.0001 EOS"),
+    memo: "memo"
+)
+
+let hexValue = args.toHex(AbiEncoder(capacity: 512))
+```
+
 ### Examples
 See the `eos-swiftTests/eos-chain-actions/abihex` test package for abi byte writing examples.
 
